@@ -6,7 +6,7 @@ public class AlexanderPower : GenericPower
 {
     public override void Activate()
     {
-        //Insert code that runs when you hit 'z' here
+        //Insert code that runs when you hit 'x' here
     }
 
     void Update()
