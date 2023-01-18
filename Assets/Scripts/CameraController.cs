@@ -7,12 +7,15 @@ using UnityEngine.SceneManagement;
 public class CameraController : MonoBehaviour
 {
     public GameObject Target;
+    public PlayerController PC;
     private Rect Bounds;
     private Camera Cam;
     public SpriteRenderer Fader;
+    public TextMeshPro HP;
 
     void Start()
     {
+        if (!PC) PC = Target.GetComponent<PlayerController>();
         Cam = GetComponent<Camera>();
         Rect bounds = new Rect();
         Collider2D[] plats = BoxCollider2D.FindObjectsOfType<Collider2D>();
@@ -25,12 +28,19 @@ public class CameraController : MonoBehaviour
             bounds.height = Mathf.Max(bounds.height,p.transform.position.y + coll.bounds.extents.y);
         }
 
+        if (PC?.MaxHP > 0) HP.gameObject.SetActive(true);
+
         bounds.x += 9;
         bounds.width -= 9;
         bounds.y += 5;
         bounds.height -= 5;
         Bounds = bounds;
         StartCoroutine(ShowName());
+    }
+
+    void Update()
+    {
+        if (PC?.MaxHP > 0) HP.text = PC.HP + "/" + PC.HP;
     }
     
     void FixedUpdate()

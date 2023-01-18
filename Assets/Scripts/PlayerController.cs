@@ -28,9 +28,13 @@ public class PlayerController : MonoBehaviour
     private int AirJumps;
     public float FallPlatTime = 0;
 
+    public float  MaxHP = 0;
+    public float HP = 0;
+
     private void Awake()
     {
         PlayerController.PC = this;
+        HP = MaxHP;
     }
 
     void Start()
@@ -190,6 +194,13 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void TakeDamage(GameObject source,int amt = 1)
+    {
+        HP -= amt;
+        if (HP <= 0)
+            Die(source);
+    }
+    
     public void Die(GameObject source)
     {
         DeathCount++;
@@ -202,5 +213,11 @@ public class PlayerController : MonoBehaviour
     
     public void SetCheckpoint(CheckpointController cc){
         LastCheckpoint = cc;
+    }
+
+    public void Knockback(Vector2 dir)
+    {
+        //WARNING: Only really works for vertical knockback
+        RB.velocity = dir;
     }
 }
