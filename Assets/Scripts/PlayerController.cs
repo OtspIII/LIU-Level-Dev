@@ -54,15 +54,15 @@ public class PlayerController : MonoBehaviour
         Vector2 vel = RB.velocity;
         
         float xDesire = 0;
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
             xDesire = Speed;
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.A))
             xDesire = -Speed;
         if (Mathf.Sign(xDesire) != Mathf.Sign(vel.x))
             vel.x = 0;
         vel.x = Mathf.Lerp(vel.x, xDesire, 0.25f);
 
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Space))
         {
             if (OnGround())
             {
