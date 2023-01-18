@@ -18,7 +18,6 @@ public class PlayerController : MonoBehaviour
     public int MaxAirJumps = 0;
     public SpriteRenderer Body;
     public BoxCollider2D Foot;
-    public AudioSource AS;
     
     public Rigidbody2D RB;
     public bool FaceLeft = false;
@@ -43,7 +42,6 @@ public class PlayerController : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         RB.gravityScale = Gravity;
         Power = GetComponent<GenericPower>();
-        AS = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -221,10 +219,5 @@ public class PlayerController : MonoBehaviour
     {
         //WARNING: Only really works for vertical knockback
         RB.velocity = dir;
-    }
-
-    public void PlaySound(AudioClip clip)
-    {
-        AS.PlayOneShot(clip);
     }
 }
