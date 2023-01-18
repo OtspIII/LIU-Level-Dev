@@ -5,13 +5,17 @@ using UnityEngine;
 public class MishaPower : GenericPower
 {
     public float Timer = 0;
+    public float DashTime = 0.5f;
+    public float DashXSpeed = 30;
+    public float DashYSpeed = 0;
     
     public override void Activate()
     {
         Timer = 1;
         Player.SetInControl(false);
         Player.RB.gravityScale = 0;
-        Player.RB.velocity = new Vector2(30,0);
+        float dir = Player.FaceLeft ? -1 : 1;
+        Player.RB.velocity = new Vector2(DashXSpeed * dir,DashYSpeed);
 //        float dist = Vector2.Distance(transform.position, brick.transform.position);
     }
 
@@ -19,7 +23,7 @@ public class MishaPower : GenericPower
     {
         if (Timer > 0)  
         {
-            Timer -= Time.deltaTime / 0.5f;
+            Timer -= Time.deltaTime / DashTime;
             Player.Body.transform.rotation = Quaternion.Euler(0, 0, Timer * 360);
             if (Timer <= 0)
             {

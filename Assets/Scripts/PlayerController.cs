@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D Foot;
     
     public Rigidbody2D RB;
-    private bool FaceLeft = false;
+    public bool FaceLeft = false;
     private float JumpTimer = 0;
     public List<GameObject> Floors = new List<GameObject>();
     private GenericPower Power;
