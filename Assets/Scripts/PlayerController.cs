@@ -54,19 +54,19 @@ public class PlayerController : MonoBehaviour
         Vector2 vel = RB.velocity;
         
         float xDesire = 0;
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             xDesire = Speed;
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             xDesire = -Speed;
         if (Mathf.Sign(xDesire) != Mathf.Sign(vel.x))
             vel.x = 0;
         vel.x = Mathf.Lerp(vel.x, xDesire, 0.25f);
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
         {
             if (OnGround())
             {
-                if (Input.GetKey(KeyCode.DownArrow))
+                if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
                 {
                     FallPlatTime = 0.5f;
                     JumpTimer = 999;
@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
                 JumpTimer += Time.deltaTime;
                 vel.y = JumpPower;
             }
-            else if (Input.GetKeyDown(KeyCode.Z) && AirJumps > 0)
+            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z) && AirJumps > 0)
             {
                 AirJumps--;
                 JumpTimer = 0;
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
         if (xDesire != 0)
             SetFlip(vel.x < 0);
         
-        if (Input.GetKeyDown(KeyCode.X) && Power != null)
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.X) && Power != null)
             Power.Activate();
         if (Input.GetKeyDown(KeyCode.R))
             Die(gameObject);
