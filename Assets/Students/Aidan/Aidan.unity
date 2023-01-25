@@ -362,7 +362,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402034919}
   m_LocalRotation: {x: -0, y: -0, z: 0.50156575, w: 0.8651196}
-  m_LocalPosition: {x: 22.15, y: -3.38, z: 0}
+  m_LocalPosition: {x: 22.15, y: -3.51, z: 0}
   m_LocalScale: {x: 1.860019, y: 1.2536184, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2452,6 +2452,21 @@ PrefabInstance:
         type: 3}
       propertyPath: MaxHP
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 471537704916083730, guid: 22598831b759c774998b1aead81bdd75,
+        type: 3}
+      propertyPath: Gravity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 471537704916083730, guid: 22598831b759c774998b1aead81bdd75,
+        type: 3}
+      propertyPath: JumpPower
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 471537704916083730, guid: 22598831b759c774998b1aead81bdd75,
+        type: 3}
+      propertyPath: MaxAirJumps
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 471537704916083731, guid: 22598831b759c774998b1aead81bdd75,
         type: 3}
