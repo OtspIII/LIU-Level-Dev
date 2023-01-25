@@ -14,12 +14,14 @@ public class FaithPower : GenericPower
         if (turnOff) 
         {
             pc.Gravity = 5;
+            pc.SetYFlip(false);
 
             turnOff = false;
         }
         else 
         { 
             pc.Gravity = 0;
+            pc.SetYFlip(true);
 
             turnOff = true;
         }
