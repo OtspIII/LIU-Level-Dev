@@ -4,26 +4,22 @@ using UnityEngine;
 
 public class FaithPower : GenericPower
 {
-    private Rigidbody2D rb;
-    private SpriteRenderer sr;
+    private PlayerController pc;
     private bool turnOff = true;
     public override void Activate()
     {
-        //Insert code that runs when you hit 'z' here
-        rb = this.GetComponent<Rigidbody2D>();
-        //sr = 
+        //Insert code that runs when you hit 'x' here
+        pc = this.GetComponent<PlayerController>();
 
         if (turnOff) 
         {
-            rb.gravityScale = 1;
-            //sr.flipX = false;
+            pc.Gravity = 5;
 
             turnOff = false;
         }
         else 
         { 
-            rb.gravityScale = 0;
-            //sr.flipX = true;
+            pc.Gravity = 0;
 
             turnOff = true;
         }
