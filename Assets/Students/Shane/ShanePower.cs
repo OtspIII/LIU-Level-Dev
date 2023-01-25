@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class ShanePower : GenericPower
 {
+    public ParticleSystem ps;
+    public bool holdingJump = false;
+    public float timer = 2;
+    public bool charged = false;
     public override void Activate()
     {
-        //Insert code that runs when you hit 'x' here
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            holdingJump = true;
+        }
+        if (Input.GetKeyUp(KeyCode.X))
+        {
+            holdingJump = false;
+        }
     }
 
     void Update()
     {
-
+        
     }
+    
+    
 }
