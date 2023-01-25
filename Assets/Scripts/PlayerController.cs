@@ -31,6 +31,10 @@ public class PlayerController : MonoBehaviour
 
     public float  MaxHP = 0;
     public float HP = 0;
+    
+    public Vector2 KBVel = new Vector2();
+    public Vector2 KBDesired = new Vector2();
+    public bool JustKB = false;
 
     private void Awake()
     {
@@ -41,7 +45,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
-        RB.gravityScale = Gravity;
+        RB.gravityScale = 0;
         Power = GetComponent<GenericPower>();
         AS = GetComponent<AudioSource>();
     }
@@ -51,7 +55,12 @@ public class PlayerController : MonoBehaviour
         FallPlatTime -= Time.deltaTime;
         if (!InControl) return;      
         
-        Vector2 vel = RB.velocity;
+		bool onGround = OnGround();
+        Vector2 vel = KBDesired;
+		if(!onGround)
+        	vel.y -= Gravity * Time.deltaTime * 9.8f;
+		else
+			vel.y = 0;
         
         float xDesire = 0;
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
@@ -64,7 +73,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
         {
-            if (OnGround())
+            if (onGround)
             {
                 if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
                 {
@@ -84,7 +93,7 @@ public class PlayerController : MonoBehaviour
                 JumpTimer += Time.deltaTime;
                 vel.y = JumpPower;
             }
-            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z) && AirJumps > 0)
+            else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z)) && AirJumps > 0)
             {
                 AirJumps--;
                 JumpTimer = 0;
@@ -93,8 +102,9 @@ public class PlayerController : MonoBehaviour
         }
         else
             JumpTimer = 999;
-        
-        RB.velocity = vel; 
+
+        KBDesired = vel;
+        RB.velocity = vel + KBVel; 
         if (xDesire != 0)
             SetFlip(vel.x < 0);
         
@@ -103,7 +113,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
             Die(gameObject);
 
-        if (vel.y > 0 || FallPlatTime > 0)
+        if (RB.velocity.y > 0 || FallPlatTime > 0)
         {
             gameObject.layer = LayerMask.NameToLayer("RisingPlayer");
             Foot.gameObject.layer = LayerMask.NameToLayer("RisingPlayerFoot");
@@ -114,6 +124,11 @@ public class PlayerController : MonoBehaviour
             Foot.gameObject.layer = LayerMask.NameToLayer("Foot");
         }
             
+    }
+
+    void FixedUpdate()
+    {
+        JustKB = false;
     }
 
     public void SetFlip(bool faceLeft)
@@ -136,9 +151,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.otherCollider.gameObject == Foot.gameObject && !Floors.Contains(other.gameObject))
+        if (other.otherCollider.gameObject == Foot.gameObject)
         {
-            Floors.Add(other.gameObject);
+            if(!JustKB)
+                KBVel = Vector2.zero;
+            if(!Floors.Contains(other.gameObject))
+                Floors.Add(other.gameObject);
         }
     }
 
@@ -219,8 +237,8 @@ public class PlayerController : MonoBehaviour
 
     public void Knockback(Vector2 dir)
     {
-        //WARNING: Only really works for vertical knockback
-        RB.velocity = dir;
+        JustKB = true;
+        KBVel = dir;
     }
 
     public void PlaySound(AudioClip clip)
