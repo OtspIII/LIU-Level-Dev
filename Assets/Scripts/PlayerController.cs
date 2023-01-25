@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
-        RB.gravityScale = Gravity;//0
+        RB.gravityScale = 0;
         Power = GetComponent<GenericPower>();
         AS = GetComponent<AudioSource>();
     }
@@ -56,9 +56,11 @@ public class PlayerController : MonoBehaviour
         if (!InControl) return;      
         
 		bool onGround = OnGround();
-        Vector2 vel = RB.velocity;
-		//if(!onGround)
-        //	vel.y -= Gravity * Time.deltaTime * 9.8f;
+        Vector2 vel = KBDesired;
+		if(!onGround)
+        	vel.y -= Gravity * Time.deltaTime * 9.8f;
+		else
+			vel.y = 0;
         
         float xDesire = 0;
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
@@ -91,7 +93,7 @@ public class PlayerController : MonoBehaviour
                 JumpTimer += Time.deltaTime;
                 vel.y = JumpPower;
             }
-            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z) && AirJumps > 0)
+            else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z)) && AirJumps > 0)
             {
                 AirJumps--;
                 JumpTimer = 0;
@@ -102,7 +104,7 @@ public class PlayerController : MonoBehaviour
             JumpTimer = 999;
 
         KBDesired = vel;
-        RB.velocity = vel;// + KBVel; 
+        RB.velocity = vel + KBVel; 
         if (xDesire != 0)
             SetFlip(vel.x < 0);
         
