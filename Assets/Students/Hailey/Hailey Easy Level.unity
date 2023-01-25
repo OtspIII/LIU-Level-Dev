@@ -1131,10 +1131,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8010425645494148991, guid: 664a0bd71eec9a546a8a3afd3d5d70b4,
         type: 3}
+      propertyPath: JumpTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010425645494148991, guid: 664a0bd71eec9a546a8a3afd3d5d70b4,
+        type: 3}
       propertyPath: JumpPower
       value: 12
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7611508493082124487, guid: 664a0bd71eec9a546a8a3afd3d5d70b4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 664a0bd71eec9a546a8a3afd3d5d70b4, type: 3}
 --- !u!4 &1334970431 stripped
 Transform:
