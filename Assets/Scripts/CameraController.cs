@@ -13,6 +13,11 @@ public class CameraController : MonoBehaviour
     public SpriteRenderer Fader;
     public TextMeshPro HP;
 
+    public bool YMinOverride = false;
+    public float YMin = -0.5f;
+    public bool YMaxOverride = false;
+    public float YMax;
+
     void Start()
     {
         if (!PC) PC = Target.GetComponent<PlayerController>();
@@ -30,6 +35,8 @@ public class CameraController : MonoBehaviour
 
         if (PC?.MaxHP > 0) HP.gameObject.SetActive(true);
 
+        if (YMinOverride) bounds.y = YMin;
+        if (YMaxOverride) bounds.height = YMax;
         bounds.x += 9;
         bounds.width -= 9;
         bounds.y += 5;
