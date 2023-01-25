@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     
     public Rigidbody2D RB;
     public bool FaceLeft = false;
+	public bool StandOnHead = false;
     private float JumpTimer = 0;
     public List<GameObject> Floors = new List<GameObject>();
     private GenericPower Power;
@@ -45,7 +46,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
-        RB.gravityScale = Gravity;//0
+        RB.gravityScale = 0;
         Power = GetComponent<GenericPower>();
         AS = GetComponent<AudioSource>();
     }
@@ -56,9 +57,11 @@ public class PlayerController : MonoBehaviour
         if (!InControl) return;      
         
 		bool onGround = OnGround();
-        Vector2 vel = RB.velocity;
-		//if(!onGround)
-        //	vel.y -= Gravity * Time.deltaTime * 9.8f;
+        Vector2 vel = KBDesired;
+		if(!onGround)
+        	vel.y -= Gravity * Time.deltaTime * 9.8f;
+		else
+			vel.y = 0;
         
         float xDesire = 0;
         if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
@@ -91,7 +94,7 @@ public class PlayerController : MonoBehaviour
                 JumpTimer += Time.deltaTime;
                 vel.y = JumpPower;
             }
-            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z) && AirJumps > 0)
+            else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z)) && AirJumps > 0)
             {
                 AirJumps--;
                 JumpTimer = 0;
@@ -102,7 +105,7 @@ public class PlayerController : MonoBehaviour
             JumpTimer = 999;
 
         KBDesired = vel;
-        RB.velocity = vel;// + KBVel; 
+        RB.velocity = vel + KBVel; 
         if (xDesire != 0)
             SetFlip(vel.x < 0);
         
@@ -135,6 +138,12 @@ public class PlayerController : MonoBehaviour
         FaceLeft = faceLeft;
         transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * (FaceLeft ? -1 : 1),
             transform.localScale.y,1);
+    }
+	public void SetYFlip(bool standOnHead)
+    {
+        if (standOnHead == StandOnHead) return;
+        StandOnHead = standOnHead;
+        Body.transform.localScale = new Vector3(Body.transform.localScale.x,Mathf.Abs(Body.transform.localScale.y) * (StandOnHead ? -1 : 1),1);
     }
 
     public bool OnGround()
