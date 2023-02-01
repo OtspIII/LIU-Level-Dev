@@ -12,7 +12,7 @@ public class KevinPower : GenericPower
     public bool Dashing = false;
     public override void Activate()
     {
-        //Timer = 1;
+        Timer = 0;
         Dashing = true;
         Player.SetInControl(false);
         float dir = Player.FaceLeft ? -1 : 1;
@@ -29,11 +29,12 @@ public class KevinPower : GenericPower
             float dir = Player.FaceLeft ? -1 : 1;
             Player.RB.velocity = new Vector2(DashXSpeed * dir,DashYSpeed);
             Player.Body.transform.rotation = Quaternion.Euler(0, 0, Timer * 360);
-            if (Input.GetKey(KeyCode.X) == false || Timer >= 1);
+            if (Input.GetKey(KeyCode.X) == false || Timer >= 1)
             {
                 Player.SetGravity(1);
                 Player.Body.transform.rotation = Quaternion.Euler(0,0,0);
                 Player.SetInControl(true);
+                Dashing = false;
             }
         }
     }
