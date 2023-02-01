@@ -29,7 +29,7 @@ public class KevinPower : GenericPower
             float dir = Player.FaceLeft ? -1 : 1;
             Player.RB.velocity = new Vector2(DashXSpeed * dir,DashYSpeed);
             Player.Body.transform.rotation = Quaternion.Euler(0, 0, Timer * 360);
-            if (Input.GetKey(KeyCode.X) == false || Timer >= 2);
+            if (Input.GetKey(KeyCode.X) == false || Timer >= 1);
             {
                 Player.SetGravity(1);
                 Player.Body.transform.rotation = Quaternion.Euler(0,0,0);
