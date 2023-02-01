@@ -1,16 +1,94 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AidanPower : GenericPower
 {
-    public override void Activate()
+public enum PlayerStates
+{
+Sprinting,
+Sliding
+}
+public float sprintSpeed = 10f;
+public float slideSpeed = 20f;
+public float forceAmount = 10f;
+public float slideUnderObjectThreshold = 1f;
+public PlayerStates currentPlayerState;
+
+private Rigidbody2D playerRigidbody;
+private float playerHeight;
+private bool isSprinting;
+private bool isSliding;
+
+/*public override void Awake()
+{
+  //  base.Awake();
+    playerRigidbody = GetComponent<Rigidbody2D>();
+    if (playerRigidbody == null)
     {
-        //Insert code that runs when you hit 'z' here
+        Debug.LogError("Rigidbody2D component not found on " + name);
+        return;
+    }
+    playerHeight = GetComponent<BoxCollider2D>().size.y;
+}
+*/
+private void Start()
+{
+    playerRigidbody = GetComponent<Rigidbody2D>();
+}
+
+void Update()
+{
+    if (Input.GetKey(KeyCode.LeftShift))
+    {
+        //playerRigidbody.AddForce(new Vector2(forceAmount, 0));
+        isSprinting = true;
+        isSliding = true;   
+    }
+    else
+    {
+        isSprinting = false;
+        isSliding = false;
     }
 
-    void Update()
-    {
+    //CheckForSlideUnderObject();
+    //HandleSprint();
+    HandleSlide();
+}
 
+void CheckForSlideUnderObject()
+{
+    Vector2 raycastStart = transform.position + new Vector3(0, playerHeight / 2, 0);
+    RaycastHit2D hit = Physics2D.Raycast(raycastStart, Vector2.right, slideUnderObjectThreshold);
+    if (hit.collider != null)
+    {
+        isSliding = true;
     }
+}
+
+void HandleSprint()
+{
+    if (isSprinting)
+    {
+        playerRigidbody.velocity = new Vector2(sprintSpeed, playerRigidbody.velocity.y);
+        currentPlayerState = PlayerStates.Sprinting;
+    }
+}
+
+void HandleSlide()
+{
+    if (isSliding)
+    {
+      // Player.SetInControl(true);
+        playerRigidbody.velocity = new Vector2(slideSpeed, playerRigidbody.velocity.y);
+        transform.localScale = new Vector3(1f, 0.35f, 0.35f);
+        currentPlayerState = PlayerStates.Sliding;
+    }
+    else
+    {
+      // Player.SetInControl(false);
+        transform.localScale = new Vector3(1f, 1f, 1f);
+    }
+}
 }
