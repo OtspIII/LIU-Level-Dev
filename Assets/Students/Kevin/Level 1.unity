@@ -489,7 +489,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   Timer: 0
   DashTime: 0.5
-  DashXSpeed: 30
+  DashXSpeed: 15
   DashYSpeed: 0
   Dashing: 0
 --- !u!1001 &1539488813
