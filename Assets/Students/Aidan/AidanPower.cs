@@ -20,6 +20,7 @@ private Rigidbody2D playerRigidbody;
 private float playerHeight;
 private bool isSprinting;
 private bool isSliding;
+public float SlidePower = 4;
 
 /*public override void Awake()
 {
@@ -50,11 +51,17 @@ void Update()
     {
         isSprinting = false;
         isSliding = false;
+        SlidePower = 1;
     }
 
+    
+}
+
+private void FixedUpdate()
+{
     //CheckForSlideUnderObject();
-    //HandleSprint();
-    HandleSlide();
+        //HandleSprint();
+        HandleSlide();
 }
 
 void CheckForSlideUnderObject()
@@ -80,14 +87,17 @@ void HandleSlide()
 {
     if (isSliding)
     {
-      // Player.SetInControl(true);
-        playerRigidbody.velocity = new Vector2(slideSpeed, playerRigidbody.velocity.y);
+        float dir = 1;
+        if (Player.FaceLeft == true) dir = -1;
+       // Player.SetInControl(true);
+       playerRigidbody.velocity = new Vector2(slideSpeed*SlidePower*dir, playerRigidbody.velocity.y);
         transform.localScale = new Vector3(1f, 0.35f, 0.35f);
         currentPlayerState = PlayerStates.Sliding;
+        SlidePower = Mathf.Lerp(SlidePower, 0, 0.1f);
     }
     else
     {
-      // Player.SetInControl(false);
+       // Player.SetInControl(false);
         transform.localScale = new Vector3(1f, 1f, 1f);
     }
 }

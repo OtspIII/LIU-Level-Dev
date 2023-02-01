@@ -26,10 +26,7 @@ public class ShanePower : GenericPower
             if (Input.GetKey(KeyCode.X) && Player.OnGround())
             {
                 holdingJump = true;
-                if (playerScaleY > .5)
-                {
-                    playerScaleY -= .05f;
-                }
+                playerScaleY = .6f;
                 
                 Player.SetInControl(false);
                 Player.RB.velocity = Vector2.zero;
@@ -76,6 +73,8 @@ public class ShanePower : GenericPower
     private IEnumerator superJump()
     {
         Player.RB.AddForce(new Vector2(0, 400));
+        Player.gameObject.layer = LayerMask.NameToLayer("RisingPlayer");
+        Player.Foot.gameObject.layer = LayerMask.NameToLayer("RisingPlayerFoot");
         yield return new WaitForSeconds(1);
         Player.SetInControl(true);
         yield return new WaitForEndOfFrame();
