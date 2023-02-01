@@ -14,6 +14,6 @@ public class GenericPower : MonoBehaviour
 
     public virtual void Activate()
     {
-        
+        x
     }
 }
