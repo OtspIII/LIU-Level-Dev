@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float JumpPower = 10;
     public float JumpTime = 0.5f;
     public float Gravity = 2;
+	float GravityStart = 2;
     public int MaxAirJumps = 0;
     public SpriteRenderer Body;
     public BoxCollider2D Foot;
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         RB.gravityScale = 0;
+		GravityStart = Gravity;
         Power = GetComponent<GenericPower>();
         AS = GetComponent<AudioSource>();
     }
@@ -252,4 +254,8 @@ public class PlayerController : MonoBehaviour
     {
         AS.PlayOneShot(clip);
     }
+
+	public void SetGravity(float grav){
+		Gravity = GravityStart * grav;
+	}
 }
