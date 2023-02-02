@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float JumpPower = 10;
     public float JumpTime = 0.5f;
     public float Gravity = 2;
+	float GravityStart = 2;
     public int MaxAirJumps = 0;
     public SpriteRenderer Body;
     public BoxCollider2D Foot;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     
     public Rigidbody2D RB;
     public bool FaceLeft = false;
+	public bool StandOnHead = false;
     private float JumpTimer = 0;
     public List<GameObject> Floors = new List<GameObject>();
     private GenericPower Power;
@@ -46,6 +48,7 @@ public class PlayerController : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         RB.gravityScale = 0;
+		GravityStart = Gravity;
         Power = GetComponent<GenericPower>();
         AS = GetComponent<AudioSource>();
     }
@@ -137,6 +140,12 @@ public class PlayerController : MonoBehaviour
         FaceLeft = faceLeft;
         transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * (FaceLeft ? -1 : 1),
             transform.localScale.y,1);
+    }
+	public void SetYFlip(bool standOnHead)
+    {
+        if (standOnHead == StandOnHead) return;
+        StandOnHead = standOnHead;
+        Body.transform.localScale = new Vector3(Body.transform.localScale.x,Mathf.Abs(Body.transform.localScale.y) * (StandOnHead ? -1 : 1),1);
     }
 
     public bool OnGround()
@@ -245,4 +254,8 @@ public class PlayerController : MonoBehaviour
     {
         AS.PlayOneShot(clip);
     }
+
+	public void SetGravity(float grav){
+		Gravity = GravityStart * grav;
+	}
 }

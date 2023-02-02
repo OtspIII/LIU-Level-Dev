@@ -8,10 +8,15 @@ public class CameraController : MonoBehaviour
 {
     public GameObject Target;
     public PlayerController PC;
-    private Rect Bounds;
+    public Rect Bounds;
     private Camera Cam;
     public SpriteRenderer Fader;
     public TextMeshPro HP;
+
+    public bool YMinOverride = false;
+    public float YMin = -0.5f;
+    public bool YMaxOverride = false;
+    public float YMax;
 
     void Start()
     {
@@ -22,14 +27,16 @@ public class CameraController : MonoBehaviour
         foreach(Collider2D coll in plats)
         {
             GameObject p = coll.gameObject;
-            bounds.x = Mathf.Min(bounds.x,p.transform.position.x - coll.bounds.extents.x);
-            bounds.width = Mathf.Max(bounds.width,p.transform.position.x + coll.bounds.extents.x);
-            bounds.y = Mathf.Min(bounds.y,p.transform.position.y - coll.bounds.extents.y);
-            bounds.height = Mathf.Max(bounds.height,p.transform.position.y + coll.bounds.extents.y);
+            bounds.x = Mathf.Min(bounds.x,(p.transform.position.x + coll.offset.x) - coll.bounds.extents.x);
+            bounds.width = Mathf.Max(bounds.width,(p.transform.position.x + coll.offset.x) + coll.bounds.extents.x);
+            bounds.y = Mathf.Min(bounds.y,(p.transform.position.y + coll.offset.y) - coll.bounds.extents.y);
+            bounds.height = Mathf.Max(bounds.height,(p.transform.position.y + coll.offset.y) + coll.bounds.extents.y);
         }
 
         if (PC?.MaxHP > 0) HP.gameObject.SetActive(true);
 
+        if (YMinOverride) bounds.y = YMin;
+        if (YMaxOverride) bounds.height = YMax;
         bounds.x += 9;
         bounds.width -= 9;
         bounds.y += 5;
@@ -59,6 +66,8 @@ public class CameraController : MonoBehaviour
         TextMeshPro tmp = name.AddComponent<TextMeshPro>();
         name.transform.SetParent(transform);
         name.transform.localPosition = new Vector3(0,0,1.1f);
+        
+//        tmp.au = true;
         tmp.text = SceneManager.GetActiveScene().name.ToUpper();
         tmp.alignment = TextAlignmentOptions.Center;
         yield return new WaitForSeconds(1);
