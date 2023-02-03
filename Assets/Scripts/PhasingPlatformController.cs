@@ -11,6 +11,14 @@ public class PhasingPlatformController : MonoBehaviour
 
     public Collider2D Collider;
     public SpriteRenderer Body;
+	Color StartColor;
+	Color FadeColor;
+
+	void Start(){
+		StartColor = Body.color;
+		FadeColor = Body.color;
+		FadeColor.a = 0.1f;
+	}
     
     void Update()
     {
@@ -21,13 +29,13 @@ public class PhasingPlatformController : MonoBehaviour
             if (PhasedIn)
             {
                 Collider.enabled = true;
-                Body.color = new Color(1,1,1,1);
+                Body.color = StartColor;
                 Timer = PhaseInTime;
             }
             else
             {
                 Collider.enabled = false;
-                Body.color = new Color(1,1,1,0.1f);
+                Body.color = FadeColor;
                 Timer = PhaseOutTime;
             }
         }
