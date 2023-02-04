@@ -14,6 +14,10 @@ public class GenericPower : MonoBehaviour
 
     public virtual void Activate()
     {
-        x
+        
     }
+
+	public virtual bool DeathOverride(GameObject source){
+		return false;
+	}
 }
