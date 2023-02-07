@@ -11,8 +11,8 @@ public class RedBrickRotate : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.Rotate(0,0,5f);
+        transform.Rotate(0,0,3f);
     }
 }
