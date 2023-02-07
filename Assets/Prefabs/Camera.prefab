@@ -102,6 +102,10 @@ MonoBehaviour:
   PC: {fileID: 0}
   Fader: {fileID: 0}
   HP: {fileID: 5494116077278103869}
+  YMinOverride: 0
+  YMin: -0.5
+  YMaxOverride: 0
+  YMax: 0
 --- !u!1 &6205322783968366798
 GameObject:
   m_ObjectHideFlags: 0
