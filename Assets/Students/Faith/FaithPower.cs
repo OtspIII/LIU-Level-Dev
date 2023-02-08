@@ -19,9 +19,13 @@ public class FaithPower : GenericPower
             turnOff = false;
         }
         else 
-        { 
+        {
+            Vector2 vel = pc.KBVel ;
+
             pc.Gravity = 0;
             pc.SetYFlip(true);
+            vel.y = pc.JumpPower;
+            pc.KBVel = vel;
 
             turnOff = true;
         }
