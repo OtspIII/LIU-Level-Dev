@@ -17,7 +17,9 @@ public class DialogueScript : MonoBehaviour
     public bool createCrashDoor = false;
     public GameObject RealDoor;
     public bool createRealDoor = false;
-
+    public GameObject UnfinishedSpawnIn;
+    public bool SpawnInUnfinished = false;
+    
     public GameObject player;
     //Timers
     public bool nextDialogue = false;
@@ -163,6 +165,7 @@ public class DialogueScript : MonoBehaviour
             RealDoor.SetActive(true);
             nextText = false;
             startDialogueTimer16 -= Time.deltaTime;
+            
         }
         
         
