@@ -6,6 +6,7 @@ using UnityEngine;
 public class KeyCardScript : MonoBehaviour
 {
     public Vector3 Size;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +32,15 @@ public class KeyCardScript : MonoBehaviour
             transform.parent = other.transform;
             transform.localPosition = new Vector3(0.78f, 0, 0);
         }
-       
+
 
         if (other.gameObject.name == "LockedDoor")
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.name == "LockedDoorTwo")
         {
             Destroy(gameObject);
             Destroy(other.gameObject);
