@@ -16,4 +16,8 @@ public class GenericPower : MonoBehaviour
     {
         
     }
+
+	public virtual bool DeathOverride(GameObject source){
+		return false;
+	}
 }
