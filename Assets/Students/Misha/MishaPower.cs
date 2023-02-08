@@ -33,4 +33,12 @@ public class MishaPower : GenericPower
             }
         }
     }
+
+//    public override bool DeathOverride(GameObject source)
+//    {
+//        Player.Body.color = Color.red;
+//        return true;
+//    }
+
+	
 }

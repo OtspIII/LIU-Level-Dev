@@ -230,8 +230,9 @@ public class PlayerController : MonoBehaviour
             Die(source);
     }
     
-    public void Die(GameObject source)
+    public void Die(GameObject source,bool force=false)
     {
+		if(!force && Power != null && Power.DeathOverride(source)) return;
         DeathCount++;
         Debug.Log("YOU DIED: " + DeathCount + " / " + SceneManager.GetActiveScene().name.ToUpper());
         if (LastCheckpoint == null)
