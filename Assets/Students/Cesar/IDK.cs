@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedBrickRotate : MonoBehaviour
+public class IDK : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -11,8 +11,8 @@ public class RedBrickRotate : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        transform.Rotate(0,0,2f);
+        
     }
 }
