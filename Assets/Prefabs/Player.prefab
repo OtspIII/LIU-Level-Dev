@@ -98,7 +98,6 @@ GameObject:
   - component: {fileID: 471537704916083729}
   - component: {fileID: 471537704916083728}
   - component: {fileID: 9161346564168956169}
-  - component: {fileID: 870652842}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -146,6 +145,7 @@ MonoBehaviour:
   AS: {fileID: 0}
   RB: {fileID: 0}
   FaceLeft: 0
+  StandOnHead: 0
   Floors: []
   FallPlatTime: 0
   MaxHP: 0
@@ -321,23 +321,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &870652842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471537704916083727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec94136d42cc6c7488b1613d8c26ff91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  Timer: 0
-  DashTime: 0.5
-  DashXSpeed: 30
-  DashYSpeed: 0
 --- !u!1 &471537704916780588
 GameObject:
   m_ObjectHideFlags: 0
