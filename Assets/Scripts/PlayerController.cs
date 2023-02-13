@@ -39,11 +39,13 @@ public class PlayerController : MonoBehaviour
     public bool JustKB = false;
     
     public KeyCode AbilityButton = KeyCode.X;
+    public static bool HasMoved = false;
 
     private void Awake()
     {
         PlayerController.PC = this;
         HP = MaxHP;
+        HasMoved = false;
     }
 
     void Start()
@@ -83,9 +85,10 @@ public class PlayerController : MonoBehaviour
         if (Mathf.Sign(xDesire) != Mathf.Sign(vel.x))
             vel.x = 0;
         vel.x = Mathf.Lerp(vel.x, xDesire, 0.25f);
-
+        
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
         {
+            HasMoved = true;
             if (onGround)
             {
                 if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
@@ -118,11 +121,16 @@ public class PlayerController : MonoBehaviour
 
         KBDesired = vel;
         RB.velocity = vel + KBVel; 
+        if(RB.velocity.x != 0) HasMoved = true;
         if (xDesire != 0)
             SetFlip(vel.x < 0);
-        
+
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKeyDown(AbilityButton) && Power != null)
+        {
+            HasMoved = true;
             Power.Activate();
+        }
+
         if (Input.GetKeyDown(KeyCode.R))
             Die(gameObject);
 

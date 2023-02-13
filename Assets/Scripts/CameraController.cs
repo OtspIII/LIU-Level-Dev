@@ -20,7 +20,8 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        Fader.gameObject.SetActive(false);
+        if(Fader != null)
+            Fader.gameObject.SetActive(false);
         if (!PC) PC = Target.GetComponent<PlayerController>();
         Cam = GetComponent<Camera>();
         Rect bounds = new Rect();
