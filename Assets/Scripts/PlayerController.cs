@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController PC;
-    public CheckpointController LastCheckpoint;
+    public static CheckpointSave LastCheckpoint;
     public static int DeathCount = 0;
     public float Speed = 10;
     public float JumpPower = 10;
@@ -37,11 +37,15 @@ public class PlayerController : MonoBehaviour
     public Vector2 KBVel = new Vector2();
     public Vector2 KBDesired = new Vector2();
     public bool JustKB = false;
+    
+    public KeyCode AbilityButton = KeyCode.X;
+    public static bool HasMoved = false;
 
     private void Awake()
     {
         PlayerController.PC = this;
         HP = MaxHP;
+        HasMoved = false;
     }
 
     void Start()
@@ -51,6 +55,14 @@ public class PlayerController : MonoBehaviour
 		GravityStart = Gravity;
         Power = GetComponent<GenericPower>();
         AS = GetComponent<AudioSource>();
+        if (PlayerController.LastCheckpoint?.Level == SceneManager.GetActiveScene().buildIndex)
+        {
+            transform.position = PlayerController.LastCheckpoint.Pos;
+            Vector3 pos = transform.position;
+            pos.z = -10;
+            pos.y += 1;
+            Camera.main.transform.position = pos;
+        }
     }
 
     void Update()
@@ -73,9 +85,10 @@ public class PlayerController : MonoBehaviour
         if (Mathf.Sign(xDesire) != Mathf.Sign(vel.x))
             vel.x = 0;
         vel.x = Mathf.Lerp(vel.x, xDesire, 0.25f);
-
+        
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.Space))
         {
+            HasMoved = true;
             if (onGround)
             {
                 if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
@@ -108,11 +121,16 @@ public class PlayerController : MonoBehaviour
 
         KBDesired = vel;
         RB.velocity = vel + KBVel; 
+        if(RB.velocity.x != 0) HasMoved = true;
         if (xDesire != 0)
             SetFlip(vel.x < 0);
-        
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.X) && Power != null)
+
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKeyDown(AbilityButton) && Power != null)
+        {
+            HasMoved = true;
             Power.Activate();
+        }
+
         if (Input.GetKeyDown(KeyCode.R))
             Die(gameObject);
 
@@ -235,14 +253,16 @@ public class PlayerController : MonoBehaviour
 		if(!force && Power != null && Power.DeathOverride(source)) return;
         DeathCount++;
         Debug.Log("YOU DIED: " + DeathCount + " / " + SceneManager.GetActiveScene().name.ToUpper());
-        if (LastCheckpoint == null)
-            StartCoroutine(DeathAnimation(source));
-        else
-            transform.position = LastCheckpoint.Spawn.position;
+        StartCoroutine(DeathAnimation(source));
+//        if (LastCheckpoint == null)
+//            
+//        else
+//            transform.position = LastCheckpoint.Spawn.position;
     }
     
-    public void SetCheckpoint(CheckpointController cc){
-        LastCheckpoint = cc;
+    public void SetCheckpoint(CheckpointController cc)
+    {
+        LastCheckpoint = new CheckpointSave(cc);
     }
 
     public void Knockback(Vector2 dir)
@@ -259,4 +279,17 @@ public class PlayerController : MonoBehaviour
 	public void SetGravity(float grav){
 		Gravity = GravityStart * grav;
 	}
+}
+
+[System.Serializable]
+public class CheckpointSave
+{
+    public Vector3 Pos;
+    public int Level;
+
+    public CheckpointSave(CheckpointController cc)
+    {
+        Pos = cc.Spawn.position;
+        Level = SceneManager.GetActiveScene().buildIndex;
+    }
 }
