@@ -9,7 +9,7 @@ public class AI_Enemy_Cesar : MonoBehaviour
     public Transform Eye;
     public GameObject mark;
 
-    public bool found, attack,ani,left;
+    public bool found, attack,ani,left, stop, sentry;
     public float drange, speed, realspeed;
     private Vector2 dir,force;
     void Start()
@@ -20,12 +20,14 @@ public class AI_Enemy_Cesar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dir = GMScript_Cesar.gm.pc.transform.position - transform.position;
-        if(found)EnemyMovement();
-        if (attack & !ani) StartCoroutine(AttackAni());
-        
-        DetectPlayer();
-        
+        if (!sentry)
+        {
+            dir = GMScript_Cesar.gm.pc.transform.position - transform.position;
+            if (found) EnemyMovement();
+            if (attack & !ani) StartCoroutine(AttackAni());
+
+            DetectPlayer();
+        }
     }
     
     void EnemyMovement()
@@ -110,10 +112,30 @@ public class AI_Enemy_Cesar : MonoBehaviour
         ani = false;
     }
 
+    void Knockback()
+    {
+        Debug.Log("working");
+        rb.AddForce(-GMScript_Cesar.gm.player.finalforce, ForceMode2D.Force);
+        stop = false;
+    }
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         PlayerController pc = col.gameObject.GetComponent<PlayerController>();
-        if(pc != null) rb.AddForce(force * new Vector2(-1,1), ForceMode2D.Force);
+        if (pc != null & !GMScript_Cesar.gm.player.activate)
+        {
+            pc.TakeDamage(pc.gameObject, 1);
+            rb.AddForce(force * new Vector2(-1, 1), ForceMode2D.Force);
+        }
+
+        DangerController dc = col.gameObject.GetComponent<DangerController>();
+        if(dc != null) Destroy(gameObject);
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+       
     }
 
     private void OnDrawGizmos()

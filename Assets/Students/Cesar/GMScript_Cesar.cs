@@ -6,6 +6,7 @@ public class GMScript_Cesar : MonoBehaviour
 {
     public static GMScript_Cesar gm;
     public PlayerController pc;
+    public Script_Cesar player;
     
     
     void Start()
