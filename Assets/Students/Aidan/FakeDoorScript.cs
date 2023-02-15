@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class FakeDoorScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static PlayerController Plyr;
+     //Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+     //Update is called once per frame
     void Update()
     {
-        void OnCollisionEnter2D(Collider2D other)
-        {
-            
-        }
+       
+
+   }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+
+     if (other.gameObject.name == "Player")
+     {
+      Destroy(gameObject);
+
+     }
     }
 }
