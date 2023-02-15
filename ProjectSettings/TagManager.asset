@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Platforms
+  - Wall
+  - Lava
   layers:
   - Default
   - TransparentFX
@@ -12,17 +13,17 @@ TagManager:
   - 
   - Water
   - UI
-  - Projectile
-  - ProjectileCore
+  - 
+  - 
   - Player
-  - Foot
-  - RisingPlayer
-  - RisingPlayerFoot
-  - OneWayPlatform
-  - 
-  - 
-  - 
-  - 
+  - Monster
+  - PBullet
+  - MBullet
+  - IgnorePlayer
+  - IgnoreEnemy
+  - IgnoreBullet
+  - IgnoreWalls
+  - Walls
   - 
   - 
   - 
