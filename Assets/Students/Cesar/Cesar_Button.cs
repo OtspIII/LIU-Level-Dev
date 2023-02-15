@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Cesar_Button : MonoBehaviour
 {
     [SerializeField] private MovingPlatformController[] move;
     [SerializeField] private Vector3[] pos;
+    [SerializeField] private TextMeshPro[] num;
+    public int numshow;
     public Vector3 offset;
     private bool pressed,stop;
     private float timer;
@@ -14,6 +17,8 @@ public class Cesar_Button : MonoBehaviour
     
     private void Start()
     {
+        for (int i = 0; i < num.Length; i++) num[i].text = "" + numshow;
+        
         timer = settimer;
 
         foreach (var i in move)
@@ -55,6 +60,8 @@ public class Cesar_Button : MonoBehaviour
         }
         
     }
+
+   
 
     private void OnTriggerEnter2D(Collider2D col)
     {
