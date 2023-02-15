@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 
 public class DialogueScript : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
-    public string[] lines;
+    [FormerlySerializedAs("lines")] public string[] NormalTextLines;
+    public string[] BlankUseText;
+    public string[] OPENText;
     public float textSpeed;
     public int index;
     public bool nextText = false;
@@ -17,8 +20,17 @@ public class DialogueScript : MonoBehaviour
     public bool createCrashDoor = false;
     public GameObject RealDoor;
     public bool createRealDoor = false;
+    public TheUnfinishedSpawnScript UnfinishedSpawnScript;
+    public bool SpawnInUnfinished = false;
+    
+    public GameObject Player;
+    public GameObject UnfinishedSpawn;
+    public CameraController MainCamera;
 
-    public GameObject player;
+    public bool PressedO = false;
+    public bool PressedP = false;
+    public bool PressedE = false;
+    public bool PressedN = false;
     //Timers
     public bool nextDialogue = false;
     public float nextDialogueTimer = 5;
@@ -39,6 +51,14 @@ public class DialogueScript : MonoBehaviour
     public float startDialogueTimer14 = 30;
     public float startDialogueTimer15 = 30;
     public float startDialogueTimer16 = 30;
+    public float startDialogueTimer17 = 30;
+    public float startDialogueTimer18 = 30;
+    public float startDialogueTimer19 = 30;
+    public float startDialogueTimer20 = 30;
+    public float startDialogueTimer21 = 30;
+    public float startDialogueTimer22 = 1;
+    public float startDialogueTimer23 = 30;
+    public float startDialogueTimer24 = 30;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +73,7 @@ public class DialogueScript : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && nextText == true || nextDialogue == true)
         {
-            if (textComponent.text == lines[index])
+            if (textComponent.text == NormalTextLines[index])
             {
                 NextLine();
                 nextDialogueTimer = 5;
@@ -61,7 +81,7 @@ public class DialogueScript : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                textComponent.text = lines[index];
+                textComponent.text = NormalTextLines[index];
             }
         }
         if (nextDialogueTimer <= 0)
@@ -160,11 +180,72 @@ public class DialogueScript : MonoBehaviour
         }
         if (index == 65) //
         {
-            RealDoor.SetActive(true);
             nextText = false;
-            startDialogueTimer16 -= Time.deltaTime;
+            index = 87;
+            //startDialogueTimer16 -= Time.deltaTime;
         }
         
+        /*
+        if (index == 87) //
+        {
+            nextText = false;
+            startDialogueTimer22 -= Time.deltaTime;
+        }
+        
+        if (index == 69) //
+        {
+            nextText = false;
+            startDialogueTimer17 -= Time.deltaTime;
+        }
+        if (index == 72) //
+        {
+            nextText = false;
+            startDialogueTimer18 -= Time.deltaTime;
+        }
+        if (index == 76) //
+        {
+            nextText = false;
+            startDialogueTimer19 -= Time.deltaTime;
+        }
+        if (index == 79) //
+        {
+            nextText = false;
+            startDialogueTimer20 -= Time.deltaTime;
+        }
+        if (index == 82) //
+        {
+            nextText = false;
+            startDialogueTimer21 -= Time.deltaTime;
+        }
+        if (index == 85) //
+        {
+            nextText = false;
+            //startDialogueTimer22 -= Time.deltaTime;
+        }
+        */
+        if (index == 95) //
+        {
+            nextText = false;
+            UnfinishedSpawnScript.Spawnin = true;
+            UnfinishedSpawnScript.SpawnSound = true;
+            startDialogueTimer23 -= Time.deltaTime;
+            MainCamera.Target = UnfinishedSpawn;
+        }
+        if (index == 96) //
+        {
+            //nextText = false;
+            textComponent.fontSize = 60;
+            textSpeed = 0.1f;
+            nextText = true;
+            //NextLine();
+        }
+        
+        if (index == 97) //
+        {
+            RealDoor.SetActive(true);
+            MainCamera.Target = Player;
+        }
+    
         
         // Start Dialogue Timers
         if (startDialogue == true)
@@ -285,6 +366,76 @@ public class DialogueScript : MonoBehaviour
             nextText = true;
         }
 
+        if (startDialogueTimer17 <= 0)
+        {
+            NextLine();
+            startDialogueTimer17 = 1;
+            nextText = true;
+        }
+
+        if (startDialogueTimer18 <= 0)
+        {
+            NextLine();
+            startDialogueTimer18 = 1;
+            nextText = true;
+        }
+
+        if (startDialogueTimer19 <= 0)
+        {
+            NextLine();
+            startDialogueTimer19 = 1;
+            nextText = true;
+        }
+
+        if (startDialogueTimer20 <= 0)
+        {
+            NextLine();
+            startDialogueTimer20 = 1;
+            nextText = true;
+        }
+
+        if (startDialogueTimer21 <= 0)
+        {
+            NextLine();
+            startDialogueTimer21 = 1;
+            nextText = true;
+        }
+
+        if (startDialogueTimer22 <= 0)
+        {
+            NextLine();
+            startDialogueTimer22 = 1;
+            nextText = true;
+        }
+        
+        if (startDialogueTimer23 <= 0)
+        {
+            NextLine();
+            startDialogueTimer23 = 1;
+            nextText = true;
+        }
+
+        if (Input.GetKey(KeyCode.O) & PressedO == false)
+        {
+            NextLineOpen();
+            PressedO = true;
+        }
+        if (Input.GetKey(KeyCode.P) & PressedO == true)
+        {
+            NextLineOpen();
+            PressedP = true;
+        }
+        if (Input.GetKey(KeyCode.E) & PressedP == true)
+        {
+            NextLineOpen();
+            PressedE = true;
+        }
+        if (Input.GetKey(KeyCode.N) & PressedE == true)
+        {
+            NextLineOpen();
+            PressedN = true;
+            index = 0;
+        }
     }
 
     void StartDialouge()
@@ -295,8 +446,21 @@ public class DialogueScript : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        /*string ss = NormalTextLines[index];
         // Type each character 1 by 1
-        foreach (char c in lines[index].ToCharArray())
+        foreach (char c in ss.ToCharArray())*/
+        // Type each character 1 by 1
+        foreach (char c in NormalTextLines[index].ToCharArray())
+        {
+            textComponent.text += c;
+            yield return new WaitForSeconds(textSpeed);
+        }
+    }
+    
+    IEnumerator TypeLineOpen()
+    {
+        // Type each character 1 by 1
+        foreach (char c in OPENText[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -305,7 +469,23 @@ public class DialogueScript : MonoBehaviour
 
     void NextLine()
     {
-        if (index < lines.Length - 1)
+        if (index < NormalTextLines.Length - 1)
+        {
+            index++;
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
+            IndexTrigger();
+            textSpeed = 0.1f;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
+    
+    void NextLineOpen()
+    {
+        if (index < OPENText.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;

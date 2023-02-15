@@ -12,7 +12,7 @@ public class MovingPlatformController : MonoBehaviour
     
     void FixedUpdate()
     {
-        if (Destinations.Count == 0 || !PlayerController.HasMoved) return;
+        if (Destinations.Count == 0) return; // || !PlayerController.HasMoved
         Vector3 dest = Destinations[CurrentDest];
         Vector3 old = transform.position;
         transform.position = Vector3.MoveTowards(transform.position, dest, Speed);
