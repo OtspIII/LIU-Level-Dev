@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,7 +10,7 @@ public class Script_Cesar : MonoBehaviour
     [SerializeField] private Vector3 pos;
     [SerializeField] private PlayerController pc;
     [SerializeField]  private int num,force;
-    [SerializeField] private float multi;
+    [SerializeField] public float multi;
     public TextMeshPro math;
     private float starting, multisave;
     public float adder,size;
@@ -20,6 +21,8 @@ public class Script_Cesar : MonoBehaviour
     private Vector2[] rbforce;
     private int[] forceX = {0, 0, 0, 0} , forceY = {0,0, 0, 0};
     public Vector3 offset;
+    public Vector2 finalforce;
+    public bool activate;
         void Start()
         {
             rbforce = new Vector2[4]
@@ -50,8 +53,8 @@ public class Script_Cesar : MonoBehaviour
     void Update()
     {
         ShowPower();
-        if(Input.GetMouseButton(0) & multi <= 2002) Charge();
-       if(Input.GetKeyDown(KeyCode.E)) Activate();
+        if(Input.GetKey(KeyCode.E) & multi <= 2002) Charge();
+       if(Input.GetMouseButton(0)) Activate();
         Change();
         pos = newpos[num];
         holder.transform.localPosition = pc.transform.position + pos;
@@ -72,10 +75,18 @@ public class Script_Cesar : MonoBehaviour
     }
     void Activate()
     {
-        pc.RB.AddRelativeForce(new Vector2(forceX[num] * multi, forceY[num] * multi), ForceMode2D.Force);
+        activate = true;
+        finalforce = new Vector2(forceX[num] * multi, forceY[num] * multi);
+        pc.RB.AddRelativeForce(finalforce, ForceMode2D.Force);
         multisave = starting;
         multi = 0;
         holder.transform.localScale = save;
+        Invoke("IFramesoff", .3f);
+    }
+
+    void IFramesoff()
+    {
+        activate = false;
     }
 
     void ShowPower()
@@ -85,5 +96,11 @@ public class Script_Cesar : MonoBehaviour
         
         math.text = power + "%";
         math.transform.position = pc.transform.position + offset;
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        DangerController dc = col.GetComponent<DangerController>();
+        if(dc != null) pc.TakeDamage(gameObject,3);
     }
 }
