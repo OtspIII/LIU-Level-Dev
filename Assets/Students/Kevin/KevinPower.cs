@@ -35,6 +35,7 @@ public class KevinPower : GenericPower
                 Player.Body.transform.rotation = Quaternion.Euler(0,0,0);
                 Player.SetInControl(true);
                 Dashing = false;
+                Player.KBDesired = Vector2.zero;
             }
         }
     }
