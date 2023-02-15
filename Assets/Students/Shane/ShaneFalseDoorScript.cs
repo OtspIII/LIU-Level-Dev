@@ -40,7 +40,7 @@ public class ShaneFalseDoorScript : MonoBehaviour
         while (hiddenWall.transform.position.x <= 159)
         {
             Vector2 wallPos = hiddenWall.transform.position;
-            wallPos.x += .005f;
+            wallPos.x += .05f;
             hiddenWall.transform.position = wallPos;
             yield return new WaitForEndOfFrame();
         }
