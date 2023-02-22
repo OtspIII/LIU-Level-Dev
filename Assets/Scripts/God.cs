@@ -25,7 +25,7 @@ public static class God
             case MColors.White: c = new Color(0.8f,0.8f,0.8f); break;
             case MColors.Ebony: c = new Color(0.1f,0.1f,0.1f); break;
             case MColors.Tan: c = new Color(0.8f,0.7f,0.6f); break;
-            case MColors.Algea: c = new Color(0.1f,0.66f,0.56f); break;
+            case MColors.Algea: 
             case MColors.Algae: c = new Color(0.1f,0.66f,0.56f); break;
             case MColors.Slate: c = new Color(0.4f,0.4f,0.4f); break;
             case MColors.WallWhite: c = Color.white; break;
