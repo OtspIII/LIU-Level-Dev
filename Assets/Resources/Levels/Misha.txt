@@ -1,26 +1,11 @@
-xxxxxxxxxx   xxxxxx
-x        x   x    x
-x P      xxxxx    x
-x                 x
-x        xxxx     x
-x db     x  x  G  x
-x YY     x  x   I x
-x        x  xxxxxxx
-x        x
-xxxxxxxxxx
+xxxxxxxxxxx
+x   bs    x
+x P     Y x
+x    G    x
+xxxxxxxxxxx
 
-xxxxxxxxxx   xxxxxx
-x        x   x    x
-x Y      xxxxx    x
-x                 x
-x        xxxx     x
-x  Y     x  x  P  x
-x        x  x     x
-x   G    x  xxxxxxx
-x        x
-xxxx  xxxx
-   x  x
- xxx  xxx
- x      x
- x      x
- xxxxxxxx
+xxxxx
+xG  x
+xx  x
+xP  x
+xxxxx
