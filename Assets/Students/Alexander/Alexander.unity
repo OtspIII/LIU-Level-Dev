@@ -5075,7 +5075,7 @@ MonoBehaviour:
   - 
   - You're still here huh?
   - Ya know what?
-  - No door for you.
+  - No door for you. DELETE
   - Now get out of here...
   - 
   - You're still here huh?
@@ -21047,6 +21047,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6662828783145738537, guid: 842d5b82df63f3a429bf4f3ad62cabed,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 842d5b82df63f3a429bf4f3ad62cabed, type: 3}
