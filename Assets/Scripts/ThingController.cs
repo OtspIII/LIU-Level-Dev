@@ -133,4 +133,7 @@ public enum SpawnThings
     Health=23,
     Goal=24,
     Destructible=25,
+    DestructibleE=26,
+    DestructableE=27,
+    WallEnemy=28,
 }

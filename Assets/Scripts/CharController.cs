@@ -13,6 +13,7 @@ public class CharController : ThingController
     public bool Player;
     public float BulletCooldown = 999;
     public bool Tile = true;
+    public bool BulletImmune = false;
 
     public override void OnAwake()
     {
@@ -113,5 +114,12 @@ public class CharController : ThingController
         if(js != null)
             b.ApplyJSON(js);
         BulletCooldown = 0;
+    }
+
+    public override void ApplyJSON(JSONData data)
+    {
+        base.ApplyJSON(data);
+        if (data.Special == "BulletImmune")
+            BulletImmune = true;
     }
 }
