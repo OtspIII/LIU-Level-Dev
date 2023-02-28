@@ -24,12 +24,14 @@ x              x
 xxxxxxxxxxxxxxxx
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    
-x Y O                                               x
+x       O                                           x
 x|||||||||||||||||||||||||||||||||||||||||||||||||||x       
-x   P         G                 R                   x
-x|||||||||||||||||||    I               G   Y     = x
-x Y O              |||||||||||                      x
-xxxxxxxxxxxxxxxx        Y    |||||||||||||||||||||||x
+x                               R                   x
+x      P            G                               x
+x                                                 = x
+x|||||||||||||||||||    I               G   Y       x
+x        O         |||||||||||                      x
+xxxxxxxxxxxxxxxx             |||||||||||||||||||||||x
                 x                   Y               x
                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                 
