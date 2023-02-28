@@ -38,33 +38,33 @@ llll x x
                           x xxxxxxxxxxsxxxxxxxxxx x
                           x    ll    xbxll        x
                           x      Y   x x    Y   llx
-                          x   Y      x xll   Y    x
-                          x    ll    x x        llx
-                          xxxxxxxxxvxx xxvxxxxxxxxx
-                      xxxxxxxxxxxxxvxx xxvxxxxxxxxxxxxx
+                          x   Y      x xll   Y    x           lll
+                          x    ll    x x        llx           xxll
+                          xxxxxxxxxvxx xxvxxxxxxxxx           llll
+                      xxxxxxxxxxxxxvxx xxvxxxxxxxxxxxxx       l l
                   xxxxxl  B   lxxxxvxx xxvxxxxl   B  lxxxxx
-                  x   x        xxxx xx xx xxxx        x   x
-                  x 1    R          xx xx          R    2 x
-                  x   x        xxxxbxx xxbxxxx        x   x
-                  xxxxxl  B   lxxxxs  +  sxxxxl   B  lxxxxx
+                  x   x        xxxx xx xx xxxx        x   x     
+                  x 1    R          xx xx          R    2 x     
+                  x   x        xxxxbxx xxbxxxx        x   x     
+                  xxxxxl  B   lxxxxs  +  sxxxxl   B  lxxxxx     
                       xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-
-
-
-
-
-         xxxxxxxxxxxxx
-         xv<<<<<<<<<<x
-         x>>>>>>>>>>^x
-         x|||||||||||x
-xxxxxxxxxx           x
-x   xxxxxx           x
-x P                   
-x   xxxxxx           x
-xxxxxxxxxx           x
-         x|||||||||||x
-         xv<<<<<<<<<<x
-         x>>>>>>>>>>^x
-         xxxxxxxxxxxxx
-
+           lll
+          llxx
+          llll
+           l l
+         xxxxxxxxxxxxxxx
+         xbbbbbbbbbbbbbx        xxxxxxxxxxxxxx
+         xbxxxxbxxxxbxbx        x            xxxxxxxxxxxxxxx
+         xB    B    Bxbxxx      x xxxx       xlll   b   lllx
+         x|||||||||||xbbbx      x x2 x   R   xl     R     lx
+xxxxxxxxxx            bxbx      x x          xl           lxxxxxxx
+x   xxxxxx           xxxbxxxxxxxx xxxxxxxxxxxx        Y    xxx   x
+x P                  sssss     !   @        +>          B  <   = x
+x   xxxxxx           xbxxxxxx xxxxxxxxxxxxxxxx        Y    xxx   x
+xxxxxxxxxx            bxxx  x x              xl           lxxxxxxx
+         x|||||||||||xbxxx  x x 1    x   R   xl     R     lx
+         xB    B    Bxbx    x xxxxxxxx       xlll   b   lllx
+         xbxxxxbxxxxbxbx    x                xxxxxxxxxxxxxxx
+         xbbbbbbbbbbbbbx    xxxxxxxxxxxxxxxxxx
+         xxxxxxxxxxxxxxx
