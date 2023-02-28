@@ -5,7 +5,7 @@ x                    x
 x          G         x
 x                    x
 x                    x
-x          P         x
+x   R       P      I x
 xxxxxxxxxxxxxxxxxxxxxx
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -23,8 +23,13 @@ x       P      x
 x              x
 xxxxxxxxxxxxxxxx
 
-xxxxxxxxxxxxxxxx
-x
-x
-x
-x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    
+x Y O                                               x
+x|||||||||||||||||||||||||||||||||||||||||||||||||||x       
+x   P         G                 R                   x
+x|||||||||||||||||||    I               G   Y     = x
+x Y O              |||||||||||                      x
+xxxxxxxxxxxxxxxx        Y    |||||||||||||||||||||||x
+                x                   Y               x
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                
