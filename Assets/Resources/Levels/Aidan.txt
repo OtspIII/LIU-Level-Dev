@@ -1,0 +1,51 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x            x             x
+x P          !             x
+x            x        =    x    
+x            x             x
+x  R       R x             x
+xxxxxx  xxxxxxxxxxxxxxxxxxxx
+x            x 
+x          R x
+x            x 
+x            x 
+x  Y       1 x
+xxxxxxxxxxxxxx
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x             x R           x                              x                                                          
+x             x             x                              x
+x  P                        !                 P            x
+x             x             x                          2   x
+x             x             x                              x
+xxxxxxx@xxxxxxxxxxxxx  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x             x             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x             x   +       Y x          O                x               x
+x             x             x    R             R        x      +        x
+xR            x             x                                       +   x
+x             x             x                       1   x     +         x
+x          R  x  R                                      x         +     x
+xxxxxx  xxxxxxxxxxxxxxxxxxxxx          R         Y      x    +          x
+x             x             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x             x
+x             x
+x       =     x
+x             x
+xxxxxxxxxxxxxxx
+
+xxxxxxxxxxxxxx      xxxxxxxxxxxxxxx    
+x            xxxxxxxx             x
+x P                           O   x
+x            xxxxxxxx             x
+x            x      x      +      x
+x            x      x             x
+x +     R    x      x   R         xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxx      x             !             x       E     x
+                    x          O  x             x             x
+xxxxxxxxxxxxxxxxxxxxxxxx    xxxxxxx             x             x
+x                   x             x             x           = x
+x  2                x   Y       Y x     E       x             x
+x      P                          x             @      E      x
+x                   x       R     xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x  +                x  +    1     x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
