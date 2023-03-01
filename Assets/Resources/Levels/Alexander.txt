@@ -53,7 +53,7 @@ XO         G          =X
 XXXXXXXXXXXXXXXXXXXXXXXX
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-X 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 X
+X 0   0   0   0   0   0   0   0   0   0   0   0 X
 X|||||||||||||||||||||||||||||||||||||||||||||||X
 X    Y    Y    Y    Y    Y    Y    Y    Y    Y  X
 X                                               X
@@ -63,6 +63,6 @@ X                        E                      X
 X                                               X
 X    Y    Y    Y    Y    Y    Y    Y    Y    Y  X
 X|||||||||||||||||||||||||||||||||||||||||||||||X
-X 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 X
+X 0   0   0   0   0   0   0   0   0   0   0   0 X
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 

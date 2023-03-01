@@ -1,5 +1,6 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "com.unity.collab-proxy": {
       "version": "1.17.2",
       "depth": 0,
@@ -70,6 +71,8 @@
       },
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> dc70f190f36def370abbb731e12fbaaa2aa5644c
     "com.unity.textmeshpro": {
       "version": "3.0.6",
       "depth": 0,
