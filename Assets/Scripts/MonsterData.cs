@@ -31,7 +31,6 @@ public struct MonsterData
         Type = (MTypes)Enum.Parse(typeof(MTypes), data[n]);n++;
         HP = int.Parse(data[n]);n++;
         Speed = float.Parse(data[n]) * GameSettings.BaseSpeed;n++;
-        Debug.Log(data[n]);
         Damage = int.Parse(data[n]);n++;
         TurnSpeed = GameSettings.BaseTurn * float.Parse(data[n]);n++;
         Size = float.Parse(data[n]);n++;

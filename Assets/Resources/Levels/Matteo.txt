@@ -8,3 +8,14 @@ x                 x
 x      =   xxxxxxxx
 x            G    x
 xxxxxxxxxxxxxxxxxxx
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x                                       x
+x   P      xxxxxxxxxxxx      G      G   x
+x          xxxxxxxxxxxx                 x
+x                              G        x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxx           x
+                  x         x           x
+                  x         x      =    x
+                  x                     x
+                  xxxxxxxxxxxxxxxxxxxxxxx
