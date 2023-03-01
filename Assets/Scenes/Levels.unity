@@ -339,7 +339,13 @@ PrefabInstance:
     - target: {fileID: 5414933748289262411, guid: d0facc5ccca58f742a8e3532c2d3ee42,
         type: 3}
       propertyPath: Creator
-      value: Hailey
+<<<<<<< HEAD
+      value: Kevin
+=======
+<<<<<<< HEAD
+      value: Isaias
+=======
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6979882516066568915, guid: d0facc5ccca58f742a8e3532c2d3ee42,
         type: 3}
@@ -380,6 +386,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+>>>>>>> fb5330794b87ba76a350ebd85472af107ab97456
+>>>>>>> dc70f190f36def370abbb731e12fbaaa2aa5644c
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0facc5ccca58f742a8e3532c2d3ee42, type: 3}
