@@ -1,0 +1,68 @@
+                 xxxxxxxxxxxxxxx
+             xxxx               xxxx
+           xx           P           xx
+          x                           x
+         x    G                        x
+         x                             xxxxxx
+   xxxxxxxxxxxxxxxxxx                  x     x
+ xxE                 xx                !      x
+x                      x               x      x
+x =                    @       b       x  G   x
+x                      x               x      x
+ xx                  xx                x  G   x
+   xxxxxxxxxxxxxxxxxx                  x      x
+         x                  R     R    x  G   x
+         x   O                         x      x
+         x                             x  G   x
+         x              Y              x      x
+         x                             x      x
+         x                             x  2  x
+         x                             x  xxx
+         x           W     W           xxx
+         x                             x
+         x          xxxxxxxxx     A    x
+         x         x         x         x 
+         x         x         x         x 
+         x         x         x         x 
+         x         x         x         x 
+         x         x         x         x 
+         x         x         x         x 
+         x Y     Y x         x         x 
+         x    I    x         x         x 
+          x   1   x           x   +   x 
+           xxxxxxx             xxxxxxx
+
+XXXXXXXXXXXXXXXXXXXXXXXX
+XP         G          OX
+X >>>>>>>>>>>>>>>>>>>v X
+X ^        b        Yv X
+X ^<<<<<<<<<<<<<<<<< v X
+X          G       ^ v X
+XXXXXXXXXXXXXXXXXX ^ v X
+XO         G       ^ v X
+X >>>>>>>>>>>>>>>>>^ v X
+X ^Y       b         v X
+X ^ <<<<<<<<<<<<<<<<<< X
+X ^ v      G          OX
+X ^ v XXXXXXXXXXXXXXXXXX
+X ^ v      G          OX
+X ^ >>>>>>>>>>>>>>>>>v X
+X ^        b        Yv X
+X ^<<<<<<<<<<<<<<<<<<<<X
+XO         G          =X
+XXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 X
+X|||||||||||||||||||||||||||||||||||||||||||||||X
+X    Y    Y    Y    Y    Y    Y    Y    Y    Y  X
+X                                               X
+X         E                        E            X
+X P                                            =X
+X                        E                      X
+X                                               X
+X    Y    Y    Y    Y    Y    Y    Y    Y    Y  X
+X|||||||||||||||||||||||||||||||||||||||||||||||X
+X 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
