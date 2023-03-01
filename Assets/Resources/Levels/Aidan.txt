@@ -21,11 +21,11 @@ x             x        R    x                              x
 xxxxxxx@xxxxxxxxxxxxx  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 x             x             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 x             x   +       Y x          O                x               x
-xxx           x             x    R             R        x      +        x
-xR         xxxx             x                                       +   x
-x             x             x                       1   x     +         x
-x           R x  R                                      x         +     x
-xxxxx   xxxxxxxxxxxxxxxxxxxxx          R         Y      x    +          x
+xxx           x             x    R             R        x               x
+xR         xxxx             x                                  +        x
+x             x             x                       1   x               x
+x           R x  R                                      x               x
+xxxxx   xxxxxxxxxxxxxxxxxxxxx          R         Y      x               x
 x             x             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 x     E       x
 x         l   x
