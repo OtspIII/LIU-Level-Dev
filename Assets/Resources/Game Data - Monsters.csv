@@ -38,9 +38,8 @@ Cesar,Red,Charger,1,1,1,1,2,0,0,0,0,1,0,9,0
 Cesar,Yellow,Shooter,1,0.1,1,1,1,1,15,10,0,1,0,9,0
 Cesar,Green,Charger,10,2.7,0,1,2,0,0,0,0,2,3,9,0
 Cesar,Purple,Shooter,3,1.7,1,1,1,0.05,3,9.5,40,1,2,9,2
-Aidan,Player,Player,10,4.5,3,2,1,0.2,10,2.5,20,1,1,10,0
+Aidan,Player,Player,20,4,2,2,1,0.2,10,5,20,1,1,10,0
 Aidan,Red,Charger,4,1.5,3,1,2,1,4,6,0,1,1,10,1
 Aidan,Yellow,Shooter,2,0.5,2,1,1,1,10,8,22,1,1,15,0
 Aidan,Orange,Leaper,6,2,2,1,1,1,10,6,15,1,1,10,0
-Aidan,Ebony,Charger,18,3,6,0.5,3,1.5,20,5,20,5,5,15,4
-Aidan,Pink,Charger,10,4,5,2,2.5,2,20,10,20,2,8,20,2
+Aidan,Ebony,Charger,25,2,6,0.5,3,1.5,20,5,20,10,10,15,4
