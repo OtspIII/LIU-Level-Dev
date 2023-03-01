@@ -1,8 +1,11 @@
 {
   "dependencies": {
-<<<<<<< HEAD
     "com.unity.collab-proxy": {
-      "version": "1.17.2",
+<<<<<<< HEAD
+      "version": "1.17.7",
+=======
+      "version": "1.15.18",
+>>>>>>> df8d7d4789af3d07d0302de5f6edb640dfec8ede
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -18,7 +21,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
+<<<<<<< HEAD
+      "version": "3.0.17",
+=======
       "version": "3.0.15",
+>>>>>>> df8d7d4789af3d07d0302de5f6edb640dfec8ede
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -27,7 +34,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
+<<<<<<< HEAD
+      "version": "2.0.17",
+=======
       "version": "2.0.16",
+>>>>>>> df8d7d4789af3d07d0302de5f6edb640dfec8ede
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -42,6 +53,14 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
+    "com.unity.services.core": {
+      "version": "1.0.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.unitywebrequest": "1.0.0"
+=======
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",
       "depth": 2,
@@ -50,18 +69,23 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.core": {
-      "version": "1.4.2",
+      "version": "1.4.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.unitywebrequest": "1.0.0",
         "com.unity.nuget.newtonsoft-json": "3.0.2",
         "com.unity.modules.androidjni": "1.0.0"
+>>>>>>> df8d7d4789af3d07d0302de5f6edb640dfec8ede
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
+<<<<<<< HEAD
+      "version": "1.1.33",
+=======
       "version": "1.1.31",
+>>>>>>> df8d7d4789af3d07d0302de5f6edb640dfec8ede
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -71,8 +95,6 @@
       },
       "url": "https://packages.unity.com"
     },
-=======
->>>>>>> dc70f190f36def370abbb731e12fbaaa2aa5644c
     "com.unity.textmeshpro": {
       "version": "3.0.6",
       "depth": 0,
@@ -83,7 +105,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
+<<<<<<< HEAD
+      "version": "1.4.8",
+=======
       "version": "1.6.4",
+>>>>>>> df8d7d4789af3d07d0302de5f6edb640dfec8ede
       "depth": 0,
       "source": "registry",
       "dependencies": {
