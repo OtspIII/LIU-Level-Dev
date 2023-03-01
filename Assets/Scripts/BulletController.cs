@@ -47,7 +47,7 @@ public class BulletController : ThingController
     private void OnCollisionEnter2D(Collision2D other)
     {
         CharController c = other.gameObject.GetComponent<CharController>();
-        if (c)
+        if (c && !c.BulletImmune)
         {
             if (!c.Tile || Shooter.Color == MColors.Player)
             {

@@ -1,0 +1,37 @@
+xxxxxxxxxxxxxxxxxxxxxx
+x          Y         x
+x                    x
+x                    x
+x          G         x
+x                    x
+x                    x
+x   R       P      I x
+xxxxxxxxxxxxxxxxxxxxxx
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x  I         R        x  G  x           
+x              O      x  G  xxxx           
+x        G             b    =  x        
+x                     x  G  xxxx        
+x               G     x  G  x           
+x      Y       xxxxxxxxxxxxxx
+x              x
+x  G         G x
+x              x
+x              x
+x       P      x
+x              x
+xxxxxxxxxxxxxxxx
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    
+x       O                                           x
+x|||||||||||||||||||||||||||||||||||||||||||||||||||x       
+x                               R                   x
+x      P            G                               x
+x                                                 = x
+x|||||||||||||||||||    I               G   Y       x
+x        O         |||||||||||                      x
+xxxxxxxxxxxxxxxx             |||||||||||||||||||||||x
+                x                   Y               x
+                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                
