@@ -41,6 +41,7 @@ ExportedObj/
 *.pdb
 *.mdb
 *.opendb
+*.dwlt
 *.VC.db
 
 # Unity3D generated meta files
@@ -64,3 +65,5 @@ ProjectSettings/ProjectVersion.txt
 Packages/
 ProjectSettings/EditorBuildSettings.asset
 ProjectSettings/EditorBuildSettings.asset~1425f4505d14f227b7878c021bf43ddcae994949
+UserSettings/Layouts/
+UserSettings/
