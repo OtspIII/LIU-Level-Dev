@@ -53,7 +53,7 @@ Matteo,Yellow,Leaper,12,2,4,1.5,2,1,20,10,10,2,0,15,2
 Matteo,Green,Charger,3,6,2,0.01,1.5,1,0.5,30,5,1,0,30,0
 Matteo,Orange,Charger,18,1.5,5,3,2.5,1,12,5,10,3,0,40,4
 Matteo,Ebony,Shooter,9,3.5,4,3,1.5,1,15,10,5,3,0,40,2
-Isaias,Player,Player,10,2,1,2,1,1,15,10,20,1,0,20,1
+Isaias,Player,Player,10,2,2,2,1,0.2,15,10,20,1,0,20,1
 Isaias,Red,Shooter,5,2,1,2,1.5,1,15,10,20,1,0,20,1
 Isaias,Blue,Leaper,8,3,2,3,1.5,2,20,12,25,2,0,25,3
 Isaias,Ebony,Charger,10,1,5,1,2.5,0.5,15,5,10,5,0,15,5
