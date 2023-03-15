@@ -63,7 +63,7 @@ x ^ v xxxxxxxxxxxxxxxxxx
 x ^ v      G          Ox
 x ^ >>>>>>>>>>>>>>>>>v x
 x ^        b        Yv x
-x ^<<<<<<<<<<<<<<<<<<<<x
+x ^<<<<<<<<<<<<<<<<<<< x
 xO         G          =x
 xxxxxxxxxxxxxxxxxxxxxxxx
 
