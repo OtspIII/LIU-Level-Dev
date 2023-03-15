@@ -57,6 +57,7 @@ public class LevelManager : GameManager
         {
             Datas.Add(json.name,new Dictionary<char, JSONData>());
             JSONTemp[] j = JsonHelper.FromJson<JSONTemp>(json.text);
+            
             foreach (JSONTemp t in j)
             {
                 //Debug.Log("X: " + json.name + " / " + t.Symbol);

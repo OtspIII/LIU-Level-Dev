@@ -89,6 +89,8 @@ public class ThingController : MonoBehaviour
         {
             gameObject.layer = data.Layer;
         }
+
+        if (data.StartOff) gameObject.SetActive(false);
     }
 
     private void OnDestroy()

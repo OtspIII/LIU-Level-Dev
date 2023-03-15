@@ -274,6 +274,7 @@ public class GameManager : MonoBehaviour
 
     public void Toggle(string tag)
     {
+        // Debug.Log("GM TOGGLE: " + tag);
         if(Tags.ContainsKey(tag))
             foreach(ThingController t in Tags[tag])
                 t.gameObject.SetActive(!t.gameObject.activeSelf);
