@@ -5,6 +5,7 @@
 {"Type":"Enemy", "Symbol":"Y", "Color":"Yellow","Audio": "Yell"},
 {"Type":"Enemy", "Symbol":"I", "Color":"Pink"},
 {"Type":"Enemy", "Symbol":"O", "Color":"Orange"},
+  {"Type":"Enemy", "Symbol":"0", "Color":"Orange", "Drop": "1"},
 {"Type":"Enemy", "Symbol":"B", "Color":"Blue"},
 {"Type":"Enemy", "Symbol":"U", "Color":"Purple"},
 {"Type":"Enemy", "Symbol":"W", "Color":"White"},
