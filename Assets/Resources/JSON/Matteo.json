@@ -38,5 +38,9 @@
 {"Type":"Health", "Symbol":"+","Amount":100,"Audio": "Heal"},
 {"Type":"Goal", "Symbol":"="}, 
 {"Type":"WallEnemy", "Symbol":"|"}, 
-{"Type":"Destructable", "Symbol":"s","Color":"WallWhite","Amount":1, "Special": "BulletImmune"}
+{"Type":"Destructable", "Symbol":"s","Color":"WallWhite","Amount":1, "Special": "BulletImmune"},
+{"Type":"Event", "Symbol":"H","Sprite":"Hi","Color":"Purple","Text":"Keep going, just get out! ;)","Audio":"Yell"},
+{"Type":"Event", "Symbol":"z","Sprite":"Hi","Color":"Purple","Text":"Don't look back! ;)","Audio":"Yell"},
+{"Type":"Event", "Symbol":"Z","Sprite":"Hi","Color":"Purple","Text":"Tight halls, watch out. ;)","Audio":"Yell"},
+{"Type":"Event", "Symbol":"L","Sprite":"Hi","Color":"Purple","Text":"Quick! You're out in the open! ;)","Audio":"Yell"}
 ]}

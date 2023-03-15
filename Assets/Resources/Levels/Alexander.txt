@@ -1,0 +1,123 @@
+
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  x                      x  =  x
+  x                      x  R  x
+  x          G           x     x
+  x                      x     x
+xxx                      x     x
+x+!P         7   I    Y A      x
+xxx                      x     x
+  x                      x     x
+  x          G           x     x
+  x                      xxx!xxx
+  x                      x  +  x
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+                 xxxxxxxxxxxxxxx
+             xxxx               xxxx
+           xx           P           xx
+          x                           x
+         x    G                        x
+         x                             xxxxxx
+   xxxxxxxxxxxxxxxxxx                  x b   x
+ xxE                 xx                !      x
+x                      x               x      x
+x =                    @       b       x  G   x
+x                      x               x      x
+ xx                  xx        Y       x  G   x
+   xxxxxxxxxxxxxxxxxx                  x      x
+         x                  R     R    x  U   x
+         x   O                         x      x
+         x                             x  G   x
+         x              Y              x      x
+         x                             x  Y   x
+         x                             x  2  x
+         x                             x  xxx
+         x           W     W           xxx
+         x                             x
+         x          xxxxxxxxx     A    x
+         x         x         x         x 
+         x         x         x         x 
+         x         x         x         x 
+         x         x         x         x 
+         x         x         x         x 
+         x         x         x         x 
+         x Y     Y x         x         x 
+         x    I    x         x         x 
+          x   1   x           x   +   x 
+           xxxxxxx             xxxxxxx
+
+xxxxxxxxxxxxxxxxxxxxxxxx
+xP         G          Ox
+x >>>>>>>>>>>>>>>>>>>v x
+x ^        b        Yv x
+x ^<<<<<<<<<<<<<<<<< v x
+x                  ^ v x
+xxxxxxxxxxxxxxxxxx ^ v x
+xO         G       ^ v x
+x >>>>>>>>>>>>>>>>>^ v x
+x ^Y       b         v x
+x ^ <<<<<<<<<<<<<<<<<< x
+x ^ v      G          Ox
+x ^ v xxxxxxxxxxxxxxxxxx
+x ^ v      G          Ox
+x ^ >>>>>>>>>>>>>>>>>v x
+x ^        b        Yv x
+x ^<<<<<<<<<<<<<<<<<<<<x
+xO         G          =x
+xxxxxxxxxxxxxxxxxxxxxxxx
+
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  x  Y          Y          Y          Y        Y  x
+  x|||||||||||||||||||||||||||||||||||||||||||||||x
+  x                                               x
+  x             E                               A x
+xxx                                 E             x
+x=!+P                                           +1x
+xxx                       E                       x
+  x                                             A x
+  x                                               x
+  x|||||||||||||||||||||||||||||||||||||||||||||||x
+  x  Y          Y          Y          Y        Y  x
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+                 xxx
+                 x=x
+                 x#x
+                 x@x
+           xxxxxxx!xxxxxxx
+           x+     P     +x
+           xxxxxxx xxxxxxx
+                 x x
+                 x x
+                 x x
+                 x x
+                 x x
+                 x x
+                 x x
+                 x x
+                 x x
+                 x x
+                 x x
+                 x x
+                 x x
+xxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxx
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+x                                   x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
