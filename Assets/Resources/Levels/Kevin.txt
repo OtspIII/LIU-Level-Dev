@@ -1,37 +1,48 @@
-xxxxxxxxxxxxxxxxxxxxxx
-x          Y         x
-x                    x
-x                    x
-x          G         x
-x                    x
-x                    x
-x   R       P      I x
-xxxxxxxxxxxxxxxxxxxxxx
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-x  I         R        x  G  x           
-x              O      x  G  xxxx           
-x        G             b    =  x        
-x                     x  G  xxxx        
-x               G     x  G  x           
-x      Y       xxxxxxxxxxxxxx
-x              x
-x  G         G x
-x              x
-x              x
-x       P      x
-x              x
-xxxxxxxxxxxxxxxx
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    
-x       O                                           x
-x|||||||||||||||||||||||||||||||||||||||||||||||||||x       
-x                               R                   x
-x      P            G                               x
-x                                                 = x
-x|||||||||||||||||||    I               G   Y       x
-x        O         |||||||||||                      x
-xxxxxxxxxxxxxxxx             |||||||||||||||||||||||x
-                x                   Y               x
-                xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                
+xxxxxxxxxxxxxxxxxxxx      
+x l l l l l l l l lx
+x                  x
+x    P             x 
+x                  x 
+x l l l l l l      x 
+xxxxxxxxxxxxx      x 
+            x      x 
+            x      xxxxxxxxxxxxxxxxxx 
+            x      l            x   x
+            x          l        ! =  x
+            x   l               x   x
+            xxxxxxxxxxxxxxxx    xxxxx
+                           x    x
+                           x    x
+                           x    xxxxxxx
+                           x        0 x  
+                           x          x  
+                           x          x 
+                           x       1  x  
+                           xxxxxxxxxxxx
+                           
+l l l l l l l l l l l l l l l l l l l l
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x   O                 I             O  x        
+x                               R      xxxxxx
+x           P           R              !  = x 
+x                                      xxxxxx
+x   O            G                   0 x 
+xxxxxxxxxxxdddxxxxxxxxxxxxdddxxxxxxxxxxx
+l l l l l l   l l l l l  l    l l l l 
+          x + x          x + x 
+          xxxxx          xxxxx  
+          
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    
+x G G       x       llllll         x 
+x G G               llllllllll  O  x
+x G G    P  h       llllllllll     x
+x G G                        llllllxxxxxxxxxxxxxxxxxxxxxxx
+x G G       x       llllll    lllllllllllllllllllllllllllx
+xxxxxxxxxxxxxxxxxxxxxlllllll      G    llllllllllllllllllx
+                    x    lllllllllll           G         x    
+                    x   lllllll                 x        =x
+                    x           lllllllllll    x         x
+                    x           llllllllllll             x
+                    x  O   llllllllllllllllllllllllllllllx  
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                       
