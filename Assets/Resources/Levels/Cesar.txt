@@ -77,54 +77,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   xxxxxxxx
       x@@@@@@@@@@@@@@@@x
       x       =        x
       xxxxxxxxxxxxxxxxxx
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-        
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-             
+
 xxxxxxxxxxxxxxxxxxxxxxxxxx 
     xxxxx                xxxxx
     x   |                |   x      
@@ -141,7 +94,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxx
          x b x     x                               x                 I   x
          x   x     x                               xxxxxxxx     xxxxxxxxxx
     xxxxxxx@xx!!!!!x                                      x     x
-    x          1   xxxxxxxxxx          xxxxxxxxxxxxxxxxxxxx     x
+    x              xxxxxxxxxx          xxxxxxxxxxxxxxxxxxxx     x
     x          P   ccccc  + x          x                        x
     x    xxxxxxxxxxxxxxxxxxxx          x                        x 
     x    x                             x         xxxxxxxxxxxxxxxx
