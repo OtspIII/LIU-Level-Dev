@@ -43,5 +43,6 @@
 {"Type":"Enemy", "Symbol":"K", "Color":"Ebony", "Drop": "2", "Audio": "Punch"},
 {"Type":"Enemy", "Symbol":"?", "Color":"Red", "Drop": "+", "Audio": "Swallow"},
 {"Type":"Enemy", "Symbol":"_", "Color":"Orange", "Drop": "*", "Music": "Never"},
-{"Type":"Destructable", "Symbol":"/","Color":"WallWhite","Amount":2}
+{"Type":"Destructable", "Symbol":"/","Color":"WallWhite","Amount":2},
+  {"Type":"Health", "Symbol":"*","Amount":10}
 ]}
