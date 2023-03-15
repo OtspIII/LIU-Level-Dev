@@ -202,6 +202,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -280,6 +281,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 949174140055783126, guid: 37b0c1e4b62f7714a818c1ec22a32f47,
+        type: 3}
+      propertyPath: JSON.Symbol
+      value: 448
+      objectReference: {fileID: 0}
     - target: {fileID: 949174140055783127, guid: 37b0c1e4b62f7714a818c1ec22a32f47,
         type: 3}
       propertyPath: m_Name
@@ -357,7 +363,7 @@ PrefabInstance:
     - target: {fileID: 1288036201253720395, guid: a0ef24ae16209dd4383d356445531c8b,
         type: 3}
       propertyPath: Creator
-      value: Misha
+      value: Alexander
       objectReference: {fileID: 0}
     - target: {fileID: 1288036201253720396, guid: a0ef24ae16209dd4383d356445531c8b,
         type: 3}
