@@ -19,7 +19,7 @@ xxxxxxxxxxxxx      x
                            x          x 
                            x       1  x  
                            xxxxxxxxxxxx
-                           
+
 l l l l l l l l l l l l l l l l l l l l
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 x   O                 I             O  x        
@@ -31,7 +31,7 @@ xxxxxxxxxxxdddxxxxxxxxxxxxdddxxxxxxxxxxx
 l l l l l l   l l l l l  l    l l l l 
           x + x          x + x 
           xxxxx          xxxxx  
-          
+
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    
 x G G       x       llllll         x 
 x G G               llllllllll  O  x
