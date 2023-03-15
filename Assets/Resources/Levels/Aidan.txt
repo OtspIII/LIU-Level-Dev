@@ -2,7 +2,7 @@
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 x   O         x      O                                     x                               
 x                           x             x                x
-x                                  R      x      _     P   x
+x                                  R      x   _      P     x
 x             x             x             x                x
 x  O          x       O                                    x
 xxxxx     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
