@@ -1,10 +1,68 @@
-xxx
-xPx        lll
-xhx        xxll
-x l        llll
-x(x        l l
-x)xxxxxx
-x     `x
-x xxxxxx
-x=x
-xxx
+xxxxx     xxxxx
+x   xxxxxxx   x
+x P   h !   = x                                xxxxxxxxxxx          lll
+x   xxx xxx   x                                x      ) (x          xxll
+xxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxx          llll
+      x sb    <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< x             l l 
+      x xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx x
+      x x                  x             x          x x
+      x x                  x xxxxxx      x          x x
+   xxxx xxxxxxx            x x    x      x          x x
+   x          xxxxxx       x x    x Y  Y x          x x
+   x       O       x   xxxxx xxxxxx      x          x x
+   x Y        xxxx x   x         xx B  2 x          x x
+   xxxxxxxxxxxx  x x   x    Y    xxxxxxxxx          x x
+                 x x   x         x       xxxxxxxxxxxx x
+                 x xxxxx  x      x       xl      B xx x
+                 x        xllllllx       x      |||xx x
+                 xxxxxxx  x      x       x            x
+                       x         xxxxxxxxx            x
+                       x    O     h@    +>  x    | ;  x
+                       x         xxxxxxxxx            x
+                       xxxxxxxxxxx       x            x
+                                         x      |||xxxx
+                                         xl      B x
+                                         xxxxxxxxxxx
+
+                           xxxxxxxxxxxxxxxxx           lll
+                           x           x  (x           xxll
+                           x  Y         )+ x           llll
+                           x           x   x           l l 
+xxxxx             xxxxxxxxxx     xxxxx xxxxxx
+x   x             x              |          xxx
+x P x             x xxxxxxxx     |  O         x
+x   x     xxxxxxxxx xxx    x     |          x x
+xx xx     xlll        x    xxxxxxxxxxxxxxxxxx x
+ x x      xl      R   x    x             x  x x              xxxxxxx
+ x x      x  O        x    x      B      xxxx x              x     x
+ x xxxxxxxx          lx    x   R              x              x  O  x
+ x                 lllx  xxx             xxxxxx        xxxxxx|||||||xxxxxx
+ xxxxxxxxxxxxxxxxxxxxxx  x    O          x             xll             llxxxxx
+                         x xxxxxxxxxxxxxxx             x                 x   x
+                         x xxxxxxxxxxxxxxxxxxxxxxxxxxxxx        B    ;   ! = x
+                         x >>>>>>>>>>>>>>>>>>>>>>>>>>>>>                 x   x
+                         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                 xxxxx
+                                                       xxxxxxxxxxxxxxxxxxx
+
+                                      xxxxxxxxxxxxxxxxxxxxxxx
+                                      x                     x
+          xxxxxxxxx                   x        x   x        x   xxxxx
+          x       x                   x        x   x        xxxxx   x
+          x x|||x x                   x   B    x ; x    B  h!     = x
+xxxxx     x x + | x                   x        xxxxx        xxxxx   x
+x   xxxxxxx x O | x                   x          O          x   xxxxx
+x P         x   | x                   x                     x
+x   xxxxxxxxxx xx x         xxxxxxxxxxx          s          x
+xxxxx        x    x         x    +    xxxxxxxxxxx^xxxxxxxxxxx
+             x xxxx         x xxxxxxx x         x x
+             x x            x xxxxxxx xxxx      x x
+             x x            x |   |      xxxxxxxx x
+             x x            x | O |      sssssxxx x
+       xxxxxxx xxxxxxx      x |   |      sssss    x
+       x B         B x      x | O |      sssssxxxxx
+       x      l      x      x |   |      xxxxxx
+       x      x      xxxxxxxx xxxxxxxxsxxx
+       x      R               x      x)x
+       x             xxxxxxxxxx      x x
+       xxxxxxxxxxxxxxx               x(x
+                                     xxx
