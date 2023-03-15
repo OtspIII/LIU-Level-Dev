@@ -35,3 +35,49 @@ xxxxxxxxxxxxxxxx             |||||||||||||||||||||||x
                 x                   Y               x
                 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                 
+xxxxxxxxxxxxxxxxxxxx      
+x l l l l l l l l lx
+x                  x
+x    P             x 
+x                  x 
+x l l l l l l      x 
+xxxxxxxxxxxxx      x 
+            x      x 
+            x      xxxxxxxxxxxxxxxxxx 
+            x      l            x   x
+            x          l        ! =  x
+            x   l               x   x
+            xxxxxxxxxxxxxxxx    xxxxx
+                           x    x
+                           x    x
+                           x    xxxxxxx
+                           x        0 x  
+                           x          x  
+                           x          x 
+                           x       1  x  
+                           xxxxxxxxxxxx
+                           
+l l l l l l l l l l l l l l l l l l l l
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x   O                                  x        
+x                               R      xxxxxx
+x           P           R              !  = x 
+x                                      xxxxxx
+x   O                               O  x 
+xxxxxxxxxxxdddxxxxxxxxxxxxdddxxxxxxxxxxx
+l l l l l l   l l l l l  l    l l l l 
+          x + x          x + x 
+          xxxxx          xxxxx  
+          
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    
+x G G       x       llllll         x 
+x G G               llllllllll  O  x
+x G G    P  h       llllllllll     x
+x G G                        llllllxxxxxxxxxxxxxxxxxxxxxxx
+x G G       x       llllll    lllllllllllllllllllllllllllx
+xxxxxxxxxxxxxxxxxxxxxlllllll      G    llllllllllllllllllx
+                    x    llllllllllll           G       =x
+                    x           lllllllllllllllllllllllllx
+                    x  O   llllllllllllllllllllllllllllllx  
+                    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                       
