@@ -42,6 +42,6 @@
 {"Type":"Enemy", "Symbol":"N", "Color":"Pink", "Drop": "1", "Audio": "REEEE"}, 
 {"Type":"Enemy", "Symbol":"K", "Color":"Ebony", "Drop": "2", "Audio": "Punch"},
 {"Type":"Enemy", "Symbol":"?", "Color":"Red", "Drop": "+", "Audio": "Swallow"},
-{"Type":"Enemy", "Symbol":"_", "Color":"Orange", "Drop": "++", "Music": "Never"},
+{"Type":"Enemy", "Symbol":"_", "Color":"Orange", "Drop": "*", "Music": "Never"},
 {"Type":"Destructable", "Symbol":"/","Color":"WallWhite","Amount":2}
 ]}
