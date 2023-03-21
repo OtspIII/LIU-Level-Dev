@@ -1,4 +1,7 @@
-{"Items":[
+{
+  "OneWayToggles": [],
+  "BGColor": "",
+  "Items":[
 {"Type":"Player", "Symbol":"P"},
 {"Type":"Enemy", "Symbol":"G", "Color":"Green"},
 {"Type":"Enemy", "Symbol":"R", "Color":"Red"},
@@ -12,7 +15,7 @@
 {"Type":"Enemy", "Symbol":"T", "Color":"Tan"},
 {"Type":"Enemy", "Symbol":"A", "Color":"Algea"},
 {"Type":"Enemy", "Symbol":"S", "Color":"Slate"},
-{"Type":"Wall", "Symbol":"x","Tag": "ABC"},
+{"Type":"Wall", "Symbol":"x","Tag": "ABC","StartOff": true},
 {"Type":"Floor", "Symbol":" "},
 {"Type":"Lava", "Symbol":"l"},
 {"Type":"ConveyorL", "Symbol":"<"},
@@ -26,7 +29,7 @@
 {"Type":"Key3", "Symbol":"3"},
 {"Type":"Door3", "Symbol":"#"},
 {"Type":"Event", "Symbol":"h","Sprite":"Hi","Color":"Purple","Text":"And that's how it all\nhappened! ;)","Audio":"Yell"},
-  {"Type":"Event", "Symbol":"$","Sprite":"Hi","Color":"Purple","Tag": "ABC"},
+  {"Type":"Event", "Symbol":"$","Sprite":"Hi","Color":"Purple","Toggle": "ABC"},
 {"Type":"Destructable", "Symbol":"d","Color":"WallWhite","Amount":3}, 
 {"Type":"DestructableE", "Symbol":"e","Color":"WallWhite","Amount":3},
 {"Type":"Bomb", "Symbol":"b","Color":"Pink","Size":0.5,"Drop":"~"},
