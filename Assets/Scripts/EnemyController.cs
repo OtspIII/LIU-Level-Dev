@@ -37,7 +37,7 @@ public class EnemyController : CharController
         {
             PlayerController pc = GameManager.Me.PC;
 //            Debug.Log("DIST: " + Vector2.Distance(transform.position,pc.transform.position) + " / " + Data.VisionRange);
-            if(pc.Moved && Vector2.Distance(transform.position,pc.transform.position) < Data.VisionRange)
+            if(PlayerController.Moved && Vector2.Distance(transform.position,pc.transform.position) < Data.VisionRange)
                 Activate();
         }
         if (Active)
