@@ -8,17 +8,19 @@ using Random = UnityEngine.Random;
 
 public class EnemyController : CharController
 {
-    public PlayerController Target;
+    public CharController Target;
     public float Rotation;
     public bool Active = false;
     public float Windup = 0;
     public float Leaping = 0;
     public Vector2 LeapStart;
+    public NPCTeam Team = NPCTeam.Enemy;
     
     
     public override void OnStart()
     {
-        GameManager.Me.Enemies.Add(this);
+        if(Team ==NPCTeam.Enemy)
+            GameManager.Me.Enemies.Add(this);
         GameManager.Me.AllEnemies.Add(this);
     }
 
@@ -42,6 +44,30 @@ public class EnemyController : CharController
         }
         if (Active)
         {
+            if (Team == NPCTeam.Friendly)
+            {
+                if (Target != null && !Target.Alive) Target = null;
+                if (Target == null)
+                {
+                    EnemyController best = null;
+                    float dist = 9999;
+                    foreach (EnemyController ec in GameManager.Me.Enemies)
+                    {
+                        if (ec.Team != NPCTeam.Enemy) continue;
+                        float d = Vector3.Distance(transform.position, ec.transform.position);
+                        if (d < dist)
+                        {
+                            best = ec;
+                            dist = d;
+                        }
+                    }
+
+                    if (best != null) Target = best;
+                    else Team = NPCTeam.Asleep;
+                }
+            }
+
+            if (Target == null) return;
             float speed = Data.Speed;
             if (Leaping <= 0)
             {
@@ -110,14 +136,30 @@ public class EnemyController : CharController
 
     }
 
-    
+    public override void ApplyJSON(JSONData data)
+    {
+        base.ApplyJSON(data);
+        if (data.Special == "Friendly")
+        {
+            Team = NPCTeam.Friendly;
+            Player = true;
+            gameObject.layer = 8;
+            
+        }
+    }
 
     public void Activate()
     {
-        Target = GameManager.Me.PC;
+        
         Active = true;
-        Rotation = Mathf.Atan2(transform.position.y - Target.transform.position.y, transform.position.x - Target.transform.position.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0,0,Rotation);
+        if (Team == NPCTeam.Enemy)
+        {
+            Target = GameManager.Me.PC;
+            Rotation = Mathf.Atan2(transform.position.y - Target.transform.position.y,
+                transform.position.x - Target.transform.position.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, Rotation);
+        }
+
         BulletCooldown = Random.Range(0, Data.AttackRate);
     }
 
@@ -150,4 +192,12 @@ public class EnemyController : CharController
         }
     }
 
+}
+
+public enum NPCTeam
+{
+    None,
+    Enemy,
+    Friendly,
+    Asleep
 }
