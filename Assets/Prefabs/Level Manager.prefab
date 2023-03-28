@@ -49,17 +49,9 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -313,7 +305,7 @@ Transform:
   m_Children:
   - {fileID: 421487505}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5414933748289262411
 MonoBehaviour:
@@ -402,6 +394,10 @@ MonoBehaviour:
     B: {fileID: 2389858591894242166, guid: 38fac8fc128a30b4bbc3dacf771a3f0e, type: 3}
   - A: 28
     B: {fileID: 8532405833318292050, guid: 7a1ce65126a6fbe4db2466ddc25aeaf9, type: 3}
+  - A: 29
+    B: {fileID: 4723774266153971020, guid: bf27864c140470240b6865fd6f022b96, type: 3}
+  - A: 30
+    B: {fileID: 2783120775443630845, guid: 23f941edddd9fb84f9fa1b3ffbc678c6, type: 3}
 --- !u!82 &1444854468155545558
 AudioSource:
   m_ObjectHideFlags: 0
