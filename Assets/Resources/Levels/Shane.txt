@@ -83,22 +83,22 @@ x                                                                               
 
         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         x l    Y      l                      x
-        x   l                          |O 1  x
+        x   l                           O  1 x
         x                  R    l            x
-        x  B      xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        x       l x                          x
-xxxxxxxxx      l  x                          x
-x |  |  xxxxx xxxxx                          x
-x     | x       d+x                          x
-x       >       xxx                          x
-x| P    >       !@>                  G       x
-x       >       xxx                          x
-x|   |  x       d+x                          x
-x ||   |xxxxx xxxxx                          x
-xxxxxxxxx      l  x                          x
-        x         x                          x
-        xll     B xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        x             R        l             x
-        x   Y                         |O  2  x
-        x             l                      x
+        x  B         l                   l   x
+        x       l xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxx      l  xlll                       x
+x |  |  xxxxx xxxxxll    Y       $     Y     x
+x     | x       d+xl                         x
+x       >       xxx     $     B              x
+x| P    >       !@>            +     G     $ x
+x       >       xxx     $     B              x
+x|   |  x       d+xl                         x
+x ||   |xxxxx xxxxxll    Y       $     Y     x
+xxxxxxxxx      l  xlll                       x
+        x         xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xll     B          l                 x
+        x             R        l        O    x
+        x   Y                              2 x
+        x             l              l       x
         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
