@@ -1,21 +1,117 @@
-xxxxxxxxxxxxxxxxxxx
-x                 x
-x    P            x
-x                 x
-xxxxxxxxxxx       x
-x                 x
-x                 x
-x      =   xxxxxxxx
-x            G    x
-xxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x P    H              xxxxxxxxxxxx                                  x
+x   xxxxxxxxxxxxx                                                   x
+x   xxxxxxxxxxxxx   xxx                                             x
+x   xxxxxxxxxxxxx     xxxxxxxxx                 R                   x
+x                                                                   x
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                      xxxxxxxxxxxxxxxxxxxxxxx
+                             x                                      xxxxxxxxxxxxxxxxxxxxxxx
+                             x	 			                                    x
+                             x                      R                                     x
+                             x                                                            x
+                             x                                                            x
+                             x                                     R                  =   x
+                             x                                                            x
+                             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-x                                       x
-x   P      xxxxxxxxxxxx      G      G   x
-x          xxxxxxxxxxxx                 x
-x                              G        x
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx           x
-                  x         x           x
-                  x         x      =    x
-                  x                     x
-                  xxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x                              x
+x    P                         x
+x                              x
+x                              X 
+x                              X
+x                              X
+x                              XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+x                                z                 R               X
+x                                         R                 R      X
+x                  R   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx             X
+x                      xxxxxxxxxxxxxxxxxxxxxxxxxx    x       =     X
+xxxxxxxxxxxxxxxxxxxxxxxxxxxx                         xXXXXXXXXXXXXXX
+
+
+XXXXXXXX
+X      X
+X P    X
+X      X
+X      X
+X      X                                               XXXXXX
+X      X                                               X  = X
+X      XXXXXXXXXXXXXXXXXXXXXXXXXXX                     X  R X
+X         Z      R               X                     X    X
+X                                X                     X    X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX     X                     X    X
+                           X     X                     X    X
+                           X     XXXXXXXXXXXXXXXXXXXXXXX    XXXXXXXXXX
+                           X                                         X
+                           XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   R X
+                                                               X     X
+                                                               X     X
+                                                               X     X
+                                                               X     XXXXXXXXXXXXXXXXXXXXX
+                                                               X                     R   X
+                                                               XXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+X          X =                                                            X
+X   P      X                                                              X
+X          XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX        X
+X                                                                X        XXXXXXXXXXXXXXXXXXXXXXX
+X     L                                                    R     X                              X
+X                                                                X                              X
+X                                                           R    XXXXXXXXXXXXXXXXXXX            X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                         X                 X            X
+X                                                                X         R       X            X
+X             R                                                  X                 X            X
+X                                                                X                 X            X
+X         R  R                                                   X                         R    X
+X                                                                X                              X
+X        R                                                                                      X
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+XXXXXXXXXXXX
+X          X
+X     P    X
+X          X
+X          X
+X          X
+X          X
+X          X   
+X          X      
+X          X        
+X          X             
+X          X           
+X          X           
+X          X                
+X          X                  
+X          X        
+X          X          
+X          X             
+X   R  R   X               
+X     R    X        
+X    R     X
+X   R R  R X
+X  R   R   X
+X    R   R X
+X  R       X
+X          X
+X     R    X
+X          X
+X R    R   X
+X          X
+X   R      X
+X    =     X
+XXXXXXXXXXXX
+                                                      
+
+
+
+
+
+
+
+
+
+
+
+
+
