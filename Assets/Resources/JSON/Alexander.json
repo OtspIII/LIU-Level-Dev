@@ -30,7 +30,13 @@
 {"Type":"Door2", "Symbol":"@"},
 {"Type":"Key3", "Symbol":"3"},
 {"Type":"Door3", "Symbol":"#"},
-{"Type":"Event", "Symbol":"h","Sprite":"Hi","Color":"Black","Text":"And that's how it all\nhappened! ;)","Audio":"Yell"},
+
+  {"Type":"Event", "Symbol":"g","Sprite":"Hi","Color":"Purple","Text":"Ah. The. Door.","Audio":"Yell"},
+  {"Type":"Event", "Symbol":"h","Sprite":"Hi","Color":"Purple","Text":"Keep. Your. Distance.","Audio":"Yell"},
+  {"Type":"Event", "Symbol":"j","Sprite":"Hi","Color":"Purple","Text":"Slow. And. Steady","Audio":"Yell"},
+  {"Type":"Event", "Symbol":"l","Sprite":"Hi","Color":"Purple","Text":"Patience. Is. Key.","Audio":"Yell"},
+  {"Type":"Event", "Symbol":"k","Sprite":"Hi","Color":"Purple","Text":"Don't. Stand. Still.","Audio":"Yell"},
+  
 {"Type":"Destructable", "Symbol":"d","Color":"WallWhite","Amount":3}, 
 {"Type":"DestructableE", "Symbol":"e","Color":"WallWhite","Amount":3},
 {"Type":"Bomb", "Symbol":"b","Color":"Pink","Size":0.5,"Drop":"~"},
