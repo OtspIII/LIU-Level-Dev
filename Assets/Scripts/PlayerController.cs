@@ -7,7 +7,7 @@ using UnityEngine.XR;
 
 public class PlayerController : CharController
 {
-    public bool Moved = false;
+    public static bool Moved = false;
     public float Invincible = 0;
     public List<int> Keys;
 
@@ -15,6 +15,7 @@ public class PlayerController : CharController
     {
         base.OnAwake();
         Player = true;
+        Moved = false;
     }
 
     public override void OnUpdate()

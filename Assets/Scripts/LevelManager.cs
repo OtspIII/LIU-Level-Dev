@@ -57,6 +57,7 @@ public class LevelManager : GameManager
         {
             Datas.Add(json.name,new Dictionary<char, JSONData>());
             JSONTemp[] j = JsonHelper.FromJson<JSONTemp>(json.text);
+            
             foreach (JSONTemp t in j)
             {
                 //Debug.Log("X: " + json.name + " / " + t.Symbol);
@@ -66,6 +67,7 @@ public class LevelManager : GameManager
                     if(!Bullets.ContainsKey(json.name)) Bullets.Add(json.name,new Dictionary<char, JSONData>());
                     Bullets[json.name].Add(data.Symbol,data);
                 }
+				if(Datas[json.name].ContainsKey(data.Symbol)) Debug.Log("DOUBLE SYMBOL: " + json.name + " / " + data.Symbol);
                 Datas[json.name].Add(data.Symbol,data);
             }
         }
