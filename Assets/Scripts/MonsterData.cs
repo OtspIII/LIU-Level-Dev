@@ -27,7 +27,6 @@ public struct MonsterData
     {
         int n = 0;
         Creator = data[n]; n++;
-        Debug.Log(data[n]);
         Color = (MColors)Enum.Parse(typeof(MColors), data[n]);n++;
         Type = (MTypes)Enum.Parse(typeof(MTypes), data[n]);n++;
         HP = int.Parse(data[n]);n++;

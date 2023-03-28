@@ -1,37 +1,70 @@
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x             qqqq              uuuu          x
+x             qqqq              uuuu          x     
+x      P      qqqq              uuuu          x       
+x             qqqq              uuuu          x 
+x             qqqq              uuuu          x
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx         x
+                                    x         x    
+                                    x         x
+                                    x         xxxxxxxxxxxxxxxxxxxxxxxxxx
+                                    x               nnnn     GGGGGGGx
+                                    x               nnnn     GGGGGGGx    
+                                    x               nnnn     GGGGGGGx
+                                    x         xxxxxxxxxxxxxxxxxxxxxxxxxx
+                                    x         x    
+                                    x         x
+                                    x         x
+                                     xx     xx
+                                      x  =  x    
+                                      xxxxxxx
+
 xxxxxxxxxxxxxxxxxxxx      
-x l l l l l l l l lx
+x                  x
 x                  x
 x    P             x 
 x                  x 
-x l l l l l l      x 
-xxxxxxxxxxxxx      x 
-            x      x 
-            x      xxxxxxxxxxxxxxxxxx 
-            x      l            x   x
-            x          l        ! =  x
-            x   l               x   x
-            xxxxxxxxxxxxxxxx    xxxxx
-                           x    x
-                           x    x
-                           x    xxxxxxx
-                           x        0 x  
-                           x          x  
-                           x          x 
-                           x       1  x  
-                           xxxxxxxxxxxx
-                           
-l l l l l l l l l l l l l l l l l l l l
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-x   O                 I             O  x        
-x                               R      xxxxxx
-x           P           R              !  = x 
-x                                      xxxxxx
-x   O            G                   0 x 
-xxxxxxxxxxxdddxxxxxxxxxxxxdddxxxxxxxxxxx
-l l l l l l   l l l l l  l    l l l l 
-          x + x          x + x 
-          xxxxx          xxxxx  
-          
+x            wwwwwwx
+xxxxxxxxxxxxxwwwwwwx 
+            xwwwwwwx 
+xxxxxxxxxxxxxwwwwwwxxxxxxxxxxxxxxxxxx       xxxxxxxxxxxxxxxxxxxxxxxxx
+x                                   x       x                    i  x
+x        G              G           xxxxxxxxx                       x
+x   R                           R   !  zzzz            G            x
+x                                   xxxxxxxxx                       xxxxxxxxxx
+x                                   x       x                       @       =x
+x                 Y                 x       x                       xxxxxxxxxx
+x                                   x       x           Y           x
+x                                   x       x                       x    
+x                                   x       x                       x
+x                                   x       xxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxx         xxxxxxxxxxxxxxx
+            x         x
+            x    1    x
+            x         x
+            xxxxxxxxxx
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+x          x        x       x           G       x
+x          x        x       x     R             x
+x    P     x      G         @           G       =
+x          x        x       x     R             x
+x          x        x       x           G       x
+xxxxxxxxxxxxxxx!xxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxx
+           x        x       x   Y   x       x
+           x        x       x       x       xxxxxxxxxxxx
+           x        x                          kkkk   1x
+           x        x       x       x       xxxxxxxxxxxx
+           x        x       x   G   x       x
+           xxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+           x        x       x   R           x
+           x        x       x               xxxxxxxxxxxx
+           x                           Y        uuuu  2x
+           x        x       x               xxxxxxxxxxxx
+           x Y      x       x    R          x
+           xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    
 x G G       x       llllll         x 
 x G G               llllllllll  O  x
