@@ -138,4 +138,6 @@ public enum SpawnThings
     DestructibleE=26,
     DestructableE=27,
     WallEnemy=28,
+    Spawner=29,
+    Powerup=30,
 }

@@ -35,7 +35,7 @@
   {"Type":"Event", "Symbol":"z","Sprite":"Hi","Color":"Red","Text":"FIND HIM, Bring him to me!","Audio":"Yell"},
   {"Type":"Event", "Symbol":"w","Sprite":"Hi","Color":"White","Text":"Boss, they have a child","Audio":"Yell"},
   {"Type":"Event", "Symbol":"k","Sprite":"Hi","Color":"Purple","Text":"I hope my parents are doing ok","Audio":"Yell"},
-  {"Type":"Event", "Symbol":"u","Sprite":"Hi","Color":"Purple","Text":"I am a bit hungry","Audio":"Yell"},
+  {"Type":"Event", "Symbol":"%NOTE YOU CANT HAVE TWO u SYMBOLS","Sprite":"Hi","Color":"Purple","Text":"I am a bit hungry","Audio":"Yell"},
 {"Type":"Destructable", "Symbol":"d","Color":"WallWhite","Amount":3}, 
 {"Type":"DestructableE", "Symbol":"e","Color":"WallWhite","Amount":3},
 {"Type":"Bomb", "Symbol":"b","Color":"Pink","Size":0.5,"Drop":"~"},
