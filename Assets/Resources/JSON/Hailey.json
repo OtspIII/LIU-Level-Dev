@@ -13,6 +13,16 @@
 {"Type":"Enemy", "Symbol":"A", "Color":"Algea"},
 {"Type":"Enemy", "Symbol":"S", "Color":"Slate"},
 {"Type":"Wall", "Symbol":"x", "Color" : "Blue"},
+
+{"Type":"Event", "Symbol":"h", "Text" : "We've arrived at this strange place. I wonder what's waiting for us here.", "Color2" : "Red"},
+{"Type":"Event", "Symbol":"a", "Text" :"Could those be other allies? Let me go take a look.", "Color2" : "Red"},
+{"Type":"Event", "Symbol":"f", "Text" :"I have no idea what they're doing attacking me. Aren't we all shapes?! This isn't fair!!!", "Color2" : "Red"},
+{"Type":"Event", "Symbol":"g", "Text" :"Why must I kill my shape bretheren. Why. Why. Why. whY. WHY!!!!!", "Color2" : "Red"},
+{"Type":"Event", "Symbol":"+", "Text" :"You know what. I don't care anymore. I've been stained with the shaped blood of countless have-been friends. I've had enough. DIE ALREADY!!!", "Color2" : "Red"},
+{"Type":"Event", "Symbol":"=", "Text" :"There's...no one here? [TO BE CONTINUED]", "Color2" : "Red"},
+
+
+
 {"Type":"Floor", "Symbol":" "},
 {"Type":"Lava", "Symbol":"l"},
 {"Type":"ConveyorL", "Symbol":"<"},
@@ -25,7 +35,6 @@
 {"Type":"Door2", "Symbol":"@"},
 {"Type":"Key3", "Symbol":"3"},
 {"Type":"Door3", "Symbol":"#"},
-{"Type":"Event", "Symbol":"h","Sprite":"Hi","Color":"Purple","Text":"And that's how it all\nhappened! ;)","Audio":"Yell"},
 {"Type":"Destructable", "Symbol":"d","Color":"WallWhite","Amount":3}, 
 {"Type":"DestructableE", "Symbol":"e","Color":"WallWhite","Amount":3},
 {"Type":"Bomb", "Symbol":"b","Color":"Pink","Size":0.5,"Drop":"~"},
@@ -35,8 +44,6 @@
   {"Type":"Explosion", "Symbol":"`","Amount":1},
 {"Type":"Zoom", "Symbol":"(","Amount":2},
 {"Type":"Zoom", "Symbol":")","Amount":1},
-{"Type":"Health", "Symbol":"+","Amount":100,"Audio": "Heal"},
-{"Type":"Goal", "Symbol":"="}, 
 {"Type":"WallEnemy", "Symbol":"|"}, 
 {"Type":"Destructable", "Symbol":"s","Color":"WallWhite","Amount":1, "Special": "BulletImmune"}
 ]}
