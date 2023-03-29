@@ -15,7 +15,7 @@
 {"Type":"Enemy", "Symbol":"A", "Color":"Algea"},
 {"Type":"Enemy", "Symbol":"S", "Color":"Slate"},
 {"Type":"Wall", "Symbol":"x", "Color": "White"},
-  {"Type":"Wall", "Symbol":"t", "Color": "White", "Trigger": "Leave"},
+  {"Type":"Wall", "Symbol":"t", "Color": "White", "Tag": "Leave"},
 {"Type":"Floor", "Symbol":" ", "Color": "Red"},
 {"Type":"Lava", "Symbol":"l"},
 {"Type":"ConveyorL", "Symbol":"<"},
