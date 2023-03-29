@@ -24,6 +24,7 @@ public class JSONData
     public Targets Target;
     public int Layer = -1;
     public string Special = "";
+	public bool StartOff = false;
     
 
     public JSONData(JSONTemp source,string author,TextAsset ta)
@@ -41,6 +42,7 @@ public class JSONData
         if (source.Tag != null) Tag = source.Tag;
         if (source.Toggle != null) Toggle = source.Toggle;
         if (source.Special != null) Special = source.Special;
+        if (source.StartOff != null) StartOff = source.StartOff;
         Amount = source.Amount;
         Size = source.Size;
         Size2 = source.Size2;
@@ -72,6 +74,7 @@ public class JSONTemp
     public string Target;
     public string Layer;
     public string Special;
+	public bool StartOff;
 }
 
 [System.Serializable]
@@ -84,6 +87,7 @@ public static class JsonHelper
 {
     public static T[] FromJson<T>(string json)
     {
+	Debug.Log(json);
         Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(json);
         return wrapper.Items;
     }
@@ -106,6 +110,8 @@ public static class JsonHelper
     private class Wrapper<T>
     {
         public T[] Items;
+public string[] OneWayToggles;
+public string BGColor;
     }
 }
 

@@ -47,14 +47,33 @@ public class BulletController : ThingController
     private void OnCollisionEnter2D(Collision2D other)
     {
         CharController c = other.gameObject.GetComponent<CharController>();
-        if (c && !c.BulletImmune)
+        
+        if(c != null && !c.BulletImmune) HitChar(c);
+        Despawn();
+    }
+
+    public void HitChar(CharController c)
+    {
+        if (!c.Tile || Shooter.Color == MColors.Player)
         {
-            if (!c.Tile || Shooter.Color == MColors.Player)
-            {
-                c.Knockback(transform.position, Shooter.Knockback);
-                c.TakeDamage(Shooter.Damage);
-            }
+            c.Knockback(transform.position, Shooter.Knockback);
+            c.TakeDamage(Shooter.Damage);
         }
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        CharController c = other.gameObject.GetComponent<CharController>();
+
+        if (c != null && !c.BulletImmune)
+        {
+            HitChar(c);
+            Despawn();
+        }
+    }
+
+    public void Despawn()
+    {
         if (JSON.Drop != ' ')
         {
             ThingController drop = GameManager.Me.SpawnThing(JSON.Drop,GameManager.Me.Creator,transform.position);
