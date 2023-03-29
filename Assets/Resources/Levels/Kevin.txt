@@ -45,23 +45,23 @@ xxxxxxxxxxxxx         xxxxxxxxxxxxxxx
             xxxxxxxxxx
 
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-x    gggg  x        x       x           G       x
-x    gggg  x        x       x     R             x
-x P  gggg         G         @           G       =
-x    gggg  x        x       x     R             x
-x    gggg  x        x       x           G       x
+x    gggg  x        x       x       G   x G     x
+x    gggg  x        x       x     R     x G     x
+x P  gggg         G         @       G   b       =
+x    gggg  x        x       x     R     x G     x
+x    gggg  x        x       x       G   x G     x
 xxxxxxxxxxxxxxx!xxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxx
-           x        x       x   Y   x       x
-           x        x       x       x       xxxxxxxxxxxx
+           x        x       x   R   x       x
+           x        x       x       x   R   xxxxxxxxxxxx
            x        x                          kkkk   1x
            x        x       x       x       xxxxxxxxxxxx
-           x        x       x   G   x       x
+           x        x  R    x   G   x   G  x
            xxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
            x        x       x   R           x
+           x        x   G   x               xxxxxxxxxxxx
+           x                           R        aaaa  2x
            x        x       x               xxxxxxxxxxxx
-           x                           Y        aaaa  2x
-           x        x       x               xxxxxxxxxxxx
-           x Y      x       x    R          x
+           x R      x      Rx    R          x
            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    
@@ -72,16 +72,16 @@ xxxxxxxxxxxxxxx!xxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxx
             x       x                       Y x
 xxxxxxxxxxxxx       x               x         x
 x     cccc          x               x         x
-x     cccc          x      Y                  x
+x     cccc          x      Y         R        x
 x  P  cccc          x                         x             
 x     cccc          x           xxxxxxxxxx    x
 x     cccc          x           x             x
 xxxxxxxxxxxxxxxx!xxxx   R       x +  Y        x
             x                   x             x
             x                   xxxxxxxxxx    xxxxxxxxxxx
-            x           G                               x
+            x    xxxxx  G                               x
             x                           R               =
-            x                                           x
+            x     Y                                     x
             xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
                                                          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -89,9 +89,9 @@ xxxxxxxxxxxxxxxx!xxxx   R       x +  Y        x
                                                          x                              x
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                              xx
 x  l  l  l  l  l  l  l  l  l  l  l  l  l  l  l  l  l  l  x                              5x
-x    jjjj       pppp        oooo        rrrr        vvvv                                xxxxxxxxxxxxxxxxxxx
-x P  jjjj   +   pppp    +   oooo    +   rrrr    +   vvvv                                     ]]]]         x
-x    jjjj       pppp        oooo        rrrr        vvvv                                     ]]]]         =
+x    jjjjj       ppppp        ooooo        rrrrr        77777                           xxxxxxxxxxxxxxxxxxx
+x P  jjjjj   +   ppppp    +   ooooo    +   rrrrr    +   77777                                ]]]]         x
+x    jjjjj       ppppp        ooooo        rrrrr        77777                                ]]]]         =
 x  l  l  l  l  l  l  l  l  l  l  l  l  l  l  l  l  l  l  x                              xxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                              yx
                                                          x                              xx
