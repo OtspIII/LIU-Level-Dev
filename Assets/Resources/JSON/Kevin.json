@@ -41,7 +41,7 @@
   {"Type":"Event", "Symbol":"j","Sprite":"Hi","Color":"Purple","Text":"Where is my our son, Richard!"},
   {"Type":"Event", "Symbol":"p","Sprite":"Hi","Color":"Purple","Text":"He's dead, my men dealt with that pest"},
   {"Type":"Event", "Symbol":"o","Sprite":"Hi","Color":"Purple","Text":"What's that noise?"},
-  {"Type":"Event", "Symbol":"v","Sprite":"Hi","Color":"Purple","Text":"No way, YOU MUST DIE!"},
+  {"Type":"Event", "Symbol":"V","Sprite":"Hi","Color":"Purple","Text":"No way, YOU MUST DIE!"},
   {"Type":"Event", "Symbol":"r","Sprite":"Hi","Color":"Purple","Text":"Father..... why?"},
   {"Type":"Event", "Symbol":"]","Sprite":"Hi","Color":"Purple","Text":"Father! You're fucking dead!"},
 {"Type":"Destructable", "Symbol":"d","Color":"WallWhite","Amount":3}, 
@@ -59,5 +59,5 @@
 {"Type":"Destructable", "Symbol":"s","Color":"WallWhite","Amount":1, "Special": "BulletImmune"},
   {"Type":"Spawner", "Symbol":"f","Drop":"G","Amount": 10},
   {"Type":"Spawner", "Symbol":"y","Drop":"Y","Amount": 5},
-  {"Type":"Spawner", "Symbol":"5","Drop":"G","Amount": 4},
+  {"Type":"Spawner", "Symbol":"5","Drop":"G","Amount": 4}
 ]}
