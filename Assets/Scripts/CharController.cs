@@ -14,6 +14,7 @@ public class CharController : ThingController
     public float BulletCooldown = 999;
     public bool Tile = true;
     public bool BulletImmune = false;
+    public float Buff = 1;
 
     public override void OnAwake()
     {
@@ -103,7 +104,7 @@ public class CharController : ThingController
 
     public virtual void Shoot()
     {
-        if (BulletCooldown < Data.AttackRate) return;
+        if (BulletCooldown < Data.AttackRate / Buff) return;
         //Debug.Log("PEW: " + Time.time);
         Vector3 rot = transform.rotation.eulerAngles;
         Vector3 pos = transform.position + (transform.right * transform.localScale.x * -0.5f);
