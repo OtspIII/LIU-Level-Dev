@@ -81,9 +81,9 @@ xxxxxxxxxxxxxxxxxxxxx
 
                                           xxxxxxxxxxxxxxxxxxxxxx             
                                           x                    x                                   
-                                          x                    x                   
+                                          x       O   O  O     x                   
                                           x                    x                                    
-                                          x            O       x                            
+                                          x      O  O  O  O    x                            
                                           x                    x
                                           x                    x        
                                           x            Y       x
@@ -96,33 +96,33 @@ xxxxxxxxxxxxxxxxxxxxx
       x                                                        ccccc          =    x
       x                  xxxxxxxxxxxxxxxxxx                    xccc                x
       x                  x                x            R       xccc                x
-      x                  x                x                    x                   x
+      x  +  +  +   +     x                x        O     O     x                   x
       xxxxxxxxxxxxxxxxxxxx                xxxxxxxxxx    xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-                                          x                    x                                   
+                                          x       O    O       x                                   
                                           x                    x                   
                                           x                    x                                    
                                           x      E             x                            
                                           x                    x
-                                          x                    x        
+                                          x      O       O     x        
                                           x                    x
                                           xxxxxxxxxxxxxxxxxxxxxx           
 
               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx      xxxxxxxxxxxxxxxxxxxxxx
-              x               R             x xxxxxx                  9 x
-              x                                                         x
-              x                                             K           x
-              x                             x xxxxxx                    x
-              x                             x      x                    x
+              x               R             x xxxxxx          O       9 x
+              x E                     O                                 x
+              x          O                                  K           x
+              x                    E        x xxxxxx                    x
+              x                             x      x               O    x
 xxxxxxxxxxxxxxxxxxx     xxxxxxxxxxxxxxxxxxxxx      xxxxxxx     xxxxxxxxxx
 x            x             x                       x                    x
-x P                   Y    x                       x    O         Y     x
+x P  +  +             Y    x                       x    O         Y     x
 x                          x                       x        E           x
-x            x             x                       x                    x
+x   +   +    x             x                       x                    x
 x            x         O   x                       x        x @ x       x
 xxxxxxxxxxxxxxxxxx      xxxx                       xxxxxxxxxx   xxxxxxxxx
               x            x                       x       jjjjjj       x
               x        Y   x                       x       jjjjjj       x
-              x            x                       x                    x
+              x    O     O x                       x                    x
               x            x                       x         =          x
               x       Y    x                       x                    x
               xxxxxxxxxxxxxx                       xxxxxxxxxxxxxxxxxxxxxx
