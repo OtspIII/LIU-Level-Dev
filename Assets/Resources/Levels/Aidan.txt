@@ -35,7 +35,7 @@ x            x      x             xxxxxxxxxxxxxxxxxx     xxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxx      x  R          C             x             x                 x
                     x             C             x             x           N     x
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx             x             x                 x
-x       x      ?            x     x                R          x                 x
+x       x      ?            x    x                 R          x                 x
 x       O                   x     !                                             x
 x                                 x           Y                       +         x
 x      K             x            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -60,16 +60,16 @@ xxxxxxxxxxxxxxxxxxxxx
                                    x        ?                                          x
                                    x                                   R    N          x
                                    x                 xxxxxxxxxxxxxx                    x
-                                   x    R     R      x            x         Y          x
+                                   x    R     R      x            x         Y       +  x
       xxxxxxxxxxxxxxxxxxxxxx       xxxxxxxxxxxxxxxxxxx            xxxxxxxxx  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
       x                    x       x                 x            x       x!xx         x                        x
       x    E   x          xxxxxxxxxx      Y          xxxxxxxxxxxxxx                 xxxx                        x
-      x        x                                                                     O /        _               x
-      x                                      +                            xxx          /                        x
-      x        K x        xxxxxxxxxx                 xxxxxxxxxxxxxx        R           x                        x
+      x        x                                                                     O /        ++++++          x
+      x                                      +                            xxx          /        ++++++          x
+      x        K x        xxxxxxxxxx                 xxxxxxxxxxxxxx        R           x         +++++          x
       x          x        x        x    Y +          x            x   xx               x                 I      x
       x                   x        x                 x            x    R               x                        x
-      x                   x        xxxxxxxxxxxxxxxxxxx            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      x       +           x        xxxxxxxxxxxxxxxxxxx            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
       xxxxxxxx@xxxxxxxxxxxx      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
       x                   x      x                             x
       x                   x      x            I                x
@@ -95,7 +95,7 @@ xxxxxxxxxxxxxxxxxxxxx
       x  P                                            R        ccccc               x
       x                                                        ccccc          =    x
       x                  xxxxxxxxxxxxxxxxxx                    xccc                x
-      x                  x                x            R       xccc                x
+      x ++++             x                x            R       xccc                x
       x  +  +  +   +     x                x        O     O     x                   x
       xxxxxxxxxxxxxxxxxxxx                xxxxxxxxxx    xxxxxxxxxxxxxxxxxxxxxxxxxxxx
                                           x       O    O       x                                   
