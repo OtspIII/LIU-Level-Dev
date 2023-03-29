@@ -258,7 +258,6 @@ public class GameManager : MonoBehaviour
             default:
             {
                 pos.z = data.Type== SpawnThings.Floor ? 20 : 10;
-                Debug.Log("DATA: " + data.Type + " / " + data.Color);
                 ThingController thing = Instantiate(Prefabs[data.Type], pos, Quaternion.identity);
                 thing.ApplyJSON(data);
                 Tiles.Add(thing);
