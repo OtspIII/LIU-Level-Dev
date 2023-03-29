@@ -7,18 +7,18 @@
    x  Y     Y   >               x
    x     Y    Y >           R   x
    x   xxxxxxxx!xxxxxxx  a      x
-   x Y x    x    x    x         x
+   x Y x    x    x    x        +x
    x   x    xcnwcx    x         x
    x   x    x3ncwx    x      a  x
    x   x    xcnnnx    x   G     x
-   x < x    xwcwcx    x      I  x
+   x<<<x    xwcwcx    x      I  x
    x   x    x    x    x   O     x
 xxxx   xxxxxxx@xxxxxxxx         x
-x       < G    >                x
+x       <   G  >                x
 x       <    G >          a     x
 x        xxxxxxxxxxxxxx         x
-x   l    x            x R    g  x
-x  lPl   x            xxxxxxxxxxx
+x lllll  x            x R    g  x
+x llPll  x            xxxxxxxxxxx
 xxxxxxxxxx
 
 xxxxxxx=xxxxxxxxxxxxxxxxxxxxxxxxxx`
@@ -41,7 +41,7 @@ xxxxxxxx@xxxxxxxxxxxxxxx!xxxxxxxxx
    x                          x
    x                          x
    x                          x
-   xxxxxxxxxxxx  ^  xxxxxxxxxxx
+   xxxxxxxxxxxx^^^^^xxxxxxxxxxx
               x     x
               x     x
               x  P  x
@@ -71,11 +71,11 @@ x               x         x  a            G   x
 x          R    x         x       Y           x
 x               x         x             a     x
 x               xxxxxxxxxxxxxxxx      xxxxxxxxxxxxxxxxxxx
-x                               I          x            x
-x  h                                     d !            =
-x  Ph                      O               x            x
-x  h            xxxxxxxxxxxxxxxx      xxxxxxxxxxxxxxxxxxx
-x               x          x                  x
+x  hhhh                         I       dd x            x
+x  hhhh                                 dd !            =
+x  Phhh                     O           dd x            x
+x  hhhh         xxxxxxxxxxxxxxxx      xxxxxxxxxxxxxxxxxxx
+x  hhhh         x          x                  x
 x               x          x  a     G         x
 x               x          x           a      x
 x               xxxxxxxxxxxx    Y             x
@@ -102,8 +102,8 @@ xxxxxxx              x          x  O      x
       x           R  x          x    G    x
       x        xxxxxxxxxxxxxxxxxx         x
 xxxxxxx                         #        u=
-x   b     m                     x         x
-x P b     m    xxxxxxxxxxxxxxxxxx         x
+x   bbb   m                     x         x
+x P bbb   m    xxxxxxxxxxxxxxxxxx         x
 xxxxxxx        x                x   Y     x
       x        xxxxxxx          x         x
 xxxxxxx        x  Y  x          x   R    Yx
