@@ -5,11 +5,11 @@
 {"Type":"Enemy", "Symbol":"Y", "Color":"Yellow"},
 {"Type":"Enemy", "Symbol":"I", "Color":"Pink", "Drop": "~"},
 {"Type":"Enemy", "Symbol":"O", "Color":"Orange"},
-{"Type":"Enemy", "Symbol":"B", "Color":"Blue"},
+{"Type":"Enemy", "Symbol":"B", "Color":"Blue","Drop":"3"},
 {"Type":"Enemy", "Symbol":"U", "Color":"Purple", "Drop":"+"},
-{"Type":"Enemy", "Symbol":"W", "Color":"White"},
+{"Type":"Enemy", "Symbol":"W", "Color":"White","Drop":"1"},
 {"Type":"Enemy", "Symbol":"E", "Color":"Ebony"},
-{"Type":"Enemy", "Symbol":"T", "Color":"Tan", "Bullet":"*"},
+{"Type":"Enemy", "Symbol":"T", "Color":"Tan","Drop":"2", "Bullet":"*"},
 {"Type":"Enemy", "Symbol":"A", "Color":"Algea"},
 {"Type":"Enemy", "Symbol":"S", "Color":"Slate"},
   
@@ -31,11 +31,15 @@
 {"Type":"Key3", "Symbol":"3"},
 {"Type":"Door3", "Symbol":"#"},
 
-  {"Type":"Event", "Symbol":"g","Sprite":"Hi","Color":"Purple","Text":"Ah. The. Door.","Audio":"Yell"},
-  {"Type":"Event", "Symbol":"h","Sprite":"Hi","Color":"Purple","Text":"Keep. Your. Distance.","Audio":"Yell"},
-  {"Type":"Event", "Symbol":"j","Sprite":"Hi","Color":"Purple","Text":"Slow. And. Steady","Audio":"Yell"},
-  {"Type":"Event", "Symbol":"l","Sprite":"Hi","Color":"Purple","Text":"Patience. Is. Key.","Audio":"Yell"},
-  {"Type":"Event", "Symbol":"k","Sprite":"Hi","Color":"Purple","Text":"Don't. Stand. Still.","Audio":"Yell"},
+  {"Type":"Event", "Symbol":"g","Sprite":"Hi","Color":"Purple","Text":"There. Are. Options."},
+  {"Type":"Event", "Symbol":"h","Sprite":"Hi","Color":"Purple","Text":"Keep. Your. Distance."},
+  {"Type":"Event", "Symbol":"j","Sprite":"Hi","Color":"Purple","Text":"Slow. And. Steady"},
+  {"Type":"Event", "Symbol":"k","Sprite":"Hi","Color":"Purple","Text":"Patience. Is. Key."},
+  {"Type":"Event", "Symbol":"c","Sprite":"Hi","Color":"Purple","Text":"Don't."},
+  {"Type":"Event", "Symbol":"n","Sprite":"Hi","Color":"Purple","Text":"Stand."},
+  {"Type":"Event", "Symbol":"M","Sprite":"Hi","Color":"Purple","Text":"STILL."},
+  {"Type":"Event", "Symbol":"/","Sprite":"Hi","Color":"Purple","Text":"Still.","Audio":"Yell"},
+  
   
 {"Type":"Destructable", "Symbol":"d","Color":"WallWhite","Amount":3}, 
 {"Type":"DestructableE", "Symbol":"e","Color":"WallWhite","Amount":3},
@@ -46,10 +50,12 @@
   {"Type":"Bullet", "Symbol":"*","Size":0.4, "Drop":"~","Drop": "l"},
   
 {"Type":"Explosion", "Symbol":"~","Amount":4},
-{"Type":"Zoom", "Symbol":"(","Amount":2},
+{"Type":"Zoom", "Symbol":"(","Amount":1.5},
 {"Type":"Zoom", "Symbol":")","Amount":1},
 {"Type":"Health", "Symbol":"+","Amount":4},
 {"Type":"Goal", "Symbol":"="}, 
 {"Type":"WallEnemy", "Symbol":"|"}, 
-{"Type":"Destructable", "Symbol":"s","Color":"WallWhite","Amount":1, "Special": "BulletImmune"}
+{"Type":"Destructable", "Symbol":"s","Color":"WallWhite","Amount":1, "Special": "BulletImmune"},
+  {"Type":"Spawner", "Symbol":"z","Drop":"U","Amount": 8},
+  {"Type":"Powerup", "Symbol":"L", "Color": "Yellow", "Amount": 2}
 ]}
