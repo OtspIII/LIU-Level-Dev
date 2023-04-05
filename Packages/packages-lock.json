@@ -1,9 +1,5 @@
 {
   "dependencies": {
-<<<<<<< HEAD
-    "com.unity.collab-proxy": {
-      "version": "1.15.18",
-=======
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
@@ -45,7 +41,6 @@
     },
     "com.unity.collab-proxy": {
       "version": "1.17.2",
->>>>>>> bc77a35db8a5b998f7b4d22bbf38d674b6285b00
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -53,8 +48,6 @@
       },
       "url": "https://packages.unity.com"
     },
-<<<<<<< HEAD
-=======
     "com.unity.collections": {
       "version": "1.2.4",
       "depth": 2,
@@ -65,7 +58,6 @@
       },
       "url": "https://packages.unity.com"
     },
->>>>>>> bc77a35db8a5b998f7b4d22bbf38d674b6285b00
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 1,
@@ -98,22 +90,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-<<<<<<< HEAD
-    "com.unity.nuget.newtonsoft-json": {
-      "version": "3.0.2",
-=======
     "com.unity.mathematics": {
       "version": "1.2.6",
->>>>>>> bc77a35db8a5b998f7b4d22bbf38d674b6285b00
       "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-<<<<<<< HEAD
-    "com.unity.services.core": {
-      "version": "1.4.0",
-=======
     "com.unity.netcode.gameobjects": {
       "version": "1.0.1",
       "depth": 0,
@@ -177,7 +160,6 @@
     },
     "com.unity.services.core": {
       "version": "1.4.2",
->>>>>>> bc77a35db8a5b998f7b4d22bbf38d674b6285b00
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -187,8 +169,6 @@
       },
       "url": "https://packages.unity.com"
     },
-<<<<<<< HEAD
-=======
     "com.unity.services.lobby": {
       "version": "1.0.1",
       "depth": 0,
@@ -236,7 +216,6 @@
       },
       "url": "https://packages.unity.com"
     },
->>>>>>> bc77a35db8a5b998f7b4d22bbf38d674b6285b00
     "com.unity.test-framework": {
       "version": "1.1.31",
       "depth": 0,
@@ -269,8 +248,6 @@
       },
       "url": "https://packages.unity.com"
     },
-<<<<<<< HEAD
-=======
     "com.unity.transport": {
       "version": "1.2.0",
       "depth": 1,
@@ -282,7 +259,6 @@
       },
       "url": "https://packages.unity.com"
     },
->>>>>>> bc77a35db8a5b998f7b4d22bbf38d674b6285b00
     "com.unity.ugui": {
       "version": "1.0.0",
       "depth": 0,
@@ -292,15 +268,6 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
-<<<<<<< HEAD
-    "com.unity.visualscripting": {
-      "version": "1.7.8",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0"
-=======
     "com.unity.xr.legacyinputhelpers": {
       "version": "2.1.10",
       "depth": 0,
@@ -308,7 +275,6 @@
       "dependencies": {
         "com.unity.modules.vr": "1.0.0",
         "com.unity.modules.xr": "1.0.0"
->>>>>>> bc77a35db8a5b998f7b4d22bbf38d674b6285b00
       },
       "url": "https://packages.unity.com"
     },
