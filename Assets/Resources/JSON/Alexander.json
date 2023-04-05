@@ -38,7 +38,7 @@
   {"Type":"Event", "Symbol":"c","Sprite":"Hi","Color":"Purple","Text":"Don't."},
   {"Type":"Event", "Symbol":"n","Sprite":"Hi","Color":"Purple","Text":"Stand."},
   {"Type":"Event", "Symbol":"M","Sprite":"Hi","Color":"Purple","Text":"STILL."},
-  {"Type":"Event", "Symbol":"/","Sprite":"Hi","Color":"Purple","Text":"Still.","Audio":"Yell"},
+  {"Type":"Event", "Symbol":"/","Sprite":"Hi","Color":"Purple","Text":"STOP POSTING ABOUT AMONG US! I'M TIRED OF SEEING IT! MY FRIENDS ON TIKTOK SEND ME MEMES, ON DISCORD IT'S FUCKING MEMES! I was in a server, right? and ALL OF THE CHANNELS were just among us stuff. I-I showed my champion underwear to my girlfriend and t-the logo I flipped it and I said \"hey babe, when the underwear is sus HAHA DING DING DING DING DING DING DING DI DI DING\" I fucking looked at a trashcan and said \"THAT'S A BIT SUSSY\".","Audio":"Yell"},
   
   
 {"Type":"Destructable", "Symbol":"d","Color":"WallWhite","Amount":3}, 
