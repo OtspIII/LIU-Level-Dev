@@ -2,6 +2,10 @@
   "dependencies": {
 <<<<<<< HEAD
     "com.unity.collab-proxy": {
+      "version": "1.17.7",
+=======
+<<<<<<< HEAD
+    "com.unity.collab-proxy": {
       "version": "1.15.18",
 =======
     "com.unity.2d.sprite": {
@@ -46,6 +50,7 @@
     "com.unity.collab-proxy": {
       "version": "1.17.2",
 >>>>>>> bc77a35db8a5b998f7b4d22bbf38d674b6285b00
+>>>>>>> f592fb94176e3ba4910c8c66dd2479a715fb071a
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -53,6 +58,8 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     "com.unity.collections": {
@@ -66,6 +73,7 @@
       "url": "https://packages.unity.com"
     },
 >>>>>>> bc77a35db8a5b998f7b4d22bbf38d674b6285b00
+>>>>>>> f592fb94176e3ba4910c8c66dd2479a715fb071a
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 1,
@@ -74,7 +82,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
+<<<<<<< HEAD
+      "version": "3.0.16",
+=======
       "version": "3.0.15",
+>>>>>>> f592fb94176e3ba4910c8c66dd2479a715fb071a
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -98,6 +110,9 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
+    "com.unity.services.core": {
+=======
 <<<<<<< HEAD
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",
@@ -206,10 +221,17 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.services.qos": {
+>>>>>>> f592fb94176e3ba4910c8c66dd2479a715fb071a
       "version": "1.0.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
+<<<<<<< HEAD
+        "com.unity.modules.unitywebrequest": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+=======
         "com.unity.services.core": "1.4.0",
         "com.unity.modules.unitywebrequest": "1.0.0",
         "com.unity.nuget.newtonsoft-json": "3.0.2",
@@ -237,6 +259,7 @@
       "url": "https://packages.unity.com"
     },
 >>>>>>> bc77a35db8a5b998f7b4d22bbf38d674b6285b00
+>>>>>>> f592fb94176e3ba4910c8c66dd2479a715fb071a
     "com.unity.test-framework": {
       "version": "1.1.31",
       "depth": 0,
@@ -271,6 +294,8 @@
     },
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
     "com.unity.transport": {
       "version": "1.2.0",
       "depth": 1,
@@ -283,6 +308,7 @@
       "url": "https://packages.unity.com"
     },
 >>>>>>> bc77a35db8a5b998f7b4d22bbf38d674b6285b00
+>>>>>>> f592fb94176e3ba4910c8c66dd2479a715fb071a
     "com.unity.ugui": {
       "version": "1.0.0",
       "depth": 0,
@@ -293,6 +319,9 @@
       }
     },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f592fb94176e3ba4910c8c66dd2479a715fb071a
     "com.unity.visualscripting": {
       "version": "1.7.8",
       "depth": 0,
@@ -300,6 +329,8 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
+<<<<<<< HEAD
+=======
 =======
     "com.unity.xr.legacyinputhelpers": {
       "version": "2.1.10",
@@ -309,6 +340,7 @@
         "com.unity.modules.vr": "1.0.0",
         "com.unity.modules.xr": "1.0.0"
 >>>>>>> bc77a35db8a5b998f7b4d22bbf38d674b6285b00
+>>>>>>> f592fb94176e3ba4910c8c66dd2479a715fb071a
       },
       "url": "https://packages.unity.com"
     },
