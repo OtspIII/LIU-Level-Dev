@@ -108,18 +108,18 @@ xxxxxxxxxxxxxxxxxxxxx
                                           xxxxxxxxxxxxxxxxxxxxxx           
 
               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx      xxxxxxxxxxxxxxxxxxxxxx
-              x               R             x xxxxxx          O       9 x
+              x               R             xxxxxxxx          O       9 x
               x E                     O                                 x
               x          O                                  K           x
-              x                    E        x xxxxxx                    x
+              x                    E        xxxxxxxx                    x
               x                             x      x               O    x
 xxxxxxxxxxxxxxxxxxx     xxxxxxxxxxxxxxxxxxxxx      xxxxxxx     xxxxxxxxxx
 x            x             x                       x                    x
 x P  +  +             Y    x                       x    O         Y     x
 x                          x                       x        E           x
 x   +   +    x             x                       x                    x
-x            x         O   x                       x        x @ x       x
-xxxxxxxxxxxxxxxxxx      xxxx                       xxxxxxxxxx   xxxxxxxxx
+x            x         O   x                       x                    x
+xxxxxxxxxxxxxxxxxx      xxxx                       xxxxxxxxxxx@xxxxxxxxxx
               x            x                       x       jjjjjj       x
               x        Y   x                       x       jjjjjj       x
               x    O     O x                       x                    x
