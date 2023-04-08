@@ -16,6 +16,8 @@ public static class God
     public static TextMeshProUGUI AnnounceText;
     public static TextMeshProUGUI UpdateText;
     public static Camera Camera;
+    public static List<ActorController> Actors = new List<ActorController>();
+    public static FirstPersonController Player;
     public static List<FirstPersonController> Players = new List<FirstPersonController>();
     public static Dictionary<string,FirstPersonController> PlayerDict = new Dictionary<string, FirstPersonController>();
     public static string NamePick;
