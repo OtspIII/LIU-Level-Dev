@@ -14,7 +14,7 @@ public class TouchController : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
 //        if (!NetworkManager.Singleton.IsServer) return;
-        FirstPersonController pc = other.gameObject.GetComponent<FirstPersonController>();
+        ActorController pc = other.gameObject.GetComponent<ActorController>();
         if (pc == null) return;
         switch (Type)
         {
