@@ -102,16 +102,7 @@ public class FirstPersonController : ActorController
         return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.PlayerHP > 0 ? God.LM.Ruleset.PlayerHP : 100;
     }
     
-    public override float GetMoveSpeed()
-    {
-        return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.MoveSpeed > 0 ? God.LM.Ruleset.MoveSpeed : 10;
-    }
     
-    public override float GetSprintSpeed()
-    {
-        float move = GetMoveSpeed();
-        return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.SprintSpeed > 0 ? God.LM.Ruleset.SprintSpeed * move : move * 1.5f;
-    }
     
     public void Reset()
     {

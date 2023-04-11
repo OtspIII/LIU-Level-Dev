@@ -11,6 +11,8 @@ public class ActorController : MonoBehaviour
     public MeshRenderer MR;
     public Collider Coll;
     public float JumpPower = 7;
+    public float MoveSpeed = 10;
+    public float SprintSpeed = 1.5f;
     public List<GameObject> Floors;
     public float ShotCooldown;
     public bool JustKnocked = false;
@@ -119,7 +121,7 @@ public class ActorController : MonoBehaviour
 
     public bool OnGround()
     {
-        return Floors.Count > 0;// && Physics.Raycast(transform.position,transform.position + new Vector3(0,-5,0),1.5f);
+        return Floors.Count > 0 && Physics.Raycast(transform.position,transform.up * -1,1.5f);
     }
     
     public void TakeDamage(int amt, ActorController source = null)
@@ -158,13 +160,16 @@ public class ActorController : MonoBehaviour
     
     public virtual float GetMoveSpeed()
     {
-        return 10;
+        return MoveSpeed;
+        //return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.MoveSpeed > 0 ? God.LM.Ruleset.MoveSpeed : 10;
     }
     
     public virtual float GetSprintSpeed()
     {
         float move = GetMoveSpeed();
-        return move * 1.5f;
+        if (SprintSpeed > 0) move *= SprintSpeed;
+        return move;
+        //return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.SprintSpeed > 0 ? God.LM.Ruleset.SprintSpeed * move : move * 1.5f;
     }
 
     private void OnCollisionEnter(Collision other)
