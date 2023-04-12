@@ -74,7 +74,7 @@ public class ActorController : MonoBehaviour
         // else
     }
     
-    public void HandleMove(Vector3 move,bool jump, float xRot,float yRot,bool sprint)
+    public virtual void HandleMove(Vector3 move,bool jump, float xRot,float yRot,bool sprint)
     {
         transform.Rotate(0,xRot,0);
         Vector3 eRot = AimObj.transform.localRotation.eulerAngles;
