@@ -24,6 +24,8 @@ public class ActorController : MonoBehaviour
     public int HP;
     public int Ammo;
 
+    public bool InControl = true;
+
     void Start()
     {
       OnStart();  
@@ -74,6 +76,14 @@ public class ActorController : MonoBehaviour
     
     public void HandleMove(Vector3 move,bool jump, float xRot,float yRot,bool sprint)
     {
+        transform.Rotate(0,xRot,0);
+        Vector3 eRot = AimObj.transform.localRotation.eulerAngles;
+        eRot.x += yRot;
+        if (eRot.x < -180) eRot.x += 360;
+        if (eRot.x > 180) eRot.x -= 360;
+        eRot = new Vector3(Mathf.Clamp(eRot.x, -90, 90),0,0);
+        AimObj.transform.localRotation = Quaternion.Euler(eRot);
+        if (!InControl) return;
         bool onGround = OnGround();
         move = move.normalized * (sprint ? GetSprintSpeed() : GetMoveSpeed());
         if (jump && onGround)
@@ -86,18 +96,13 @@ public class ActorController : MonoBehaviour
             move.z += Fling.z;
         if (Fling != Vector3.zero && move.y == 0) move.y = 3;
         RB.velocity = move;
-        transform.Rotate(0,xRot,0);
-        Vector3 eRot = AimObj.transform.localRotation.eulerAngles;
-        eRot.x += yRot;
-        if (eRot.x < -180) eRot.x += 360;
-        if (eRot.x > 180) eRot.x -= 360;
-        eRot = new Vector3(Mathf.Clamp(eRot.x, -90, 90),0,0);
-        AimObj.transform.localRotation = Quaternion.Euler(eRot);
+        
     }
     
     
     public void Shoot(Vector3 pos,Quaternion rot)
     {
+        if (!InControl) return;
         JSONWeapon wpn = GetWeapon();
         if (wpn == null || wpn.RateOfFire <= 0) return;
         ShotCooldown = wpn.RateOfFire;
