@@ -60,12 +60,12 @@ sysinfo.txt
 crashlytics-build.properties
 
 .idea/
-Packages/manifest.json
 ProjectSettings/ProjectVersion.txt
-Packages/
 ProjectSettings/EditorBuildSettings.asset
 ProjectSettings/EditorBuildSettings.asset~1425f4505d14f227b7878c021bf43ddcae994949
 UserSettings/Layouts/
 UserSettings/
 Assets/Resources/JSON/Matteo - Copy.json
 Assets/Resources/JSON/Matteo - Copy.json.meta
+Assets/Resources/JSON/Folder.DotSettings.user.meta
+Assets/Scripts/Folder.DotSettings.user.meta
