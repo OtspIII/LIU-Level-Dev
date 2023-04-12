@@ -8,14 +8,14 @@ using UnityEngine;
 public class ExplosionController : NetworkBehaviour
 {
     public JSONWeapon Data;
-    public FirstPersonController Shooter;
+    public ActorController Shooter;
     public ParticleSystem PS;
     public NetworkObject NO;
     public SphereCollider Coll;
     public bool IsSetup = false;
     public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
     
-    public void Setup(FirstPersonController pc,JSONWeapon data)
+    public void Setup(ActorController pc,JSONWeapon data)
     {
         Data = data;
         Shooter = pc;
