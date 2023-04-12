@@ -12,7 +12,7 @@ public class ProjectileController : NetworkBehaviour
     public Rigidbody RB;
     public NetworkObject NO;
     public float Lifetime = 10;
-    public FirstPersonController Shooter;
+    public ActorController Shooter;
     public bool Hit = false;
     public JSONWeapon Data;
     public MeshRenderer MR;
@@ -22,7 +22,7 @@ public class ProjectileController : NetworkBehaviour
     public bool IsSetup = false;
     public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
     
-    public void Setup(FirstPersonController pc,JSONWeapon data)
+    public void Setup(ActorController pc,JSONWeapon data)
     {
 //    public float ExplodeRadius;
 //    public float ExplodeDamage;
