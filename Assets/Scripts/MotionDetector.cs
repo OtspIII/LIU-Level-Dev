@@ -11,6 +11,7 @@ public class MotionDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
         if(EnterMessage != "")
             Target.SendMessage(EnterMessage);
     }

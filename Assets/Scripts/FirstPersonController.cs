@@ -12,7 +12,6 @@ using Random = UnityEngine.Random;
 
 //Battle Royale Storm
 //Animating Enemies
-//Automatic Doors
 //Dash
 //A Ladder
 //Slow Fall
@@ -176,8 +175,12 @@ public class FirstPersonController : ActorController
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.GetMask("Checkpoint"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Checkpoint"))
+        {
             StartSpot = transform.position;
+            Debug.Log("HIT CHECKPOINT: " + other.gameObject.name);
+        }
+            
     }
 }
 
