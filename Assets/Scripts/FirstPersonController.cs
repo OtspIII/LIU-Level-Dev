@@ -10,6 +10,16 @@ using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
+//Battle Royale Storm
+//Animating Enemies
+//Automatic Doors
+//Dash
+//A Ladder
+//Slow Fall
+//Slide
+//Inverted Controls
+//Conveyor Belts
+
 public class FirstPersonController : ActorController
 {
     public Camera Eyes;
