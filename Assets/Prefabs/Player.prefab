@@ -408,18 +408,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba99f67f160d304489b2b5d42ed1fa15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Eyes: {fileID: 6701280136742610446}
+  AimObj: {fileID: 0}
   RB: {fileID: 2284296766530852865}
-  NRB: {fileID: 0}
   MR: {fileID: 5762141610368144449}
   Coll: {fileID: 5762141610368144448}
-  NameText: {fileID: 6467906636470138432}
-  MouseSensitivity: 3
   JumpPower: 7
+  MoveSpeed: 10
+  SprintSpeed: 1.5
   Floors: []
   ShotCooldown: 0
   JustKnocked: 0
-  GhostMode: 0
   CurrentWeapon:
     Text: 
     Type: 0
@@ -454,149 +452,17 @@ MonoBehaviour:
     Knockback: 0
     Bounce: 0
     SelfDamage: 0
-  Name:
-    utf8LengthInBytes: 0
-    bytes:
-      offset0000:
-        byte0000: 0
-        byte0001: 0
-        byte0002: 0
-        byte0003: 0
-        byte0004: 0
-        byte0005: 0
-        byte0006: 0
-        byte0007: 0
-        byte0008: 0
-        byte0009: 0
-        byte0010: 0
-        byte0011: 0
-        byte0012: 0
-        byte0013: 0
-        byte0014: 0
-        byte0015: 0
-      offset0016:
-        byte0000: 0
-        byte0001: 0
-        byte0002: 0
-        byte0003: 0
-        byte0004: 0
-        byte0005: 0
-        byte0006: 0
-        byte0007: 0
-        byte0008: 0
-        byte0009: 0
-        byte0010: 0
-        byte0011: 0
-        byte0012: 0
-        byte0013: 0
-        byte0014: 0
-        byte0015: 0
-      offset0032:
-        byte0000: 0
-        byte0001: 0
-        byte0002: 0
-        byte0003: 0
-        byte0004: 0
-        byte0005: 0
-        byte0006: 0
-        byte0007: 0
-        byte0008: 0
-        byte0009: 0
-        byte0010: 0
-        byte0011: 0
-        byte0012: 0
-        byte0013: 0
-        byte0014: 0
-        byte0015: 0
-      byte0048: 0
-      byte0049: 0
-      byte0050: 0
-      byte0051: 0
-      byte0052: 0
-      byte0053: 0
-      byte0054: 0
-      byte0055: 0
-      byte0056: 0
-      byte0057: 0
-      byte0058: 0
-      byte0059: 0
-      byte0060: 0
-      byte0061: 0
-  Weapon:
-    utf8LengthInBytes: 0
-    bytes:
-      offset0000:
-        byte0000: 0
-        byte0001: 0
-        byte0002: 0
-        byte0003: 0
-        byte0004: 0
-        byte0005: 0
-        byte0006: 0
-        byte0007: 0
-        byte0008: 0
-        byte0009: 0
-        byte0010: 0
-        byte0011: 0
-        byte0012: 0
-        byte0013: 0
-        byte0014: 0
-        byte0015: 0
-      offset0016:
-        byte0000: 0
-        byte0001: 0
-        byte0002: 0
-        byte0003: 0
-        byte0004: 0
-        byte0005: 0
-        byte0006: 0
-        byte0007: 0
-        byte0008: 0
-        byte0009: 0
-        byte0010: 0
-        byte0011: 0
-        byte0012: 0
-        byte0013: 0
-        byte0014: 0
-        byte0015: 0
-      offset0032:
-        byte0000: 0
-        byte0001: 0
-        byte0002: 0
-        byte0003: 0
-        byte0004: 0
-        byte0005: 0
-        byte0006: 0
-        byte0007: 0
-        byte0008: 0
-        byte0009: 0
-        byte0010: 0
-        byte0011: 0
-        byte0012: 0
-        byte0013: 0
-        byte0014: 0
-        byte0015: 0
-      byte0048: 0
-      byte0049: 0
-      byte0050: 0
-      byte0051: 0
-      byte0052: 0
-      byte0053: 0
-      byte0054: 0
-      byte0055: 0
-      byte0056: 0
-      byte0057: 0
-      byte0058: 0
-      byte0059: 0
-      byte0060: 0
-      byte0061: 0
-  Position: {x: 0, y: 0, z: 0}
   Fling: {x: 0, y: 0, z: 0}
-  XRot: 0
-  YRot: 0
   HP: 0
   Ammo: 0
-  Team: 0
+  InControl: 1
+  Eyes: {fileID: 6701280136742610446}
+  NameText: {fileID: 6467906636470138432}
+  MouseSensitivity: 3
+  GhostMode: 0
+  StartSpot: {x: 0, y: 0, z: 0}
+  Dizzy: 0
+  DizzyDir: {x: 0, y: 0}
 --- !u!33 &5762141610368144450
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -654,7 +520,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5762141610368144462}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: fa8125e175359f54386b2332371b720f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
