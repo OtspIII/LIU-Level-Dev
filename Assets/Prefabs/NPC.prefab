@@ -82,9 +82,18 @@ MonoBehaviour:
   MR: {fileID: 7442884100221511470}
   Coll: {fileID: 7442884100032248510}
   JumpPower: 7
+  MoveSpeed: 10
+  SprintSpeed: 1.5
   Floors: []
   ShotCooldown: 0
   JustKnocked: 0
+  JSON:
+    Name: 
+    HP: 0
+    MoveSpeed: 0
+    SprintSpeed: 0
+    Weapon: 
+    Vision: 0
   CurrentWeapon:
     Text: 
     Type: 0
@@ -122,6 +131,17 @@ MonoBehaviour:
   Fling: {x: 0, y: 0, z: 0}
   HP: 0
   Ammo: 0
+  InControl: 1
+  Type: Amogus
+  Behavior: 3
+  Aggro: 0
+  Attacking: {fileID: 0}
+  PatrolPath:
+  - {x: 15, y: 0, z: -9}
+  - {x: -15, y: 0, z: -9}
+  - {x: 0, y: 0, z: 9}
+  PatrolProgress: -1
+  DestTime: 0
 --- !u!1001 &7371725498183705713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139,7 +159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 74255445081334178, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_VersionIndex
-      value: 146
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 74255445081334191, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_Mesh
@@ -155,7 +175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 74255445113867777, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_VersionIndex
-      value: 634
+      value: 658
       objectReference: {fileID: 0}
     - target: {fileID: 74255445113867789, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_Mesh
@@ -175,7 +195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 74255445421114193, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_VersionIndex
-      value: 674
+      value: 698
       objectReference: {fileID: 0}
     - target: {fileID: 74255445421114194, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_RootOrder
@@ -271,7 +291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 74255446160863816, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_VersionIndex
-      value: 1399
+      value: 1423
       objectReference: {fileID: 0}
     - target: {fileID: 74255446827279584, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_Mesh
@@ -279,7 +299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 74255446827279584, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_VersionIndex
-      value: 1202
+      value: 1226
       objectReference: {fileID: 0}
     - target: {fileID: 74255446827279596, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_Mesh
@@ -311,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 74255446865998774, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_VersionIndex
-      value: 637
+      value: 661
       objectReference: {fileID: 0}
     - target: {fileID: 290515488474788545, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_Mesh
@@ -319,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 290515488474788545, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_VersionIndex
-      value: 479
+      value: 503
       objectReference: {fileID: 0}
     - target: {fileID: 1045950790964303682, guid: 5d5a5436473637f41bd50c0cc087314f, type: 3}
       propertyPath: m_Mesh

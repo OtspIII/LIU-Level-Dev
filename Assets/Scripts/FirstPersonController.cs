@@ -18,7 +18,7 @@ using Random = UnityEngine.Random;
 
 public class FirstPersonController : ActorController
 {
-    public Camera Eyes;
+    public GameObject Eyes;
     public TextMeshPro NameText;
     public float MouseSensitivity = 3;
     public bool GhostMode;
@@ -33,8 +33,10 @@ public class FirstPersonController : ActorController
         base.OnStart();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        God.Player = this;
         God.Players.Add(this);
         StartSpot = transform.position;
+        if(God.LM.UseJSON) ImprintJSON(God.LM.GetActor("Player"));
         Reset();
     }
 
@@ -44,7 +46,8 @@ public class FirstPersonController : ActorController
         if (God.HPText != null)
         {
             God.HPText.text = HP + "/" + GetMaxHP();
-            God.StatusText.text = GetWeapon().Text + (Ammo > 0 ? " - " + Ammo : "");
+            if(GetWeapon() != null)
+                God.StatusText.text = GetWeapon().Text + (Ammo > 0 ? " - " + Ammo : "");
         }
 
         float xRot = Input.GetAxis("Mouse X") * MouseSensitivity;
@@ -98,20 +101,11 @@ public class FirstPersonController : ActorController
                 jump = true;
         }
         HandleMove(move,jump,xRot,yRot,sprint);
-        if (Input.GetMouseButton(0) && ShotCooldown <= 0)
+        if (Input.GetMouseButton(0))
         {
             Shoot(Eyes.transform.position + Eyes.transform.forward, Eyes.transform.rotation);
         }
     }
-
-    
-
-    public override int GetMaxHP()
-    {
-        return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.PlayerHP > 0 ? God.LM.Ruleset.PlayerHP : 100;
-    }
-    
-    
     
     public void Reset()
     {
@@ -147,7 +141,6 @@ public class FirstPersonController : ActorController
 
     public void SetGhostMode(bool set)
     {
-        Debug.Log("SGM");
         if (set)
         {
             RB.velocity = Vector3.zero;
@@ -168,7 +161,9 @@ public class FirstPersonController : ActorController
 
     public override void Die(ActorController source = null)
     {
-        base.Die(source);
+        //base.Die(source);
+        if(source != null)
+            Debug.Log("KILLED BY " + source);
         Reset();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         // SetGhostMode(true);

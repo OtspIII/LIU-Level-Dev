@@ -418,6 +418,13 @@ MonoBehaviour:
   Floors: []
   ShotCooldown: 0
   JustKnocked: 0
+  JSON:
+    Name: 
+    HP: 0
+    MoveSpeed: 0
+    SprintSpeed: 0
+    Weapon: 
+    Vision: 0
   CurrentWeapon:
     Text: 
     Type: 0
@@ -456,7 +463,7 @@ MonoBehaviour:
   HP: 0
   Ammo: 0
   InControl: 1
-  Eyes: {fileID: 6701280136742610446}
+  Eyes: {fileID: 772149536382218223}
   NameText: {fileID: 6467906636470138432}
   MouseSensitivity: 3
   GhostMode: 0

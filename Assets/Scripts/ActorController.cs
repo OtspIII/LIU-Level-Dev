@@ -16,7 +16,8 @@ public class ActorController : MonoBehaviour
     public List<GameObject> Floors;
     public float ShotCooldown;
     public bool JustKnocked = false;
-    
+
+    public JSONActor JSON;
     public JSONWeapon CurrentWeapon;
     public JSONWeapon DefaultWeapon;
     
@@ -49,6 +50,16 @@ public class ActorController : MonoBehaviour
         ShotCooldown -= Time.deltaTime;
 
     }
+
+    public void ImprintJSON(JSONActor j)
+    {
+        Debug.Log("IMPRINT JSON: " + name + " / " + j.Name);
+        MoveSpeed = j.MoveSpeed;
+        SprintSpeed = j.SprintSpeed;
+        HP = j.HP;
+        DefaultWeapon = God.LM.GetWeapon(j.Weapon);
+        //Debug.Log("JSON IMP: " + j.Weapon + " / " + DefaultWeapon.Text);
+    }
     
     public void SetWeapon(JSONWeapon wpn)
     {
@@ -60,14 +71,15 @@ public class ActorController : MonoBehaviour
     public JSONWeapon GetWeapon()
     {
         // return God.LM.GetWeapon(Weapon.Value.ToString());
-        if (CurrentWeapon != null) return CurrentWeapon;
-        if (DefaultWeapon != null) return DefaultWeapon;
+        if (CurrentWeapon != null && CurrentWeapon.RateOfFire > 0) return CurrentWeapon;
+        if (DefaultWeapon != null && DefaultWeapon.RateOfFire > 0) return DefaultWeapon;
         return null;
     }
     
     public virtual void Die(ActorController source=null)
     {
-        Debug.Log("KILLED BY " + source);
+        
+        Destroy(gameObject);
         
         // if(God.LM.Respawn(this))
         //     Reset();
@@ -102,9 +114,11 @@ public class ActorController : MonoBehaviour
     
     public void Shoot(Vector3 pos,Quaternion rot)
     {
-        if (!InControl) return;
+        if (!InControl || ShotCooldown > 0) return;
         JSONWeapon wpn = GetWeapon();
+        
         if (wpn == null || wpn.RateOfFire <= 0) return;
+        
         ShotCooldown = wpn.RateOfFire;
 
         if (Ammo > 0)
@@ -129,7 +143,7 @@ public class ActorController : MonoBehaviour
         return Floors.Count > 0 && Physics.Raycast(transform.position,transform.up * -1,1.5f);
     }
     
-    public void TakeDamage(int amt, ActorController source = null)
+    public virtual void TakeDamage(int amt, ActorController source = null)
     {
         HP -= amt;
         if (HP <= 0)
@@ -158,21 +172,22 @@ public class ActorController : MonoBehaviour
         JustKnocked = true;
     }
     
-    public virtual int GetMaxHP()
+    public int GetMaxHP()
     {
-        return 100;
+        return JSON != null && JSON.HP > 0 ? JSON.HP : 100;
     }
     
-    public virtual float GetMoveSpeed()
+    public float GetMoveSpeed()
     {
         return MoveSpeed;
         //return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.MoveSpeed > 0 ? God.LM.Ruleset.MoveSpeed : 10;
     }
     
-    public virtual float GetSprintSpeed()
+    public float GetSprintSpeed()
     {
         float move = GetMoveSpeed();
         if (SprintSpeed > 0) move *= SprintSpeed;
+        Debug.Log("SPRINT SPEED: " + move + " / " + name);
         return move;
         //return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.SprintSpeed > 0 ? God.LM.Ruleset.SprintSpeed * move : move * 1.5f;
     }
