@@ -16,7 +16,9 @@ public class ActorController : MonoBehaviour
     public List<GameObject> Floors;
     public float ShotCooldown;
     public bool JustKnocked = false;
-    
+    public MeleeBox MB;
+
+    public JSONActor JSON;
     public JSONWeapon CurrentWeapon;
     public JSONWeapon DefaultWeapon;
     
@@ -24,6 +26,13 @@ public class ActorController : MonoBehaviour
     public int HP;
     public int Ammo;
 
+    public bool InControl = true;
+
+    void Awake()
+    {
+        MB = GetComponentInChildren<MeleeBox>();
+    }
+    
     void Start()
     {
       OnStart();  
@@ -47,6 +56,16 @@ public class ActorController : MonoBehaviour
         ShotCooldown -= Time.deltaTime;
 
     }
+
+    public void ImprintJSON(JSONActor j)
+    {
+        //Debug.Log("IMPRINT JSON: " + name + " / " + j.Name);
+        MoveSpeed = j.MoveSpeed;
+        SprintSpeed = j.SprintSpeed;
+        HP = j.HP;
+        DefaultWeapon = God.LM.GetWeapon(j.Weapon);
+        //Debug.Log("JSON IMP: " + j.Weapon + " / " + DefaultWeapon.Text);
+    }
     
     public void SetWeapon(JSONWeapon wpn)
     {
@@ -58,22 +77,31 @@ public class ActorController : MonoBehaviour
     public JSONWeapon GetWeapon()
     {
         // return God.LM.GetWeapon(Weapon.Value.ToString());
-        if (CurrentWeapon != null) return CurrentWeapon;
-        if (DefaultWeapon != null) return DefaultWeapon;
+        if (CurrentWeapon != null && CurrentWeapon.RateOfFire > 0) return CurrentWeapon;
+        if (DefaultWeapon != null && DefaultWeapon.RateOfFire > 0) return DefaultWeapon;
         return null;
     }
     
     public virtual void Die(ActorController source=null)
     {
-        Debug.Log("KILLED BY " + source);
+        
+        Destroy(gameObject);
         
         // if(God.LM.Respawn(this))
         //     Reset();
         // else
     }
     
-    public void HandleMove(Vector3 move,bool jump, float xRot,float yRot,bool sprint)
+    public virtual void HandleMove(Vector3 move,bool jump, float xRot,float yRot,bool sprint)
     {
+        transform.Rotate(0,xRot,0);
+        Vector3 eRot = AimObj.transform.localRotation.eulerAngles;
+        eRot.x += yRot;
+        if (eRot.x < -180) eRot.x += 360;
+        if (eRot.x > 180) eRot.x -= 360;
+        eRot = new Vector3(Mathf.Clamp(eRot.x, -90, 90),0,0);
+        AimObj.transform.localRotation = Quaternion.Euler(eRot);
+        if (!InControl) return;
         bool onGround = OnGround();
         move = move.normalized * (sprint ? GetSprintSpeed() : GetMoveSpeed());
         if (jump && onGround)
@@ -86,20 +114,17 @@ public class ActorController : MonoBehaviour
             move.z += Fling.z;
         if (Fling != Vector3.zero && move.y == 0) move.y = 3;
         RB.velocity = move;
-        transform.Rotate(0,xRot,0);
-        Vector3 eRot = AimObj.transform.localRotation.eulerAngles;
-        eRot.x += yRot;
-        if (eRot.x < -180) eRot.x += 360;
-        if (eRot.x > 180) eRot.x -= 360;
-        eRot = new Vector3(Mathf.Clamp(eRot.x, -90, 90),0,0);
-        AimObj.transform.localRotation = Quaternion.Euler(eRot);
+        
     }
     
     
     public void Shoot(Vector3 pos,Quaternion rot)
     {
+        if (!InControl || ShotCooldown > 0) return;
         JSONWeapon wpn = GetWeapon();
+        Debug.Log("B: " + wpn?.Text + " / " + wpn?.RateOfFire);
         if (wpn == null || wpn.RateOfFire <= 0) return;
+        
         ShotCooldown = wpn.RateOfFire;
 
         if (Ammo > 0)
@@ -108,13 +133,23 @@ public class ActorController : MonoBehaviour
             if (Ammo <= 0)
                 SetWeapon(DefaultWeapon);
         }
-        for (int n = 0; n < Mathf.Max(1, wpn.Shots); n++)
+
+        //Debug.Log("SHOOT: " + wpn.Text + " / " + wpn.Type);
+        if (wpn.Type == WeaponTypes.Melee)
         {
-            Vector3 r = rot.eulerAngles;
-            r.y += Random.Range(-wpn.Accuracy, wpn.Accuracy);
-            r.x += Random.Range(-wpn.Accuracy, wpn.Accuracy);
-            ProjectileController p = Instantiate(God.Library.Projectile, pos,Quaternion.Euler(r));
-            p.Setup(this,wpn);
+            MB.Swing(wpn);
+        }
+        else
+        {
+
+            for (int n = 0; n < Mathf.Max(1, wpn.Shots); n++)
+            {
+                Vector3 r = rot.eulerAngles;
+                r.y += Random.Range(-wpn.Accuracy, wpn.Accuracy);
+                r.x += Random.Range(-wpn.Accuracy, wpn.Accuracy);
+                ProjectileController p = Instantiate(God.Library.Projectile, pos, Quaternion.Euler(r));
+                p.Setup(this, wpn);
+            }
         }
     }
     
@@ -124,7 +159,7 @@ public class ActorController : MonoBehaviour
         return Floors.Count > 0 && Physics.Raycast(transform.position,transform.up * -1,1.5f);
     }
     
-    public void TakeDamage(int amt, ActorController source = null)
+    public virtual void TakeDamage(int amt, ActorController source = null)
     {
         HP -= amt;
         if (HP <= 0)
@@ -153,21 +188,22 @@ public class ActorController : MonoBehaviour
         JustKnocked = true;
     }
     
-    public virtual int GetMaxHP()
+    public int GetMaxHP()
     {
-        return 100;
+        return JSON != null && JSON.HP > 0 ? JSON.HP : 100;
     }
     
-    public virtual float GetMoveSpeed()
+    public float GetMoveSpeed()
     {
         return MoveSpeed;
         //return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.MoveSpeed > 0 ? God.LM.Ruleset.MoveSpeed : 10;
     }
     
-    public virtual float GetSprintSpeed()
+    public float GetSprintSpeed()
     {
         float move = GetMoveSpeed();
         if (SprintSpeed > 0) move *= SprintSpeed;
+        //Debug.Log("SPRINT SPEED: " + move + " / " + name);
         return move;
         //return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.SprintSpeed > 0 ? God.LM.Ruleset.SprintSpeed * move : move * 1.5f;
     }

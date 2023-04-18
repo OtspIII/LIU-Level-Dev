@@ -45,6 +45,28 @@ public class JSONWeapon
 }
 
 [System.Serializable]
+public class JSONActor
+{
+    public string Name;
+    public int HP;
+    public float MoveSpeed;
+    public float SprintSpeed;
+    public string Weapon;
+    public float Vision;
+    
+
+    public JSONActor(JSONTempActor source)
+    {
+        Name = source.Name;
+        HP = source.HP;
+        MoveSpeed = source.MoveSpeed;
+        SprintSpeed = source.SprintSpeed;
+        Weapon = source.Weapon;
+        Vision = source.Vision > 0 ? source.Vision : 999;
+    }
+}
+
+[System.Serializable]
 public class JSONItem
 {
     public string Text = "";
@@ -72,7 +94,7 @@ public class JSONCreator
     public float SprintSpeed;
     public float Gravity;
     public GameModes Mode;
-    public List<IColors> Teams = new List<IColors>();
+    public List<JSONActor> Actors = new List<JSONActor>();
     public List<JSONItem> Items = new List<JSONItem>();
     public List<JSONWeapon> Weapons = new List<JSONWeapon>();
     
@@ -80,15 +102,15 @@ public class JSONCreator
     public JSONCreator(JSONTempCreator source,string author,TextAsset ta)
     {
         Author = author;
-        Mode = source.Mode != null ? (GameModes)Enum.Parse(typeof(GameModes), source.Mode) : GameModes.Deathmatch;
-        PointsToWin = source.PointsToWin;
-        PlayerHP = source.PlayerHP;
+        Mode = !string.IsNullOrEmpty( source.Mode) ? (GameModes)Enum.Parse(typeof(GameModes), source.Mode) : GameModes.Deathmatch;
+        PointsToWin = source.PointsToWin != null ? source.PointsToWin : 999;
+        
+        foreach(JSONTempActor i in source.Actors)
+            Actors.Add(new JSONActor(i));
         foreach(JSONTempItem i in source.Items)
             Items.Add(new JSONItem(i));
         foreach(JSONTempWeapon i in source.Weapons)
             Weapons.Add(new JSONWeapon(i));
-        MoveSpeed = source.MoveSpeed > 0 ? source.MoveSpeed : 10;
-        SprintSpeed = source.SprintSpeed > 0 ? source.SprintSpeed : 1.5f;
         Gravity = source.Gravity > 0 ? source.Gravity : 1;
 
 //        if (source.Symbol == null)
@@ -98,6 +120,17 @@ public class JSONCreator
 //        Type = source.Type != null ? (SpawnThings)Enum.Parse(typeof(SpawnThings), source.Type) : SpawnThings.None;
 //        if (source.Sprite != null) Sprite = GameManager.GetResourceSprite(source.Sprite, author);
     }
+}
+
+[System.Serializable]
+public class JSONTempActor
+{
+    public string Name;
+    public int HP;
+    public float MoveSpeed;
+    public float SprintSpeed;
+    public string Weapon;
+    public float Vision;
 }
 
 [System.Serializable]
@@ -134,11 +167,9 @@ public class JSONTempWeapon
 public class JSONTempCreator
 {
     public int PointsToWin;
-    public int PlayerHP;
-    public float MoveSpeed;
-    public float SprintSpeed;
     public float Gravity;
     public string Mode;
+    public JSONTempActor[] Actors;
     public JSONTempItem[] Items;
     public JSONTempWeapon[] Weapons;
 }
