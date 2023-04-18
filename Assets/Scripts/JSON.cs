@@ -102,7 +102,7 @@ public class JSONCreator
     public JSONCreator(JSONTempCreator source,string author,TextAsset ta)
     {
         Author = author;
-        Mode = source.Mode != null ? (GameModes)Enum.Parse(typeof(GameModes), source.Mode) : GameModes.Deathmatch;
+        Mode = !string.IsNullOrEmpty( source.Mode) ? (GameModes)Enum.Parse(typeof(GameModes), source.Mode) : GameModes.Deathmatch;
         PointsToWin = source.PointsToWin != null ? source.PointsToWin : 999;
         
         foreach(JSONTempActor i in source.Actors)

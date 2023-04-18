@@ -16,6 +16,7 @@ public class ActorController : MonoBehaviour
     public List<GameObject> Floors;
     public float ShotCooldown;
     public bool JustKnocked = false;
+    public MeleeBox MB;
 
     public JSONActor JSON;
     public JSONWeapon CurrentWeapon;
@@ -27,6 +28,11 @@ public class ActorController : MonoBehaviour
 
     public bool InControl = true;
 
+    void Awake()
+    {
+        MB = GetComponentInChildren<MeleeBox>();
+    }
+    
     void Start()
     {
       OnStart();  
@@ -53,7 +59,7 @@ public class ActorController : MonoBehaviour
 
     public void ImprintJSON(JSONActor j)
     {
-        Debug.Log("IMPRINT JSON: " + name + " / " + j.Name);
+        //Debug.Log("IMPRINT JSON: " + name + " / " + j.Name);
         MoveSpeed = j.MoveSpeed;
         SprintSpeed = j.SprintSpeed;
         HP = j.HP;
@@ -116,7 +122,7 @@ public class ActorController : MonoBehaviour
     {
         if (!InControl || ShotCooldown > 0) return;
         JSONWeapon wpn = GetWeapon();
-        
+        Debug.Log("B: " + wpn?.Text + " / " + wpn?.RateOfFire);
         if (wpn == null || wpn.RateOfFire <= 0) return;
         
         ShotCooldown = wpn.RateOfFire;
@@ -127,13 +133,23 @@ public class ActorController : MonoBehaviour
             if (Ammo <= 0)
                 SetWeapon(DefaultWeapon);
         }
-        for (int n = 0; n < Mathf.Max(1, wpn.Shots); n++)
+
+        //Debug.Log("SHOOT: " + wpn.Text + " / " + wpn.Type);
+        if (wpn.Type == WeaponTypes.Melee)
         {
-            Vector3 r = rot.eulerAngles;
-            r.y += Random.Range(-wpn.Accuracy, wpn.Accuracy);
-            r.x += Random.Range(-wpn.Accuracy, wpn.Accuracy);
-            ProjectileController p = Instantiate(God.Library.Projectile, pos,Quaternion.Euler(r));
-            p.Setup(this,wpn);
+            MB.Swing(wpn);
+        }
+        else
+        {
+
+            for (int n = 0; n < Mathf.Max(1, wpn.Shots); n++)
+            {
+                Vector3 r = rot.eulerAngles;
+                r.y += Random.Range(-wpn.Accuracy, wpn.Accuracy);
+                r.x += Random.Range(-wpn.Accuracy, wpn.Accuracy);
+                ProjectileController p = Instantiate(God.Library.Projectile, pos, Quaternion.Euler(r));
+                p.Setup(this, wpn);
+            }
         }
     }
     
@@ -187,7 +203,7 @@ public class ActorController : MonoBehaviour
     {
         float move = GetMoveSpeed();
         if (SprintSpeed > 0) move *= SprintSpeed;
-        Debug.Log("SPRINT SPEED: " + move + " / " + name);
+        //Debug.Log("SPRINT SPEED: " + move + " / " + name);
         return move;
         //return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.SprintSpeed > 0 ? God.LM.Ruleset.SprintSpeed * move : move * 1.5f;
     }

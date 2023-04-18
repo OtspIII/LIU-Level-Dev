@@ -41,7 +41,13 @@ public class NPCController : ActorController
         if (Attacking != null)
         {
             LookAt(Attacking.transform);
-            HandleMove(transform.forward, false, 0, 0, true);
+            Vector3 dist = AimObj.transform.position - Attacking.transform.position;
+            dist.y = 0;
+            //Debug.Log("DIST: " + dist.magnitude);
+            if(dist.magnitude > 3)
+                HandleMove(transform.forward, false, 0, 0, true);
+            else
+                HandleMove(Vector3.zero, false, 0, 0, true);
             Shoot(AimObj.transform.position + AimObj.transform.forward, AimObj.transform.rotation);
         }
         else IdleAI();
