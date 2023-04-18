@@ -10,6 +10,12 @@ using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
+//Battle Royale Storm
+//Animating Enemies
+//A Ladder
+//Slow Fall
+//Conveyor Belts
+
 public class FirstPersonController : ActorController
 {
     public Camera Eyes;
@@ -17,6 +23,9 @@ public class FirstPersonController : ActorController
     public float MouseSensitivity = 3;
     public bool GhostMode;
     public Vector3 StartSpot;
+
+    public float Dizzy = 0;
+    public Vector2 DizzyDir;
 
     public override void OnStart()
     {
@@ -106,6 +115,7 @@ public class FirstPersonController : ActorController
     
     public void Reset()
     {
+        Dizzy = 0;
         HP = GetMaxHP();
         RB.velocity = Vector3.zero;
         Fling = Vector3.zero;
@@ -113,7 +123,27 @@ public class FirstPersonController : ActorController
         transform.position = StartSpot;
     }
 
-    
+    public override void HandleMove(Vector3 move, bool jump, float xRot, float yRot, bool sprint)
+    {
+        if (Dizzy > 0)
+        {
+            Dizzy -= Time.deltaTime;
+            move.x *= -1;
+            move.z *= -1;
+            xRot *= -1;
+            yRot *= -1;
+            if(DizzyDir == Vector2.zero)
+                DizzyDir = new Vector2(Random.Range(-1, 1f),Random.Range(-1, 1f));
+            
+            DizzyDir += new Vector2(Random.Range(-0.1f, 0.1f) + Mathf.Sin(Time.time * 3),
+                Random.Range(-0.1f, 0.1f) + Mathf.Sin(Time.time * 2));
+            DizzyDir.Normalize();
+            xRot += DizzyDir.x * 0.5f;
+            yRot += DizzyDir.y * 0.5f;
+        }
+        base.HandleMove(move, jump, xRot, yRot, sprint);
+    }
+
 
     public void SetGhostMode(bool set)
     {
@@ -166,8 +196,12 @@ public class FirstPersonController : ActorController
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.GetMask("Checkpoint"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Checkpoint"))
+        {
             StartSpot = transform.position;
+            Debug.Log("HIT CHECKPOINT: " + other.gameObject.name);
+        }
+            
     }
 }
 
