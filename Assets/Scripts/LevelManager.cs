@@ -44,7 +44,7 @@ public class LevelManager : MonoBehaviour
         {
             Physics.gravity = new Vector3(0,-9.81f,0) * Ruleset.Gravity;
         }
-        Debug.Log("WEAPONS: " + Ruleset.Weapons.Count + " / " + cr);
+        //Debug.Log("WEAPONS: " + Ruleset.Weapons.Count + " / " + cr);
         foreach(JSONActor i in Ruleset.Actors)
             Actors.Add(i.Name,i);
         foreach(JSONItem i in Ruleset.Items)
@@ -162,6 +162,7 @@ public class LevelManager : MonoBehaviour
     public JSONActor GetActor(string n)
     {
         if (Actors.ContainsKey(n)) return Actors[n];
+        Debug.Log("ACTOR NOT FOUND: " + n + " / " + Ruleset.Actors.Count + " / " + Actors.Keys.Count);
         if (Ruleset.Actors.Count > 0) return Ruleset.Actors[0];
         JSONTempActor a = new JSONTempActor();
         a.HP = 100;

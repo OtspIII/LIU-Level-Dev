@@ -30,7 +30,7 @@ public class NPCController : ActorController
         if (Aggro && !Attacking && God.Player != null 
             && Vector3.Distance(transform.position,God.Player.transform.position) < GetVision())
         {
-            Debug.Log("LOOK FOR PLAYER");
+            //Debug.Log("LOOK FOR PLAYER");
             if(Physics.Raycast(transform.position,(God.Player.transform.position - transform.position),out RaycastHit hit))
             {
                 FirstPersonController p = hit.collider.GetComponentInParent<FirstPersonController>();
