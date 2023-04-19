@@ -104,9 +104,13 @@ public class JSONCreator
         Author = author;
         Mode = !string.IsNullOrEmpty( source.Mode) ? (GameModes)Enum.Parse(typeof(GameModes), source.Mode) : GameModes.Deathmatch;
         PointsToWin = source.PointsToWin != null ? source.PointsToWin : 999;
-        
-        foreach(JSONTempActor i in source.Actors)
+
+        foreach (JSONTempActor i in source.Actors)
+        {
             Actors.Add(new JSONActor(i));
+            //Debug.Log("ADD ACTOR: "+ i.Name);
+        }
+
         foreach(JSONTempItem i in source.Items)
             Items.Add(new JSONItem(i));
         foreach(JSONTempWeapon i in source.Weapons)

@@ -6,14 +6,15 @@
       "HP": 100,
       "MoveSpeed": 10,
       "SprintSpeed": 2,
-      "Weapon": "Sword"
+      "Weapon": "Rifle",
+      "Accuracy":1
     },
     {
       "Name": "Amogus",
       "HP": 20,
       "MoveSpeed": 10,
       "SprintSpeed": 0.1,
-      "Weapon": "Sword"
+      "Weapon": "Rifle"
     }
   ],
   "Weapons": [
@@ -27,11 +28,10 @@
     {
       "Color":"Blue",
       "Text": "Rifle",
+      "Type": "Hitscan",
       "Damage": 10,
       "Ammo": 30,
-      "RateOfFire":0.2,
-      "Accuracy":2,
-      "Speed":80
+      "RateOfFire":0.2
     },
     {
       "Color":"Red",
