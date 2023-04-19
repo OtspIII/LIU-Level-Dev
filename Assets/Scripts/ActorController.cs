@@ -18,6 +18,7 @@ public class ActorController : MonoBehaviour
     public float ShotCooldown;
     public bool JustKnocked = false;
     public MeleeBox MB;
+    
 
     public JSONActor JSON;
     public JSONWeapon CurrentWeapon;
@@ -30,6 +31,7 @@ public class ActorController : MonoBehaviour
     public int Ammo;
 
     public bool InControl = true;
+    public bool CanWalk = true;
 
     void Awake()
     {
@@ -105,7 +107,7 @@ public class ActorController : MonoBehaviour
         if (eRot.x > 180) eRot.x -= 360;
         eRot = new Vector3(Mathf.Clamp(eRot.x, -90, 90),0,0);
         AimObj.transform.localRotation = Quaternion.Euler(eRot);
-        if (!InControl) return;
+        if (!InControl || !CanWalk) return;
         bool onGround = OnGround();
         move = move.normalized * (sprint ? GetSprintSpeed() : GetMoveSpeed());
         if (jump && onGround)
