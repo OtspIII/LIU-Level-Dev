@@ -12,20 +12,20 @@ using Random = UnityEngine.Random;
 
 //Battle Royale Storm
 //Animating Enemies
-//Dash
 //A Ladder
 //Slow Fall
-//Slide
-//Inverted Controls
 //Conveyor Belts
 
 public class FirstPersonController : ActorController
 {
-    public Camera Eyes;
+    public GameObject Eyes;
     public TextMeshPro NameText;
     public float MouseSensitivity = 3;
     public bool GhostMode;
     public Vector3 StartSpot;
+
+    public float Dizzy = 0;
+    public Vector2 DizzyDir;
 
     public override void OnStart()
     {
@@ -33,8 +33,11 @@ public class FirstPersonController : ActorController
         base.OnStart();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        God.Player = this;
         God.Players.Add(this);
         StartSpot = transform.position;
+        //Debug.Log("X");
+        if(God.LM.UseJSON) ImprintJSON(God.LM.GetActor("Player"));
         Reset();
     }
 
@@ -44,7 +47,8 @@ public class FirstPersonController : ActorController
         if (God.HPText != null)
         {
             God.HPText.text = HP + "/" + GetMaxHP();
-            God.StatusText.text = GetWeapon().Text + (Ammo > 0 ? " - " + Ammo : "");
+            if(GetWeapon() != null)
+                God.StatusText.text = GetWeapon().Text + (Ammo > 0 ? " - " + Ammo : "");
         }
 
         float xRot = Input.GetAxis("Mouse X") * MouseSensitivity;
@@ -98,23 +102,15 @@ public class FirstPersonController : ActorController
                 jump = true;
         }
         HandleMove(move,jump,xRot,yRot,sprint);
-        if (Input.GetMouseButton(0) && ShotCooldown <= 0)
+        if (Input.GetMouseButton(0))
         {
             Shoot(Eyes.transform.position + Eyes.transform.forward, Eyes.transform.rotation);
         }
     }
-
-    
-
-    public override int GetMaxHP()
-    {
-        return God.LM != null && God.LM.Ruleset != null && God.LM.Ruleset.PlayerHP > 0 ? God.LM.Ruleset.PlayerHP : 100;
-    }
-    
-    
     
     public void Reset()
     {
+        Dizzy = 0;
         HP = GetMaxHP();
         RB.velocity = Vector3.zero;
         Fling = Vector3.zero;
@@ -122,11 +118,30 @@ public class FirstPersonController : ActorController
         transform.position = StartSpot;
     }
 
-    
+    public override void HandleMove(Vector3 move, bool jump, float xRot, float yRot, bool sprint)
+    {
+        if (Dizzy > 0)
+        {
+            Dizzy -= Time.deltaTime;
+            move.x *= -1;
+            move.z *= -1;
+            xRot *= -1;
+            yRot *= -1;
+            if(DizzyDir == Vector2.zero)
+                DizzyDir = new Vector2(Random.Range(-1, 1f),Random.Range(-1, 1f));
+            
+            DizzyDir += new Vector2(Random.Range(-0.1f, 0.1f) + Mathf.Sin(Time.time * 3),
+                Random.Range(-0.1f, 0.1f) + Mathf.Sin(Time.time * 2));
+            DizzyDir.Normalize();
+            xRot += DizzyDir.x * 0.5f;
+            yRot += DizzyDir.y * 0.5f;
+        }
+        base.HandleMove(move, jump, xRot, yRot, sprint);
+    }
+
 
     public void SetGhostMode(bool set)
     {
-        Debug.Log("SGM");
         if (set)
         {
             RB.velocity = Vector3.zero;
@@ -147,7 +162,9 @@ public class FirstPersonController : ActorController
 
     public override void Die(ActorController source = null)
     {
-        base.Die(source);
+        //base.Die(source);
+        if(source != null)
+            Debug.Log("KILLED BY " + source);
         Reset();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         // SetGhostMode(true);

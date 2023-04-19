@@ -1,33 +1,19 @@
 {
-  "PointsToWin":2, 
-  "PlayerHP": 100,
-  "MoveSpeed": 10,
-  "SprintSpeed": 2,
   "Gravity": 1,
-  "Teams": ["Red","Blue"],
-  "Items":[
+  "Actors": [
     {
-      "Text": "1 Point",
-      "Type": "Points",
-      "Amount": 1,
-      "Color": "Yellow"
+      "Name": "Player",
+      "HP": 100,
+      "MoveSpeed": 10,
+      "SprintSpeed": 2,
+      "Weapon": "Sword"
     },
     {
-      "Text": "Health",
-      "Type": "Healing",
-      "Amount": 50,
-      "Color": "Green"
-    },
-    {
-      "Text": "Jump",
-      "Type": "Jump",
-      "Amount": 10,
-      "Color": "Blue"
-    },
-    {
-      "Text": "Teleporter",
-      "Type": "Teleport",
-      "Color": "White"
+      "Name": "Amogus",
+      "HP": 20,
+      "MoveSpeed": 10,
+      "SprintSpeed": 0.1,
+      "Weapon": "Rifle"
     }
   ],
   "Weapons": [
@@ -41,11 +27,10 @@
     {
       "Color":"Blue",
       "Text": "Rifle",
+      "Type": "Hitscan",
       "Damage": 10,
       "Ammo": 30,
-      "RateOfFire":0.2,
-      "Accuracy":2,
-      "Speed":80
+      "RateOfFire":0.2
     },
     {
       "Color":"Red",
@@ -93,6 +78,16 @@
       "Ammo": 90,
       "RateOfFire":0.1,
       "Accuracy":10
+    },
+    {
+      "Color":"Orange",
+      "Text": "Sword",
+      "Damage": 25,
+      "Ammo": 90,
+      "RateOfFire":0.5,
+      "Type": "Melee"
     }
-  ]
+  ],
+  "PointsToWin":2,
+  "Items":[]
 }

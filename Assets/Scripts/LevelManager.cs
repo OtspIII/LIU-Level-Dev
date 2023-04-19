@@ -13,12 +13,14 @@ public class LevelManager : MonoBehaviour
 {
     public string Creator;
     public string Name;
+    public bool UseJSON = false;
     public JSONCreator Ruleset;
     public List<PlayerSpawnController> PSpawns;
     public List<ItemSpawnController> ISpawns;
     public List<WeaponSpawnController> WSpawns;
     public PlayerSpawnController LastPS;
     public List<string> Announces;
+    public Dictionary<string, JSONActor> Actors = new Dictionary<string, JSONActor>();
     public Dictionary<string, JSONItem> Items = new Dictionary<string, JSONItem>();
     public Dictionary<string, JSONWeapon> Weapons = new Dictionary<string, JSONWeapon>();
     public List<FirstPersonController> AlivePlayers = new List<FirstPersonController>();
@@ -34,6 +36,7 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
+        if (!UseJSON) return;
         string cr = Creator != "" ? Creator : "Misha";
         if (!God.LS.Rulesets.ContainsKey(cr)) cr = "Misha";
         Ruleset = God.LS.Rulesets[cr];
@@ -41,7 +44,9 @@ public class LevelManager : MonoBehaviour
         {
             Physics.gravity = new Vector3(0,-9.81f,0) * Ruleset.Gravity;
         }
-        Debug.Log("WEAPONS: " + Ruleset.Weapons.Count + " / " + cr);
+        //Debug.Log("WEAPONS: " + Ruleset.Weapons.Count + " / " + cr);
+        foreach(JSONActor i in Ruleset.Actors)
+            Actors.Add(i.Name,i);
         foreach(JSONItem i in Ruleset.Items)
             Items.Add(i.Text,i);
         foreach(JSONWeapon i in Ruleset.Weapons)
@@ -154,6 +159,17 @@ public class LevelManager : MonoBehaviour
         return new JSONItem(r);
     }
 
+    public JSONActor GetActor(string n)
+    {
+        if (Actors.ContainsKey(n)) return Actors[n];
+        Debug.Log("ACTOR NOT FOUND: " + n + " / " + Ruleset.Actors.Count + " / " + Actors.Keys.Count);
+        if (Ruleset.Actors.Count > 0) return Ruleset.Actors[0];
+        JSONTempActor a = new JSONTempActor();
+        a.HP = 100;
+        a.MoveSpeed = 10;
+        return new JSONActor(a);
+    }
+    
     public JSONWeapon GetWeapon(string n)
     {
         if (Weapons.ContainsKey(n)) return Weapons[n];
@@ -168,13 +184,6 @@ public class LevelManager : MonoBehaviour
     {
         if (Ruleset.Mode == GameModes.Elim) return false;
         return true;
-    }
-
-    private void OnDestroy()
-    {
-        if(NetworkManager.Singleton.IsServer)
-            foreach(GameObject obj in Spawned)
-                Destroy(obj);
     }
 
     public void NoticeDeath(FirstPersonController pc,FirstPersonController source=null)
@@ -201,27 +210,27 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public IColors PickTeam(FirstPersonController pc)
-    {
-        if (Ruleset.Teams.Count <= 1) return IColors.None;
-        int amt = 999;
-        IColors best = IColors.None;
-        foreach (IColors c in Ruleset.Teams)
-        {
-            if(!Teams.ContainsKey(c)) Teams.Add(c,new List<FirstPersonController>());
-            if (Teams[c].Contains(pc)) return c;
-            int mem = Teams[c].Count;
-            if (mem < amt)
-            {
-                best = c;
-                amt = mem;
-            }
-        }
-
-        if (Teams.ContainsKey(best))
-            Teams[best].Add(pc);
-        return best;
-    }
+    // public IColors PickTeam(FirstPersonController pc)
+    // {
+    //     if (Ruleset.Teams.Count <= 1) return IColors.None;
+    //     int amt = 999;
+    //     IColors best = IColors.None;
+    //     foreach (IColors c in Ruleset.Teams)
+    //     {
+    //         if(!Teams.ContainsKey(c)) Teams.Add(c,new List<FirstPersonController>());
+    //         if (Teams[c].Contains(pc)) return c;
+    //         int mem = Teams[c].Count;
+    //         if (mem < amt)
+    //         {
+    //             best = c;
+    //             amt = mem;
+    //         }
+    //     }
+    //
+    //     if (Teams.ContainsKey(best))
+    //         Teams[best].Add(pc);
+    //     return best;
+    // }
 
     public void RemovePlayer(FirstPersonController pc)
     {
