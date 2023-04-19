@@ -73,6 +73,7 @@ public class EnemyNormal : MonoBehaviour
                 if (hit.collider.gameObject.layer == 8) return true;
             }
         }
+
         return false;
     }
     public void FacePlayer(Transform pos)

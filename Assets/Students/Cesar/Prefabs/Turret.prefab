@@ -6843,8 +6843,8 @@ MonoBehaviour:
   detect: {fileID: 0}
   playerPos: {fileID: 0}
   bulletPrefab: {fileID: 4920029536488070154, guid: 6eef50771a8a2584e8ace5e71b2a9718, type: 3}
-  rotationSpeed: 20
-  sightDistance: 10
+  rotationSpeed: 200
+  sightDistance: 80
   attackDistance: 0
   headPos: {fileID: 6510337190208172638}
   eyePos: {fileID: 7892729654325265956}
