@@ -120,7 +120,7 @@ public class HookShotScript : MonoBehaviour
             float minSpeed = 10;
             float speedMulti = 800;
             fps.RB.useGravity = false;
-            flySpeed = Math.Clamp(Vector3.Distance(fps.transform.position, _hitPoint), minSpeed, maxSpeed);
+            //flySpeed = Math.Clamp(Vector3.Distance(fps.transform.position, _hitPoint), minSpeed, maxSpeed);
             fps.RB.velocity = (dir.normalized * flySpeed * speedMulti) * Time.deltaTime;
 
             if (Input.GetKeyDown(KeyCode.Space))
