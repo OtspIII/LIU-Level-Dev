@@ -5,23 +5,23 @@ using Unity.Collections;
 using Unity.Netcode;
 using UnityEngine;
 
-public class ExplosionController : NetworkBehaviour
+public class ExplosionController : MonoBehaviour
 {
     public JSONWeapon Data;
     public ActorController Shooter;
     public ParticleSystem PS;
-    public NetworkObject NO;
+    //public NetworkObject NO;
     public SphereCollider Coll;
     public bool IsSetup = false;
-    public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
+    public string Name;
     
     public void Setup(ActorController pc,JSONWeapon data)
     {
         Data = data;
         Shooter = pc;
-        NO.Spawn();
+        //NO.Spawn();
         
-        Name.Value = Data.Text;
+        Name = Data.Text;
         SetColor();
     }
     
@@ -34,10 +34,10 @@ public class ExplosionController : NetworkBehaviour
     
     void Update()
     {
-        if (!IsSetup && Name.Value != "")
+        if (!IsSetup && Name != "")
         {
             
-            Data = God.LM.GetWeapon(Name.Value.ToString());
+            Data = God.LM.GetWeapon(Name.ToString());
             SetColor();
         }
     }
@@ -49,7 +49,7 @@ public class ExplosionController : NetworkBehaviour
         yield return null;
         Coll.enabled = false;
         yield return new WaitForSeconds(2);
-        if(IsServer) Destroy(gameObject);
+       Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider other)

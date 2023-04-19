@@ -5,17 +5,16 @@ using UnityEngine;
 
 public class ParticleGnome : NetworkBehaviour
 {
-    public NetworkObject NO;
     public ParticleSystem PS;
     public bool IsSetup = false;
-    public NetworkVariable<int> Amount = new NetworkVariable<int>();
+    public int Amount = 0;
 
     void Update()
     {
-        if (!IsSetup && Amount.Value > 0)
+        if (!IsSetup && Amount > 0)
         {
             IsSetup = true;
-            PS.Emit(Amount.Value);
+            PS.Emit(Amount);
         }
     }
 
@@ -23,9 +22,8 @@ public class ParticleGnome : NetworkBehaviour
     public void Setup(int amt)
     {
         PS.Emit(amt);
-        NO.Spawn();
         Invoke("TimeUp",1);
-        Amount.Value = amt;
+        Amount = amt;
     }
 
     public void TimeUp()

@@ -7,10 +7,9 @@ using UnityEngine;
 using Unity.Netcode;
 using Unity.Netcode.Components;
 
-public class ProjectileController : NetworkBehaviour
+public class ProjectileController : MonoBehaviour
 {
     public Rigidbody RB;
-    public NetworkObject NO;
     public float Lifetime = 10;
     public ActorController Shooter;
     public bool Hit = false;
@@ -20,7 +19,7 @@ public class ProjectileController : NetworkBehaviour
     public TrailRenderer TR;
     public bool Doomed;
     public bool IsSetup = false;
-    public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
+    public string Name;
     
     public void Setup(ActorController pc,JSONWeapon data)
     {
@@ -29,11 +28,10 @@ public class ProjectileController : NetworkBehaviour
 //    public bool SelfDamage;
         Data = data;
         Shooter = pc;
-        NO.Spawn();
         IsSetup = true;
         RB.velocity = transform.forward * Data.Speed;
         Lifetime = Data.Lifetime > 0 ? Data.Lifetime : 10;
-        Name.Value = Data.Text;
+        Name = Data.Text;
         SetColor();
 
 //        if (Shooter.IsOwner && Data.Type != WeaponTypes.Grenade) TR.enabled = false;
@@ -42,10 +40,10 @@ public class ProjectileController : NetworkBehaviour
 
     void Update()
     {
-        if (!IsSetup && Name.Value != "")
+        if (!IsSetup && Name != "")
         {
             
-            Data = God.LM.GetWeapon(Name.Value.ToString());
+            Data = God.LM.GetWeapon(Name);
             SetColor();
         }
     }
@@ -66,14 +64,14 @@ public class ProjectileController : NetworkBehaviour
             RB.AddForce(new Vector3(0,-9.81f,0) * Data.Gravity);
         OldVel = RB.velocity;
         Lifetime -= Time.fixedDeltaTime;
-        if(Lifetime <= 0 && NetworkManager.Singleton.IsServer) 
+        if(Lifetime <= 0) 
             Explode();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!NetworkManager.Singleton.IsServer || Hit) return;
-        FirstPersonController pc = other.gameObject.GetComponent<FirstPersonController>();
+        if (Hit) return;
+        ActorController pc = other.gameObject.GetComponentInParent<ActorController>();
         if (pc == Shooter) return;
         if (pc != null && pc != Shooter)
         {
@@ -91,7 +89,7 @@ public class ProjectileController : NetworkBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (!NetworkManager.Singleton.IsServer || Hit) return;
+        if (Hit) return;
         
         if(Data.Type != WeaponTypes.Grenade)
             Explode();
