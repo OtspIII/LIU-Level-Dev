@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Students/Matteo/Game.unity.meta
+guid: 16e53b2db0cafb4408ae92c5fe4df8d6
+========
 guid: d9628aa360ef19c47be68510f97daf9d
+>>>>>>>> f7d81846f5bbecacb85b58392a2f13dcce6517a1:Assets/Students/Cesar/Cesar.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
