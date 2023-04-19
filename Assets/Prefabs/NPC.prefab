@@ -87,6 +87,7 @@ MonoBehaviour:
   Floors: []
   ShotCooldown: 0
   JustKnocked: 0
+  MB: {fileID: 0}
   JSON:
     Name: 
     HP: 0
@@ -128,6 +129,7 @@ MonoBehaviour:
     Knockback: 0
     Bounce: 0
     SelfDamage: 0
+  Muzzle: {fileID: 0}
   Fling: {x: 0, y: 0, z: 0}
   HP: 0
   Ammo: 0
