@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class TouchController : MonoBehaviour
 {
-    public TouchThings Type;
+    public TouchThings Type = TouchThings.Lava;
     public float Amount;
     public float KB = 10;
     public Vector3 KBDir;
@@ -17,6 +17,18 @@ public class TouchController : MonoBehaviour
 //        if (!NetworkManager.Singleton.IsServer) return;
         ActorController pc = other.gameObject.GetComponent<ActorController>();
         if (pc == null) return;
+        Apply(pc);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        ActorController pc = other.gameObject.GetComponent<ActorController>();
+        if (pc == null) return;
+        Apply(pc);
+    }
+
+    public void Apply(ActorController pc)
+    {
         switch (Type)
         {
             case TouchThings.Lava:
@@ -28,6 +40,12 @@ public class TouchController : MonoBehaviour
                 pc.TakeKnockback(kb);
                 break;
             }
+            case TouchThings.Dizzy:
+            {
+                if (!(pc is FirstPersonController)) break;
+                ((FirstPersonController)pc).Dizzy = Amount;
+                break;
+            }
         }
     }
 }
@@ -36,5 +54,6 @@ public enum TouchThings
 {
     None,
     Lava,
+    Dizzy,
     
 }
