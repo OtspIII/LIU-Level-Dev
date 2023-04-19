@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HookShotScript : MonoBehaviour
 {
@@ -10,11 +11,14 @@ public class HookShotScript : MonoBehaviour
     [SerializeField] private GameObject hook;
     [SerializeField] private float flySpeed, hookRange;
     [SerializeField] private AudioClip[] hookNoise;
+    [SerializeField] private Slider hookSlider;
     private AudioSource _hookSource;
     private Rigidbody rb;
+    private GameObject _gameObject;
     private Vector3 _hitPoint,_hookMomentum;
     private HookState _hookState;
-    private float _hookDetect = 2f,_hookSize;
+    private float _hookDetect = 2f,_hookSize, _coolRate = .2f;
+    private bool _hookCoolDown;
     void Awake()
     {
         rb = GetComponentInParent<Rigidbody>();
@@ -53,7 +57,8 @@ public class HookShotScript : MonoBehaviour
                 }
                 if(fps.OnGround()) fps.InControl = true;
                 
-                StartHookShot();
+                if(!_hookCoolDown)StartHookShot();
+                else HookCoolDown();
                 break;
             }
             
@@ -77,9 +82,10 @@ public class HookShotScript : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            if (Physics.Raycast(fps.Eyes.transform.position, fps.Eyes.transform.forward, out RaycastHit hit, hookRange))
+            if (Physics.Raycast(fps.Eyes.transform.position, fps.Eyes.transform.forward, out RaycastHit hit, hookRange, ~(1 << 10 | 1 << 2)))
             {
                 _hitPoint = hit.point;
+                _gameObject = hit.collider.gameObject;
                 _hookSize = 0;
                 hook.transform.localScale = new Vector3(0, 0, 0);
                 hook.SetActive(true);
@@ -125,10 +131,9 @@ public class HookShotScript : MonoBehaviour
                 Vector3 jumpForce = Vector3.up * jumpSpeed;
 
                 _hookMomentum += jumpForce;
-
-                fps.RB.useGravity = true;
-                _hookState = HookState.NotHooked;
-                _hookSource.PlayOneShot(hookNoise[0]);
+                float speed = 5.15f;
+                _coolRate = speed;
+                Unhook();
                 return;
             }
 
@@ -136,10 +141,10 @@ public class HookShotScript : MonoBehaviour
 
             if (dist <= .4f)
             {
-                fps.RB.useGravity = true;
                 fps.RB.velocity = Vector3.zero;
-                _hookState = HookState.NotHooked;
-                _hookSource.PlayOneShot(hookNoise[0]);
+                float speed = .85f;
+                _coolRate = speed;
+                Unhook();
                 return;
             }
 
@@ -147,23 +152,40 @@ public class HookShotScript : MonoBehaviour
             {
                 if (hit.collider != null)
                 {
-
-                    fps.RB.useGravity = true;
                     fps.RB.velocity = Vector3.zero;
-                    _hookSource.PlayOneShot(hookNoise[0]);
-                    _hookState = HookState.NotHooked;
-
+                    float speed = .85f;
+                    _coolRate = speed;
+                    Unhook();
                 }
             }
             
     }
 
-   
+    private void HookCoolDown()
+    {
+        if (hookSlider.value >= 1)
+        {
+            _hookCoolDown = false;
+        }
+        else
+        {
+            hookSlider.value += _coolRate * Time.deltaTime;
+        }
+    }
 
+    private void Unhook()
+    {
+        fps.RB.useGravity = true;
+        _hookSource.PlayOneShot(hookNoise[0]);
+        hookSlider.value = 0;
+        _hookCoolDown = true;
+        _hookState = HookState.NotHooked;
+    }
     private enum HookState
     {
         NotHooked,
         Hooked,
-        Flying
+        Flying,
+       
     }
 }
