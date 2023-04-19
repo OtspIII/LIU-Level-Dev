@@ -15,9 +15,9 @@ public class HookShotScript : MonoBehaviour
     private AudioSource _hookSource;
     private Rigidbody rb;
     private GameObject _gameObject;
-    private Vector3 _hitPoint,_hookMomentum;
+    private Vector3 _hitPoint, _hookMomentum;
     private HookState _hookState;
-    private float _hookDetect = 2f,_hookSize, _coolRate = .2f;
+    private float _hookDetect = 2f, _hookSize, _coolRate = .2f;
     private bool _hookCoolDown;
     void Awake()
     {
@@ -26,7 +26,7 @@ public class HookShotScript : MonoBehaviour
         _hookSource = GetComponent<AudioSource>();
         hook.SetActive(false);
     }
-    
+
     void Update()
     {
 
@@ -43,37 +43,37 @@ public class HookShotScript : MonoBehaviour
         switch (_hookState)
         {
             case HookState.NotHooked:
-            {
-                hook.SetActive(false);
-                rb.velocity += _hookMomentum;
-                if (_hookMomentum.magnitude >= .1)
                 {
-                    float drag = 800;
-                    _hookMomentum -= _hookMomentum * drag * Time.deltaTime;
-                    if (_hookMomentum.magnitude < .1)
+                    hook.SetActive(false);
+                    rb.velocity += _hookMomentum;
+                    if (_hookMomentum.magnitude >= .1)
                     {
-                        _hookMomentum = Vector3.zero;
+                        float drag = 80;
+                        _hookMomentum -= _hookMomentum * (drag * Time.deltaTime);
+                        if (_hookMomentum.magnitude < .1)
+                        {
+                            _hookMomentum = Vector3.zero;
+                        }
                     }
+                    if (fps.OnGround()) fps.InControl = true;
+
+                    if (!_hookCoolDown) StartHookShot();
+                    else HookCoolDown();
+                    break;
                 }
-                if(fps.OnGround()) fps.InControl = true;
-                
-                if(!_hookCoolDown)StartHookShot();
-                else HookCoolDown();
-                break;
-            }
-            
+
             case HookState.Hooked:
-            {
-                ThrowHook();
-                break;
-            }
+                {
+                    ThrowHook();
+                    break;
+                }
 
             case HookState.Flying:
-            {
-                fps.InControl = false;
-                FlyToHook();
-                break;
-            }
+                {
+                    fps.InControl = false;
+                    FlyToHook();
+                    break;
+                }
 
         }
     }
@@ -99,12 +99,12 @@ public class HookShotScript : MonoBehaviour
 
     private void ThrowHook()
     {
-        
+
         float hookSpeed = 70;
         hook.transform.LookAt(_hitPoint);
-        _hookSize += hookSpeed  * Time.deltaTime;
+        _hookSize += hookSpeed * Time.deltaTime;
         hook.transform.localScale = new Vector3(.15f, .15f, _hookSize);
-     
+
         if (_hookSize >= Vector3.Distance(transform.position, _hitPoint))
         {
             _hookSource.PlayOneShot(hookNoise[2]);
@@ -113,52 +113,52 @@ public class HookShotScript : MonoBehaviour
     }
 
     private void FlyToHook()
+    {
+        hook.transform.LookAt(_hitPoint);
+        Vector3 dir = _hitPoint - fps.transform.position;
+        float maxSpeed = 40;
+        float minSpeed = 10;
+        float speedMulti = 80;
+        fps.RB.useGravity = false;
+        flySpeed = Mathf.Clamp(Vector3.Distance(fps.transform.position, _hitPoint), minSpeed, maxSpeed);
+        fps.RB.velocity = (dir.normalized * flySpeed) * (speedMulti * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            hook.transform.LookAt(_hitPoint);
-            Vector3 dir = _hitPoint - fps.transform.position;
-            float maxSpeed = 40;
-            float minSpeed = 10;
-            float speedMulti = 800;
-            fps.RB.useGravity = false;
-            flySpeed = Math.Clamp(Vector3.Distance(fps.transform.position, _hitPoint), minSpeed, maxSpeed);
-            fps.RB.velocity = (dir.normalized * flySpeed * speedMulti) * Time.deltaTime;
+            float extraSpeed = 7;
+            _hookMomentum = dir.normalized * (flySpeed * Time.deltaTime);
+            float jumpSpeed = 9;
+            Vector3 jumpForce = Vector3.up * jumpSpeed;
 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                float extraSpeed = 7;
-                _hookMomentum = dir.normalized * (flySpeed * Time.deltaTime);
-                float jumpSpeed = 9;
-                Vector3 jumpForce = Vector3.up * jumpSpeed;
+            _hookMomentum += jumpForce;
+            float speed = 5.15f;
+            _coolRate = speed;
+            Unhook();
+            return;
+        }
 
-                _hookMomentum += jumpForce;
-                float speed = 5.15f;
-                _coolRate = speed;
-                Unhook();
-                return;
-            }
+        float dist = Vector3.Distance(fps.transform.position, _hitPoint);
 
-            float dist = Vector3.Distance(fps.transform.position, _hitPoint);
+        if (dist <= .4f)
+        {
+            fps.RB.velocity = Vector3.zero;
+            float speed = .85f;
+            _coolRate = speed;
+            Unhook();
+            return;
+        }
 
-            if (dist <= .4f)
+        if (Physics.Raycast(fps.Eyes.transform.position, dir, out RaycastHit hit, _hookDetect))
+        {
+            if (hit.collider != null)
             {
                 fps.RB.velocity = Vector3.zero;
                 float speed = .85f;
                 _coolRate = speed;
                 Unhook();
-                return;
             }
+        }
 
-            if (Physics.Raycast(fps.Eyes.transform.position, dir, out RaycastHit hit, _hookDetect))
-            {
-                if (hit.collider != null)
-                {
-                    fps.RB.velocity = Vector3.zero;
-                    float speed = .85f;
-                    _coolRate = speed;
-                    Unhook();
-                }
-            }
-            
     }
 
     private void HookCoolDown()
@@ -186,6 +186,6 @@ public class HookShotScript : MonoBehaviour
         NotHooked,
         Hooked,
         Flying,
-       
+
     }
 }
