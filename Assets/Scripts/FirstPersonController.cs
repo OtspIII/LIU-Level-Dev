@@ -36,6 +36,7 @@ public class FirstPersonController : ActorController
         God.Player = this;
         God.Players.Add(this);
         StartSpot = transform.position;
+        //Debug.Log("X");
         if(God.LM.UseJSON) ImprintJSON(God.LM.GetActor("Player"));
         Reset();
     }

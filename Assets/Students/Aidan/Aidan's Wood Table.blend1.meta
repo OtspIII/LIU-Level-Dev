@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Students/Alexander/Alexander.unity.meta
-guid: 41af22efd9556de4a817af0ba2b41df8
+<<<<<<<< HEAD:Assets/Students/Shane/CPMat.mat.meta
+guid: 04d1dd94eee492e4a9c118108588f9e6
+NativeFormatImporter:
 ========
 guid: 1997724b12df73a41ae9f3a39901d934
->>>>>>>> 5b2e43c9aa4f09981da11f62f5c70c7cb2bb228c:Assets/Students/Aidan/Aidan's Wood Table.blend1.meta
 DefaultImporter:
+>>>>>>>> 45e910ba23f56bc57e3ff095901cfcb7399d8be8:Assets/Students/Aidan/Aidan's Wood Table.blend1.meta
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
