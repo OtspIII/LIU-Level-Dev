@@ -24,6 +24,17 @@ public class ExplosionController : MonoBehaviour
         Name = Data.Text;
         SetColor();
     }
+    public void Setup(float size, float dmg, float kb)
+    {
+        JSONTempWeapon js = new JSONTempWeapon();
+        js.ExplodeRadius = size;
+        js.ExplodeDamage = dmg;
+        js.Knockback = kb;
+        Data = new JSONWeapon(js);
+        Shooter = null;
+        Name = "BOOM";
+        SetColor();
+    }
     
     public void SetColor()
     {
