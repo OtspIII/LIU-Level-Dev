@@ -6,23 +6,24 @@
       "HP": 100,
       "MoveSpeed": 10,
       "SprintSpeed": 2,
-      "Weapon": "Sword"
+      "Weapon": "Pistol"
     },
     {
       "Name": "Amogus",
       "HP": 20,
       "MoveSpeed": 10,
       "SprintSpeed": 0.1,
-      "Weapon": "Rifle"
+      "Weapon": "Sword"
     }
   ],
   "Weapons": [
     {
       "Color":"Yellow",
       "Text": "Pistol",
-      "Damage": 10,
+      "Damage": 0,
       "RateOfFire":0.5,
-      "Accuracy":1
+      "Accuracy":1,
+      "Knockback":10
     },
     {
       "Color":"Blue",
