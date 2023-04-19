@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
 public class ActorController : MonoBehaviour
@@ -61,12 +62,13 @@ public class ActorController : MonoBehaviour
 
     public void ImprintJSON(JSONActor j)
     {
-        //Debug.Log("IMPRINT JSON: " + name + " / " + j.Name + " / " + j.Weapon);
+        Debug.Log("IMPRINT JSON: " + name + " / " + j.Name + " / " + j.Weapon);
+        JSON = j;
         MoveSpeed = j.MoveSpeed;
         SprintSpeed = j.SprintSpeed;
         HP = j.HP;
         DefaultWeapon = God.LM.GetWeapon(j.Weapon);
-        //Debug.Log("JSON IMP: " + j.Weapon + " / " + DefaultWeapon.Text);
+        Debug.Log("JSON IMP: " + j.Weapon + " / " + DefaultWeapon.Text);
     }
     
     public void SetWeapon(JSONWeapon wpn)
@@ -223,7 +225,7 @@ public class ActorController : MonoBehaviour
         JustKnocked = true;
     }
     
-    public int GetMaxHP()
+    public virtual int GetMaxHP()
     {
         return JSON != null && JSON.HP > 0 ? JSON.HP : 100;
     }

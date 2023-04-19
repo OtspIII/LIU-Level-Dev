@@ -3,7 +3,7 @@
   "Actors": [
     {
       "Name": "Player",
-      "HP": 90,
+      "HP": 10,
       "MoveSpeed": 10,
       "SprintSpeed": 2,
       "Weapon": "Pistol"
@@ -22,8 +22,7 @@
       "Text": "Pistol",
       "Damage": 10,
       "RateOfFire":0.5,
-      "Accuracy":1,
-      "Knockback":10
+      "Accuracy":45
     },
     {
       "Color":"Blue",
