@@ -6,14 +6,14 @@
       "HP": 100,
       "MoveSpeed": 10,
       "SprintSpeed": 2,
-      "Weapon": "Pistol"
+      "Weapon": "Sword"
     },
     {
       "Name": "Amogus",
       "HP": 20,
       "MoveSpeed": 10,
       "SprintSpeed": 0.1,
-      "Weapon": "Sword"
+      "Weapon": "Rifle"
     }
   ],
   "Weapons": [
@@ -22,21 +22,20 @@
       "Text": "Pistol",
       "Damage": 0,
       "RateOfFire":0.5,
-      "Accuracy":1,
-      "Knockback":10
+      "Accuracy":1
     },
     {
       "Color":"Blue",
       "Text": "Rifle",
       "Type": "Hitscan",
-      "Damage": 10,
+      "Damage": 0,
       "Ammo": 30,
       "RateOfFire":0.2
     },
     {
       "Color":"Red",
       "Text": "Rocket",
-      "Damage": 10,
+      "Damage": 0,
       "Ammo": 3,
       "RateOfFire":1,
       "Accuracy":2,
@@ -49,7 +48,7 @@
     {
       "Color":"Pink",
       "Text": "Grenade",
-      "Damage": 20,
+      "Damage": 0,
       "Ammo": 10,
       "RateOfFire":0.5,
       "Accuracy":5,
@@ -66,7 +65,7 @@
     {
       "Color":"Green",
       "Text": "Shotgun",
-      "Damage": 5,
+      "Damage": 0,
       "Ammo": 10,
       "RateOfFire":0.4,
       "Accuracy":15,
@@ -75,7 +74,7 @@
     {
       "Color":"White",
       "Text": "Uzi",
-      "Damage": 5,
+      "Damage": 0,
       "Ammo": 90,
       "RateOfFire":0.1,
       "Accuracy":10
@@ -83,7 +82,7 @@
     {
       "Color":"Orange",
       "Text": "Sword",
-      "Damage": 25,
+      "Damage": 0,
       "Ammo": 90,
       "RateOfFire":0.5,
       "Type": "Melee"
