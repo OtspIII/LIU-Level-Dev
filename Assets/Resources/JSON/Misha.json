@@ -6,8 +6,7 @@
       "HP": 100,
       "MoveSpeed": 10,
       "SprintSpeed": 2,
-      "Weapon": "Rifle",
-      "Accuracy":1
+      "Weapon": "Sword"
     },
     {
       "Name": "Amogus",
