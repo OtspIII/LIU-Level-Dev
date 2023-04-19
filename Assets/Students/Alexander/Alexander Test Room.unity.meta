@@ -1,5 +1,10 @@
 fileFormatVersion: 2
-guid: 6fde0e5b03b6cb84cabee61ebdfe5120
+<<<<<<<< HEAD:Assets/Students/Matteo.meta
+guid: 5898065096fe336439dc1c993e4a0cc4
+folderAsset: yes
+========
+guid: ac5ed7bccb8a82742bb9b4b97b14d5ba
+>>>>>>>> 5c93a07c053e5cca0e5e4e69cd66539cc0101b55:Assets/Students/Hailey/Polytope Studio/Lowpoly Medieval Environments/SRP/PT_Environment_Pack_URP_7.5.3.unitypackage.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
