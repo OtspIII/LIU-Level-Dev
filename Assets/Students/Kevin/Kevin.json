@@ -3,40 +3,41 @@
   "Actors": [
     {
       "Name": "Player",
-      "HP": 90,
+      "HP": 100,
       "MoveSpeed": 10,
       "SprintSpeed": 2,
-      "Weapon": "Pistol"
+      "Weapon": "Sword"
     },
     {
       "Name": "Amogus",
       "HP": 20,
       "MoveSpeed": 10,
       "SprintSpeed": 0.1,
-      "Weapon": "Sword"
+      "Weapon": "Rifle"
     }
   ],
   "Weapons": [
     {
       "Color":"Yellow",
       "Text": "Pistol",
-      "Damage": 10,
+      "Damage": 1,
       "RateOfFire":0.5,
       "Accuracy":1,
-      "Knockback":10
+      "Knockback":5
     },
     {
       "Color":"Blue",
       "Text": "Rifle",
       "Type": "Hitscan",
-      "Damage": 10,
+      "Damage": 1,
       "Ammo": 30,
-      "RateOfFire":0.2
+      "RateOfFire":0.2,
+      "Knockback":1
     },
     {
       "Color":"Red",
       "Text": "Rocket",
-      "Damage": 10,
+      "Damage": 1,
       "Ammo": 3,
       "RateOfFire":1,
       "Accuracy":2,
@@ -49,7 +50,7 @@
     {
       "Color":"Pink",
       "Text": "Grenade",
-      "Damage": 20,
+      "Damage": 1,
       "Ammo": 10,
       "RateOfFire":0.5,
       "Accuracy":5,
@@ -58,7 +59,7 @@
       "ExplodeRadius":2,
       "ExplodeDamage":20,
       "SelfDamage":true,
-      "Knockback":1,
+      "Knockback":10,
       "Bounce":2.5,
       "Lifetime":3,
       "Type":"Grenade"
@@ -66,53 +67,32 @@
     {
       "Color":"Green",
       "Text": "Shotgun",
-      "Damage": 5,
+      "Damage": 1,
       "Ammo": 10,
       "RateOfFire":0.4,
       "Accuracy":15,
+      "Knockback":8,
       "Shots":5
     },
     {
       "Color":"White",
       "Text": "Uzi",
-      "Damage": 5,
+      "Damage": 1,
       "Ammo": 90,
       "RateOfFire":0.1,
-      "Accuracy":10
+      "Accuracy":10,
+      "Knockback":1
     },
     {
       "Color":"Orange",
       "Text": "Sword",
-      "Damage": 25,
+      "Damage": 1,
       "Ammo": 90,
       "RateOfFire":0.5,
-      "Type": "Melee"
+      "Type": "Melee",
+      "Knockback":6
     }
   ],
   "PointsToWin":2,
-  "Items":[
-    {
-      "Text": "1 Point",
-      "Type": "Points",
-      "Amount": 1,
-      "Color": "Yellow"
-    },
-    {
-      "Text": "Health",
-      "Type": "Healing",
-      "Amount": 50,
-      "Color": "Green"
-    },
-    {
-      "Text": "Jump",
-      "Type": "Jump",
-      "Amount": 10,
-      "Color": "Blue"
-    },
-    {
-      "Text": "Teleporter",
-      "Type": "Teleport",
-      "Color": "White"
-    }
-  ]
+  "Items":[]
 }
