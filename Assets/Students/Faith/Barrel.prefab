@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 66
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2402679868929663976
 MeshFilter:
@@ -165,7 +165,7 @@ MonoBehaviour:
     SelfDamage: 0
   Muzzle: {fileID: 0}
   Fling: {x: 0, y: 0, z: 0}
-  HP: 0
+  HP: 1
   Ammo: 0
   InControl: 1
   CanWalk: 1
