@@ -109,6 +109,9 @@ public class FirstPersonController : ActorController
         {
             Shoot(Eyes.transform.position + Eyes.transform.forward, Eyes.transform.rotation);
         }
+
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
     public void Reset()
