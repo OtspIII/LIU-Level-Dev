@@ -20,7 +20,6 @@ public class WeaponSpawnController : MonoBehaviour
     void Update()
     {
         Holder.transform.Rotate(0,5,0);
-        if (!NetworkManager.Singleton.IsServer) return;
         if (Held != null) return;
         Countdown -= Time.deltaTime;
         if (Countdown <= 0)
@@ -31,7 +30,6 @@ public class WeaponSpawnController : MonoBehaviour
 
     public void Spawn()
     {
-        if (!NetworkManager.Singleton.IsServer) return;
         Countdown = RespawnTime;
         Held = Instantiate(GetPrefab(), Holder.transform.position, Quaternion.identity);
         Held.Setup(this,God.LM.GetWeapon(WeaponToSpawn));
