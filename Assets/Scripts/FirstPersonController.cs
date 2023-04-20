@@ -26,6 +26,7 @@ public class FirstPersonController : ActorController
 
     public float Dizzy = 0;
     public Vector2 DizzyDir;
+    bool Crouching;
 
     public override void OnStart()
     {
@@ -102,6 +103,8 @@ public class FirstPersonController : ActorController
                 jump = true;
         }
         HandleMove(move,jump,xRot,yRot,sprint);
+        bool crouch = InControl && CanWalk && Input.GetKey(KeyCode.LeftControl);
+        if (Crouching != crouch) SetCrouch(crouch);
         if (Input.GetMouseButton(0))
         {
             Shoot(Eyes.transform.position + Eyes.transform.forward, Eyes.transform.rotation);
@@ -138,6 +141,28 @@ public class FirstPersonController : ActorController
             yRot += DizzyDir.y * 0.5f;
         }
         base.HandleMove(move, jump, xRot, yRot, sprint);
+    }
+
+    public void SetCrouch(bool c)
+    {
+        //Debug.Log("CR: " + c);
+        Crouching = c;
+        if (!(Coll is CapsuleCollider)) return;
+        
+        CapsuleCollider coll = (CapsuleCollider)Coll;
+        if (Crouching)
+        {
+            coll.height = 1;
+            coll.center = new Vector3(0, -0.5f, 0);
+            Eyes.transform.localPosition = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            coll.height = 2;
+            coll.center = new Vector3(0, 0, 0);
+            Eyes.transform.localPosition = new Vector3(0, 0.5f, 0);
+        }
+        //Debug.Log("B: " + coll.height);
     }
 
 
