@@ -1,5 +1,6 @@
 {
   "Gravity": 1,
+  "Waves": 3,
   "Actors": [
     {
       "Name": "Player",

@@ -26,6 +26,7 @@ public class ProjectileController : MonoBehaviour
 //    public float ExplodeRadius;
 //    public float ExplodeDamage;
 //    public bool SelfDamage;
+        if (pc is NPCController) gameObject.layer = 11;
         Data = data;
         Shooter = pc;
         IsSetup = true;

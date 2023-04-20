@@ -66,7 +66,7 @@ public class ExplosionController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 //        if (!NetworkManager.Singleton.IsServer) return;
-        FirstPersonController pc = other.GetComponent<FirstPersonController>();
+        ActorController pc = other.GetComponent<ActorController>();
         if (pc)
         {
             if(Data.Knockback >0)

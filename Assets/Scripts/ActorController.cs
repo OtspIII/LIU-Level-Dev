@@ -90,7 +90,6 @@ public class ActorController : MonoBehaviour
     
     public virtual void Die(ActorController source=null)
     {
-        
         Destroy(gameObject);
         
         // if(God.LM.Respawn(this))
