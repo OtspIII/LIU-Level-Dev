@@ -114,6 +114,7 @@ public class FirstPersonController : ActorController
         HP = GetMaxHP();
         RB.velocity = Vector3.zero;
         Fling = Vector3.zero;
+        InControl = true;
         SetGhostMode(false);
         transform.position = StartSpot;
     }

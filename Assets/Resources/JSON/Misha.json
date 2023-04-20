@@ -3,18 +3,17 @@
   "Actors": [
     {
       "Name": "Player",
-      "HP": 100,
+      "HP": 90,
       "MoveSpeed": 10,
       "SprintSpeed": 2,
-      "Weapon": "Rifle",
-      "Accuracy":1
+      "Weapon": "Pistol"
     },
     {
       "Name": "Amogus",
       "HP": 20,
       "MoveSpeed": 10,
       "SprintSpeed": 0.1,
-      "Weapon": "Rifle"
+      "Weapon": "Sword"
     }
   ],
   "Weapons": [
@@ -23,7 +22,8 @@
       "Text": "Pistol",
       "Damage": 10,
       "RateOfFire":0.5,
-      "Accuracy":1
+      "Accuracy":1,
+      "Knockback":10
     },
     {
       "Color":"Blue",

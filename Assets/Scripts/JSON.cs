@@ -28,7 +28,7 @@ public class JSONWeapon
         Type = source.Type != null ? (WeaponTypes)Enum.Parse(typeof(WeaponTypes), source.Type) : WeaponTypes.Projectile;
         Color = source.Color != null ? (IColors)Enum.Parse(typeof(IColors), source.Color) : IColors.None;
         Text = source.Text;
-        Damage = source.Damage > 0 ? (int)source.Damage : 10;
+        Damage = (int)source.Damage;// > 0 ? (int)source.Damage : 10;
         Shots = source.Shots > 0 ? source.Shots : 1;
         Ammo = source.Ammo;
         RateOfFire = source.RateOfFire > 0 ? source.RateOfFire : 0.2f;

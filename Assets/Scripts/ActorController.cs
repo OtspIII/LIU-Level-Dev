@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
 public class ActorController : MonoBehaviour
@@ -17,6 +18,7 @@ public class ActorController : MonoBehaviour
     public float ShotCooldown;
     public bool JustKnocked = false;
     public MeleeBox MB;
+    
 
     public JSONActor JSON;
     public JSONWeapon CurrentWeapon;
@@ -29,6 +31,7 @@ public class ActorController : MonoBehaviour
     public int Ammo;
 
     public bool InControl = true;
+    public bool CanWalk = true;
 
     void Awake()
     {
@@ -61,12 +64,13 @@ public class ActorController : MonoBehaviour
 
     public void ImprintJSON(JSONActor j)
     {
-        //Debug.Log("IMPRINT JSON: " + name + " / " + j.Name + " / " + j.Weapon);
+        Debug.Log("IMPRINT JSON: " + name + " / " + j.Name + " / " + j.Weapon);
+        JSON = j;
         MoveSpeed = j.MoveSpeed;
         SprintSpeed = j.SprintSpeed;
         HP = j.HP;
         DefaultWeapon = God.LM.GetWeapon(j.Weapon);
-        //Debug.Log("JSON IMP: " + j.Weapon + " / " + DefaultWeapon.Text);
+        Debug.Log("JSON IMP: " + j.Weapon + " / " + DefaultWeapon.Text);
     }
     
     public void SetWeapon(JSONWeapon wpn)
@@ -103,7 +107,7 @@ public class ActorController : MonoBehaviour
         if (eRot.x > 180) eRot.x -= 360;
         eRot = new Vector3(Mathf.Clamp(eRot.x, -90, 90),0,0);
         AimObj.transform.localRotation = Quaternion.Euler(eRot);
-        if (!InControl) return;
+        if (!InControl || !CanWalk) return;
         bool onGround = OnGround();
         move = move.normalized * (sprint ? GetSprintSpeed() : GetMoveSpeed());
         if (jump && onGround)
@@ -223,7 +227,7 @@ public class ActorController : MonoBehaviour
         JustKnocked = true;
     }
     
-    public int GetMaxHP()
+    public virtual int GetMaxHP()
     {
         return JSON != null && JSON.HP > 0 ? JSON.HP : 100;
     }
