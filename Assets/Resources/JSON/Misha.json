@@ -1,19 +1,20 @@
 {
   "Gravity": 1,
+  "Waves": 3,
   "Actors": [
     {
       "Name": "Player",
-      "HP": 100,
+      "HP": 90,
       "MoveSpeed": 10,
       "SprintSpeed": 2,
-      "Weapon": "Sword"
+      "Weapon": "Pistol"
     },
     {
       "Name": "Amogus",
       "HP": 20,
       "MoveSpeed": 10,
       "SprintSpeed": 0.1,
-      "Weapon": "Rifle"
+      "Weapon": "Sword"
     }
   ],
   "Weapons": [
@@ -22,7 +23,8 @@
       "Text": "Pistol",
       "Damage": 10,
       "RateOfFire":0.5,
-      "Accuracy":1
+      "Accuracy":1,
+      "Knockback":10
     },
     {
       "Color":"Blue",
@@ -89,5 +91,29 @@
     }
   ],
   "PointsToWin":2,
-  "Items":[]
+  "Items":[
+    {
+      "Text": "1 Point",
+      "Type": "Points",
+      "Amount": 1,
+      "Color": "Yellow"
+    },
+    {
+      "Text": "Health",
+      "Type": "Healing",
+      "Amount": 50,
+      "Color": "Green"
+    },
+    {
+      "Text": "Jump",
+      "Type": "Jump",
+      "Amount": 10,
+      "Color": "Blue"
+    },
+    {
+      "Text": "Teleporter",
+      "Type": "Teleport",
+      "Color": "White"
+    }
+  ]
 }
