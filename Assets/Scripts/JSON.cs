@@ -28,7 +28,7 @@ public class JSONWeapon
         Type = source.Type != null ? (WeaponTypes)Enum.Parse(typeof(WeaponTypes), source.Type) : WeaponTypes.Projectile;
         Color = source.Color != null ? (IColors)Enum.Parse(typeof(IColors), source.Color) : IColors.None;
         Text = source.Text;
-        Damage = source.Damage > 0 ? (int)source.Damage : 10;
+        Damage = (int)source.Damage;// > 0 ? (int)source.Damage : 10;
         Shots = source.Shots > 0 ? source.Shots : 1;
         Ammo = source.Ammo;
         RateOfFire = source.RateOfFire > 0 ? source.RateOfFire : 0.2f;
@@ -93,6 +93,7 @@ public class JSONCreator
     public float MoveSpeed;
     public float SprintSpeed;
     public float Gravity;
+    public int Waves;
     public GameModes Mode;
     public List<JSONActor> Actors = new List<JSONActor>();
     public List<JSONItem> Items = new List<JSONItem>();
@@ -116,6 +117,7 @@ public class JSONCreator
         foreach(JSONTempWeapon i in source.Weapons)
             Weapons.Add(new JSONWeapon(i));
         Gravity = source.Gravity > 0 ? source.Gravity : 1;
+        Waves = source.Waves;
 
 //        if (source.Symbol == null)
 //        {
@@ -173,6 +175,7 @@ public class JSONTempCreator
     public int PointsToWin;
     public float Gravity;
     public string Mode;
+    public int Waves;
     public JSONTempActor[] Actors;
     public JSONTempItem[] Items;
     public JSONTempWeapon[] Weapons;
