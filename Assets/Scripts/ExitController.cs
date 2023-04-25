@@ -24,6 +24,8 @@ public class ExitController : MonoBehaviour
         {
             int sceneN = SceneManager.GetActiveScene().buildIndex;
             StartCoroutine(p.LoadLevel(sceneN + 1));
+            
+            God.LM.MakeAnnounce("YOU WIN");
         }
     }
 

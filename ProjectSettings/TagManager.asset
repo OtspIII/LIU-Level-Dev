@@ -15,8 +15,8 @@ TagManager:
   - ProjectileCore
   - Player
   - Checkpoint
-  - 
-  - 
+  - NPC
+  - NProjectile
   - 
   - 
   - 
