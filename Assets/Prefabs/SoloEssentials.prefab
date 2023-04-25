@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Creator: Misha
   Name: 
-  UseJSON: 0
+  UseJSON: 1
   Ruleset:
     Author: 
     PointsToWin: 0

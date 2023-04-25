@@ -15,6 +15,12 @@ public class MeleeBox : MonoBehaviour
     void Awake()
     {
         Shooter = gameObject.GetComponentInParent<ActorController>();
+        if (Shooter != null && Shooter is NPCController)
+        {
+            Coll.gameObject.layer = 11;
+            gameObject.layer = 11;
+        }
+            
     }
 
     public void Swing(JSONWeapon wpn)
@@ -32,6 +38,7 @@ public class MeleeBox : MonoBehaviour
         //Debug.Log("OTE: " + other.name);
         ActorController pc = other.GetComponentInParent<ActorController>();
         if (pc == Shooter || (pc != null && pc == Hit)) return;
+        if ((pc is NPCController && Shooter is NPCController)) return;
         if (pc != null)
         {
             pc.TakeDamage(Data.Damage,Shooter);

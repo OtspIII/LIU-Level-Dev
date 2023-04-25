@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
     public List<PlayerSpawnController> PSpawns;
     public List<ItemSpawnController> ISpawns;
     public List<WeaponSpawnController> WSpawns;
+    public List<NPCSpawner> NPCSpawns;
     public PlayerSpawnController LastPS;
     public List<string> Announces;
     public Dictionary<string, JSONActor> Actors = new Dictionary<string, JSONActor>();
@@ -27,7 +28,7 @@ public class LevelManager : MonoBehaviour
     public List<GameObject> Spawned;
     public bool RoundComplete;
     public Dictionary<IColors,List<FirstPersonController>> Teams = new Dictionary<IColors, List<FirstPersonController>>();
-
+    public int CurrentWave = 0;
 
     void Awake()
     {
@@ -68,6 +69,35 @@ public class LevelManager : MonoBehaviour
             txt += a;
         }
         God.UpdateText.text = txt;
+
+        if (Ruleset.Waves > 0 && CurrentWave != -1)
+        {
+            bool any = false;
+            foreach (NPCSpawner sp in NPCSpawns)
+            {
+                if (sp.Children.Count > 0)
+                {
+                    any = true;
+                    break;
+                }
+            }
+            if (!any)
+            {
+                CurrentWave++;
+                if (CurrentWave >= Ruleset.Waves)
+                {
+                    MakeAnnounce("YOU WIN");
+                    CurrentWave = -1;
+                }
+                else
+                {
+                    foreach (NPCSpawner sp in NPCSpawns)
+                    {
+                        sp.Spawn();
+                    }
+                }
+            }
+        }
     }
 
     public PlayerSpawnController GetPSpawn(FirstPersonController pc)
