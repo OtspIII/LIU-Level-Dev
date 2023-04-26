@@ -1,0 +1,1216 @@
+fileFormatVersion: 2
+guid: a99a136ea5d1c3c44a0abda90e648793
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2428599146379729914
+    second: mewhenspritesheet_0
+  - first:
+      213: 1822612908862568398
+    second: mewhenspritesheet_1
+  - first:
+      213: -1567975943550399568
+    second: mewhenspritesheet_2
+  - first:
+      213: 2237312993305091578
+    second: mewhenspritesheet_3
+  - first:
+      213: 1375988362047009499
+    second: mewhenspritesheet_4
+  - first:
+      213: -598350457364403766
+    second: mewhenspritesheet_5
+  - first:
+      213: 4873019510764596629
+    second: mewhenspritesheet_6
+  - first:
+      213: 4143081661798541142
+    second: mewhenspritesheet_7
+  - first:
+      213: -8078673634059326124
+    second: mewhenspritesheet_8
+  - first:
+      213: 1286639403856995250
+    second: mewhenspritesheet_9
+  - first:
+      213: -2350607955550554214
+    second: mewhenspritesheet_10
+  - first:
+      213: -2386167584770428536
+    second: mewhenspritesheet_11
+  - first:
+      213: 4394374717618110952
+    second: mewhenspritesheet_12
+  - first:
+      213: -8257186527137272581
+    second: mewhenspritesheet_13
+  - first:
+      213: 2159224164921954167
+    second: mewhenspritesheet_14
+  - first:
+      213: -3742696185675208730
+    second: mewhenspritesheet_15
+  - first:
+      213: 6587207883009798329
+    second: mewhenspritesheet_16
+  - first:
+      213: -7408560927752605926
+    second: mewhenspritesheet_17
+  - first:
+      213: -5005349754369754861
+    second: mewhenspritesheet_18
+  - first:
+      213: -1458995721270287369
+    second: mewhenspritesheet_19
+  - first:
+      213: 3353303699732635886
+    second: mewhenspritesheet_20
+  - first:
+      213: 8538878902785481902
+    second: mewhenspritesheet_21
+  - first:
+      213: 3955332067638127673
+    second: mewhenspritesheet_22
+  - first:
+      213: 5860599229349745733
+    second: mewhenspritesheet_23
+  - first:
+      213: 3970208139900186320
+    second: mewhenspritesheet_24
+  - first:
+      213: -7056520976455220565
+    second: mewhenspritesheet_25
+  - first:
+      213: 6893643739367678536
+    second: mewhenspritesheet_26
+  - first:
+      213: -3652035681645624043
+    second: mewhenspritesheet_27
+  - first:
+      213: -6086109008751825316
+    second: mewhenspritesheet_28
+  - first:
+      213: -8413243118628113332
+    second: mewhenspritesheet_29
+  - first:
+      213: -2002304522266776312
+    second: mewhenspritesheet_30
+  - first:
+      213: 9083881622343452082
+    second: mewhenspritesheet_31
+  - first:
+      213: 1303239979044018179
+    second: mewhenspritesheet_32
+  - first:
+      213: -8910355806579281501
+    second: mewhenspritesheet_33
+  - first:
+      213: 173173324284328103
+    second: mewhenspritesheet_34
+  - first:
+      213: -7880357964728536194
+    second: mewhenspritesheet_35
+  - first:
+      213: 8657475005980671259
+    second: mewhenspritesheet_36
+  - first:
+      213: 1117740145797594002
+    second: mewhenspritesheet_37
+  - first:
+      213: 7550412050443599653
+    second: mewhenspritesheet_38
+  - first:
+      213: 9020284788557970754
+    second: mewhenspritesheet_39
+  - first:
+      213: -5905608874640032061
+    second: mewhenspritesheet_40
+  - first:
+      213: 3080829203314407157
+    second: mewhenspritesheet_41
+  - first:
+      213: 8334412033924546783
+    second: mewhenspritesheet_42
+  - first:
+      213: 5272520354876746188
+    second: mewhenspritesheet_43
+  - first:
+      213: -2543989752113420564
+    second: mewhenspritesheet_44
+  - first:
+      213: -4384416914199451325
+    second: mewhenspritesheet_45
+  - first:
+      213: 7918416524250758005
+    second: mewhenspritesheet_46
+  - first:
+      213: 1623749068400256730
+    second: mewhenspritesheet_47
+  - first:
+      213: -5315865464920383919
+    second: mewhenspritesheet_48
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mewhenspritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2826
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604283291f1eb4ed0800000000000000
+      internalID: -2428599146379729914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2826
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec77bc3b8c83b4910800000000000000
+      internalID: 1822612908862568398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 2826
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb0254df2e6d3ae0800000000000000
+      internalID: -1567975943550399568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2826
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afdd05940588c0f10800000000000000
+      internalID: 2237312993305091578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2826
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd232eeff1e781310800000000000000
+      internalID: 1375988362047009499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 2826
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac92a91ed6b32b7f0800000000000000
+      internalID: -598350457364403766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 2826
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59debaa3d6170a340800000000000000
+      internalID: 4873019510764596629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2355
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657efe602de2f7930800000000000000
+      internalID: 4143081661798541142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 2355
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d6499e129c2ef80800000000000000
+      internalID: -8078673634059326124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 2355
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3aaec88bf0bd110800000000000000
+      internalID: 1286639403856995250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2355
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97b33bb486f06fd0800000000000000
+      internalID: -2350607955550554214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 2355
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881f43f5931a2eed0800000000000000
+      internalID: -2386167584770428536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 2355
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1c595f584fbfc30800000000000000
+      internalID: 4394374717618110952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 2355
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc67dd1a94986d80800000000000000
+      internalID: -8257186527137272581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1884
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77fcc9c10fa17fd10800000000000000
+      internalID: 2159224164921954167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1884
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7ae9616a54f0cc0800000000000000
+      internalID: -3742696185675208730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1884
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0b3784ba67a6b50800000000000000
+      internalID: 6587207883009798329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1884
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1fa774a6118f2990800000000000000
+      internalID: -7408560927752605926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1884
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319b33afaec698ab0800000000000000
+      internalID: -5005349754369754861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1884
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3aed02f1b90cbe0800000000000000
+      internalID: -1458995721270287369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1884
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee02196c2f3598e20800000000000000
+      internalID: 3353303699732635886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1413
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac1b940f11308670800000000000000
+      internalID: 8538878902785481902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1413
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c284c2f8924e630800000000000000
+      internalID: 3955332067638127673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1413
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544d154c2f7055150800000000000000
+      internalID: 5860599229349745733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 1413
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de6d17a443091730800000000000000
+      internalID: 3970208139900186320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 1413
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba24b481f83321e90800000000000000
+      internalID: -7056520976455220565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 1413
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8422b15f4742baf50800000000000000
+      internalID: 6893643739367678536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 1413
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 515067895ec515dc0800000000000000
+      internalID: -3652035681645624043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 942
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5eea052a1cc98ba0800000000000000
+      internalID: -6086109008751825316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 942
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c44fb2975f72e3b80800000000000000
+      internalID: -8413243118628113332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 942
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d612a45a26634e0800000000000000
+      internalID: -2002304522266776312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 942
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b50b71053e601e70800000000000000
+      internalID: 9083881622343452082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 942
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30891082bd9061210800000000000000
+      internalID: 1303239979044018179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 942
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a1b08e5a9e085480800000000000000
+      internalID: -8910355806579281501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 942
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a87a8e883c376200800000000000000
+      internalID: 173173324284328103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 471
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e737f69de2853a290800000000000000
+      internalID: -7880357964728536194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 471
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1dfc4f06a7852870800000000000000
+      internalID: 8657475005980671259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 471
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b75759db2038f00800000000000000
+      internalID: 1117740145797594002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 471
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ff48e81c378c860800000000000000
+      internalID: 7550412050443599653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 1992
+        y: 471
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d7bd2493d7e2d70800000000000000
+      internalID: 9020284788557970754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 2490
+        y: 471
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cebfac84001b0ea0800000000000000
+      internalID: -5905608874640032061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 471
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f6743566dd41ca20800000000000000
+      internalID: 3080829203314407157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mewhenspritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 498
+        height: 471
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd040d55697c9a370800000000000000
+      internalID: 8334412033924546783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b4f9da5432aeeea4090490ee5aed1bd6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      mewhenspritesheet_32: 1303239979044018179
+      mewhenspritesheet_18: -5005349754369754861
+      mewhenspritesheet_42: 8334412033924546783
+      mewhenspritesheet_37: 1117740145797594002
+      mewhenspritesheet_19: -1458995721270287369
+      mewhenspritesheet_38: 7550412050443599653
+      mewhenspritesheet_2: -1567975943550399568
+      mewhenspritesheet_11: -2386167584770428536
+      mewhenspritesheet_13: -8257186527137272581
+      mewhenspritesheet_36: 8657475005980671259
+      mewhenspritesheet_33: -8910355806579281501
+      mewhenspritesheet_22: 3955332067638127673
+      mewhenspritesheet_16: 6587207883009798329
+      mewhenspritesheet_28: -6086109008751825316
+      mewhenspritesheet_41: 3080829203314407157
+      mewhenspritesheet_23: 5860599229349745733
+      mewhenspritesheet_40: -5905608874640032061
+      mewhenspritesheet_4: 1375988362047009499
+      mewhenspritesheet_27: -3652035681645624043
+      mewhenspritesheet_5: -598350457364403766
+      mewhenspritesheet_1: 1822612908862568398
+      mewhenspritesheet_26: 6893643739367678536
+      mewhenspritesheet_8: -8078673634059326124
+      mewhenspritesheet_21: 8538878902785481902
+      mewhenspritesheet_39: 9020284788557970754
+      mewhenspritesheet_12: 4394374717618110952
+      mewhenspritesheet_31: 9083881622343452082
+      mewhenspritesheet_0: -2428599146379729914
+      mewhenspritesheet_34: 173173324284328103
+      mewhenspritesheet_29: -8413243118628113332
+      mewhenspritesheet_25: -7056520976455220565
+      mewhenspritesheet_10: -2350607955550554214
+      mewhenspritesheet_3: 2237312993305091578
+      mewhenspritesheet_20: 3353303699732635886
+      mewhenspritesheet_35: -7880357964728536194
+      mewhenspritesheet_9: 1286639403856995250
+      mewhenspritesheet_24: 3970208139900186320
+      mewhenspritesheet_6: 4873019510764596629
+      mewhenspritesheet_7: 4143081661798541142
+      mewhenspritesheet_17: -7408560927752605926
+      mewhenspritesheet_14: 2159224164921954167
+      mewhenspritesheet_30: -2002304522266776312
+      mewhenspritesheet_15: -3742696185675208730
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
