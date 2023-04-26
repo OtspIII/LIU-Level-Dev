@@ -18,7 +18,7 @@
     {
       "Name": "Watcher",
       "HP": 20,
-      "MoveSpeed": 5,
+      "MoveSpeed": 2,
       "SprintSpeed": 0.2,
       "Weapon": "Laser"
     },
@@ -26,7 +26,7 @@
       "Name": "HeadsWorm",
       "HP": 5,
       "MoveSpeed": 1,
-      "SprintSpeed": 3,
+      "SprintSpeed": 4,
       "Weapon": "Sword"
     },
     {
