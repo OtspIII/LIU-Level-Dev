@@ -1,0 +1,97 @@
+{
+  "Gravity": 1,
+  "Actors": [
+    {
+      "Name": "Player",
+      "HP": 100,
+      "MoveSpeed": 10,
+      "SprintSpeed": 2,
+      "Weapon": "Pistol"
+    },
+    {
+      "Name": "Amogus",
+      "HP": 20,
+      "MoveSpeed": 10,
+      "SprintSpeed": 0.1,
+      "Weapon": "Rifle"
+    }
+  ],
+  "Weapons": [
+    {
+      "Color":"Yellow",
+      "Text": "Pistol",
+      "Damage": 0,
+      "RateOfFire":0.5,
+      "Accuracy":1,
+      "Knockback":15
+    },
+    {
+      "Color":"Blue",
+      "Text": "Rifle",
+      "Damage": 0,
+      "Ammo": 30,
+      "RateOfFire":0.1,
+      "Knockback":3
+    },
+    {
+      "Color":"Red",
+      "Text": "Rocket",
+      "Damage": 0,
+      "Ammo": 3,
+      "RateOfFire":1,
+      "Accuracy":2,
+      "Speed":30,
+      "ExplodeRadius":3,
+      "ExplodeDamage":50,
+      "SelfDamage":true,
+      "Knockback":10
+    },
+    {
+      "Color":"Pink",
+      "Text": "Grenade",
+      "Damage": 0,
+      "Ammo": 10,
+      "RateOfFire":0.5,
+      "Accuracy":5,
+      "Speed":20,
+      "Gravity":2,
+      "ExplodeRadius":2,
+      "ExplodeDamage":20,
+      "SelfDamage":true,
+      "Knockback":10,
+      "Bounce":2.5,
+      "Lifetime":3,
+      "Type":"Grenade"
+    },
+    {
+      "Color":"Green",
+      "Text": "Shotgun",
+      "Damage": 0,
+      "Ammo": 10,
+      "RateOfFire":0.4,
+      "Accuracy":15,
+      "Knockback":8,
+      "Shots":5
+    },
+    {
+      "Color":"White",
+      "Text": "Uzi",
+      "Damage": 0,
+      "Ammo": 90,
+      "RateOfFire":0.1,
+      "Accuracy":10,
+      "Knockback":1
+    },
+    {
+      "Color":"Orange",
+      "Text": "Sword",
+      "Damage": 0,
+      "Ammo": 90,
+      "RateOfFire":0.5,
+      "Type": "Melee",
+      "Knockback":6
+    }
+  ],
+  "PointsToWin":2,
+  "Items":[]
+}
