@@ -18,11 +18,46 @@
     {
       "Name": "Watcher",
       "HP": 20,
-      "MoveSpeed": 5,
-      "SprintSpeed": 0.1
+      "MoveSpeed": 2,
+      "SprintSpeed": 0.2,
+      "Weapon": "Laser"
+    },
+    {
+      "Name": "HeadsWorm",
+      "HP": 5,
+      "MoveSpeed": 1,
+      "SprintSpeed": 4,
+      "Weapon": "Sword"
+    },
+    {
+      "Name": "EyeTurret",
+      "HP": 12,
+      "MoveSpeed": 0,
+      "SprintSpeed": 0,
+      "Weapon": "Laser2"
+    },
+    {
+      "Name": "SpawnerPod",
+      "HP": 20,
+      "MoveSpeed": 0,
+      "SprintSpeed": 0
     }
   ],
   "Weapons": [
+    {
+      "Color": "Red",
+      "Text": "Laser",
+      "Damage": 10,
+      "RateOfFire": 0.7,
+      "Accuracy": 1
+    },
+    {
+      "Color": "Red",
+      "Text": "Laser2",
+      "Damage": 5,
+      "RateOfFire": 0.3,
+      "Accuracy": 1
+    },
     {
       "Color":"Yellow",
       "Text": "Pistol",

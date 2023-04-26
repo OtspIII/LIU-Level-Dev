@@ -93,6 +93,7 @@ public class JSONCreator
     public float MoveSpeed;
     public float SprintSpeed;
     public float Gravity;
+    public int Waves;
     public GameModes Mode;
     public List<JSONActor> Actors = new List<JSONActor>();
     public List<JSONItem> Items = new List<JSONItem>();
@@ -116,6 +117,7 @@ public class JSONCreator
         foreach(JSONTempWeapon i in source.Weapons)
             Weapons.Add(new JSONWeapon(i));
         Gravity = source.Gravity > 0 ? source.Gravity : 1;
+        Waves = source.Waves;
 
 //        if (source.Symbol == null)
 //        {
@@ -173,6 +175,7 @@ public class JSONTempCreator
     public int PointsToWin;
     public float Gravity;
     public string Mode;
+    public int Waves;
     public JSONTempActor[] Actors;
     public JSONTempItem[] Items;
     public JSONTempWeapon[] Weapons;

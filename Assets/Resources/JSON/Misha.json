@@ -1,5 +1,6 @@
 {
   "Gravity": 1,
+  "Waves": 3,
   "Actors": [
     {
       "Name": "Player",
@@ -90,5 +91,29 @@
     }
   ],
   "PointsToWin":2,
-  "Items":[]
+  "Items":[
+    {
+      "Text": "1 Point",
+      "Type": "Points",
+      "Amount": 1,
+      "Color": "Yellow"
+    },
+    {
+      "Text": "Health",
+      "Type": "Healing",
+      "Amount": 50,
+      "Color": "Green"
+    },
+    {
+      "Text": "Jump",
+      "Type": "Jump",
+      "Amount": 10,
+      "Color": "Blue"
+    },
+    {
+      "Text": "Teleporter",
+      "Type": "Teleport",
+      "Color": "White"
+    }
+  ]
 }
