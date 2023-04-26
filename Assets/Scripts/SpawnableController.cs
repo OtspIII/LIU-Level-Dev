@@ -7,37 +7,35 @@ using UnityEngine;
 using Unity.Netcode;
 using Unity.Netcode.Components;
 
-public class SpawnableController : NetworkBehaviour
+public class SpawnableController : MonoBehaviour
 {
     public ItemSpawnController Spawner;
     public TextMeshPro Desc;
-    public NetworkObject NO;
     public JSONItem Data;
     public MeshRenderer MR;
     
     public bool IsSetup = false;
-    public NetworkVariable<FixedString64Bytes> Name = new NetworkVariable<FixedString64Bytes>();
-    public NetworkVariable<Vector3> Destination = new NetworkVariable<Vector3>();
+    public string Name;// = new NetworkVariable<FixedString64Bytes>();
+    public Vector3 Destination;// = new NetworkVariable<Vector3>();
 
     public void Setup(ItemSpawnController s,JSONItem data)
     {
         Data = data;
         Spawner = s;
-        Destination.Value = Spawner.Destination;
-        NO.Spawn();
-        Name.Value = Data.Text;
+        Destination = Spawner.Destination;
+        Name = Data.Text;
         SetColor();
         God.LM.Spawned.Add(gameObject);
     }
 
     void Update()
     {
-        if (!IsSetup && Name.Value != "" && God.LM?.Ruleset != null && God.LM?.Ruleset.Author != "")
+        if (!IsSetup && Name != "" && God.LM?.Ruleset != null && God.LM?.Ruleset.Author != "")
         {
             
-            Data = God.LM.GetItem(Name.Value.ToString());
-            //Debug.Log("SETUP! " + Name.Value + " / " + Data.Text + " / " + God.LM?.Ruleset?.Author);
-            Desc.text = Name.Value.ToString();
+            Data = God.LM.GetItem(Name.ToString());
+            //Debug.Log("SETUP! " + Name + " / " + Data.Text + " / " + God.LM?.Ruleset?.Author);
+            Desc.text = Name.ToString();
             SetColor();
         }
     }
@@ -56,7 +54,7 @@ public class SpawnableController : NetworkBehaviour
     {
         TakeEffects(pc);
         Spawner?.TakenFrom(pc);
-        if(NetworkManager.Singleton.IsServer)
+        
             Destroy(gameObject);
     }
 
@@ -79,32 +77,32 @@ public class SpawnableController : NetworkBehaviour
             case ItemTypes.Points:
             {
                 //##pc.GetPoint((int)amt);
-                if (Destination.Value != Vector3.zero)
+                if (Destination != Vector3.zero)
                 {
-                    pc.transform.position = God.LM.transform.position + Destination.Value;
-                    //##pc.SetPosClientRPC(God.LM.transform.position + Destination.Value);
+                    pc.transform.position = God.LM.transform.position + Destination;
+                    //##pc.SetPosClientRPC(God.LM.transform.position + Destination);
                 }
                 break;
             }
             case ItemTypes.Jump:
             {
                 Vector3 vel = pc.RB.velocity;
-                if (Destination.Value == Vector3.zero)
+                if (Destination == Vector3.zero)
                 {
 //                    vel.y = amt;
 //                    pc.RB.velocity = vel;
                     pc.TakeKnockback(new Vector3(0,amt,0));
                 }
                 else
-                    pc.TakeKnockback(Destination.Value);
+                    pc.TakeKnockback(Destination);
                 
                 
                 break;
             }
             case ItemTypes.Teleport:
             {
-                pc.transform.position = God.LM.transform.position + Destination.Value;
-                //##pc.SetPosClientRPC(God.LM.transform.position + Destination.Value);
+                pc.transform.position = God.LM.transform.position + Destination;
+                //##pc.SetPosClientRPC(God.LM.transform.position + Destination);
                 break;
             }
         }
@@ -114,16 +112,14 @@ public class SpawnableController : NetworkBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!NetworkManager.Singleton.IsServer && Data.Type != ItemTypes.Jump) return;
         FirstPersonController pc = other.gameObject.GetComponent<FirstPersonController>();
 //        Debug.Log("OCE: " + pc + " / " + other.gameObject);
         if(pc != null)
             GetTaken(pc);
     }
 
-    public override void OnDestroy()
+    public void OnDestroy()
     {
-        base.OnDestroy();
         God.LM?.Spawned.Remove(gameObject);
     }
 }

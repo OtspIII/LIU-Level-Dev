@@ -9,9 +9,10 @@ public class HookShotScript : MonoBehaviour
     private FirstPersonController fps;
     [SerializeField] private GameObject debugCube;
     [SerializeField] private GameObject hook;
-    [SerializeField] private float flySpeed, hookRange;
+    [SerializeField] private float flySpeed, hookRange ;
     [SerializeField] private AudioClip[] hookNoise;
     [SerializeField] private Slider hookSlider;
+    
     private AudioSource _hookSource;
     private Rigidbody rb;
     private GameObject _gameObject;
@@ -49,7 +50,11 @@ public class HookShotScript : MonoBehaviour
                     if (_hookMomentum.magnitude >= .1)
                     {
                         float drag = 80;
-                        _hookMomentum -= _hookMomentum * (drag * Time.deltaTime);
+                        Vector3 dragMomentum = _hookMomentum * (drag * Time.deltaTime);
+                      
+                        _hookMomentum -= new Vector3(Mathf.Clamp(dragMomentum.x, -20, 20),
+                            Mathf.Clamp(dragMomentum.y, -20, 20), Mathf.Clamp(dragMomentum.z, -20, 20));
+                       
                         if (_hookMomentum.magnitude < .1)
                         {
                             _hookMomentum = Vector3.zero;

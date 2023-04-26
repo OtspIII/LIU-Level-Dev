@@ -25,7 +25,6 @@ public class ItemSpawnController : MonoBehaviour
     {
         if(Holder != null)
             Holder?.transform.Rotate(0,5,0);
-        if (!NetworkManager.Singleton.IsServer) return;
         if (Held != null) return;
         Countdown -= Time.deltaTime;
         if (Countdown <= 0)
@@ -36,7 +35,6 @@ public class ItemSpawnController : MonoBehaviour
 
     public void Spawn()
     {
-        if (!NetworkManager.Singleton.IsServer) return;
         Countdown = RespawnTime;
         Vector3 where = Holder != null ? Holder.transform.position : transform.position;
         Held = Instantiate(GetPrefab(), where, Quaternion.identity);

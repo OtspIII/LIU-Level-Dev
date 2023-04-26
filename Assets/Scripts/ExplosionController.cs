@@ -24,6 +24,17 @@ public class ExplosionController : MonoBehaviour
         Name = Data.Text;
         SetColor();
     }
+    public void Setup(float size, float dmg, float kb)
+    {
+        JSONTempWeapon js = new JSONTempWeapon();
+        js.ExplodeRadius = size;
+        js.ExplodeDamage = dmg;
+        js.Knockback = kb;
+        Data = new JSONWeapon(js);
+        Shooter = null;
+        Name = "BOOM";
+        SetColor();
+    }
     
     public void SetColor()
     {
@@ -55,7 +66,7 @@ public class ExplosionController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 //        if (!NetworkManager.Singleton.IsServer) return;
-        FirstPersonController pc = other.GetComponent<FirstPersonController>();
+        ActorController pc = other.GetComponent<ActorController>();
         if (pc)
         {
             if(Data.Knockback >0)
