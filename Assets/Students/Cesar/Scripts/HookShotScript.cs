@@ -129,7 +129,7 @@ public class HookShotScript : MonoBehaviour
             _hookMomentum = dir.normalized * (flySpeed * Time.deltaTime);
             float jumpSpeed = 9;
             Vector3 jumpForce = Vector3.up * jumpSpeed;
-
+ 
             _hookMomentum += jumpForce;
             float speed = 5.15f;
             _coolRate = speed;
