@@ -64,13 +64,13 @@ public class ActorController : MonoBehaviour
 
     public void ImprintJSON(JSONActor j)
     {
-        Debug.Log("IMPRINT JSON: " + name + " / " + j.Name + " / " + j.Weapon);
+        //Debug.Log("IMPRINT JSON: " + name + " / " + j.Name + " / " + j.Weapon);
         JSON = j;
         MoveSpeed = j.MoveSpeed;
         SprintSpeed = j.SprintSpeed;
         HP = j.HP;
         DefaultWeapon = God.LM.GetWeapon(j.Weapon);
-        Debug.Log("JSON IMP: " + j.Weapon + " / " + DefaultWeapon.Text);
+        //Debug.Log("JSON IMP: " + j.Weapon + " / " + DefaultWeapon.Text);
     }
     
     public void SetWeapon(JSONWeapon wpn)
@@ -90,7 +90,6 @@ public class ActorController : MonoBehaviour
     
     public virtual void Die(ActorController source=null)
     {
-        
         Destroy(gameObject);
         
         // if(God.LM.Respawn(this))
