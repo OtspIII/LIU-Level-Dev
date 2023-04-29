@@ -14,10 +14,14 @@ public class NPCController : ActorController
     public int PatrolProgress = -1;
     private Transform Destination;
     public float DestTime = 0;
+    public NPCSpawner Spawner; 
     
     public override void OnStart()
     {
         base.OnStart();
+        gameObject.layer = 10;
+        foreach (Collider c in gameObject.GetComponentsInChildren<Collider>())
+            c.gameObject.layer = 10;
         if(God.LM.UseJSON) ImprintJSON(God.LM.GetActor(Type));
         Destination = new GameObject().transform;
         Destination.transform.position = transform.position;
@@ -99,6 +103,12 @@ public class NPCController : ActorController
     public float GetVision()
     {
         return JSON.Vision > 0 ? JSON.Vision : 999;
+    }
+
+    void OnDestroy()
+    {
+        God.Actors.Remove(this);
+        if (Spawner != null) Spawner.Children.Remove(this);
     }
 }
 
