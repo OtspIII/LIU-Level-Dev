@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 5728
+  controlID: 17064
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 5729
+  controlID: 17065
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 5730
+  controlID: 17050
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2afbffff
+      m_ExpandedIDs: 10f6feffac00ffff10fbffff28fbffff2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 14.637838, y: 10.740143, z: 15.941547}
+    m_Target: {x: 0.373641, y: -2.7394629, z: 3.255807}
     speed: 2
-    m_Value: {x: 14.637838, y: 10.740143, z: 15.941547}
+    m_Value: {x: 0.373641, y: -2.7394629, z: 3.255807}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -606,13 +606,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08466491, y: -0.34330085, z: 0.031089513, w: -0.9349503}
+    m_Target: {x: 0.11244124, y: -0.16729614, z: 0.019198142, w: 0.9793567}
     speed: 2
-    m_Value: {x: -0.08465974, y: -0.3432799, z: 0.031087615, w: -0.93489325}
+    m_Value: {x: 0.11243341, y: -0.16728449, z: 0.019196806, w: 0.9792885}
   m_Size:
-    m_Target: 34.743473
+    m_Target: 47.220364
     speed: 2
-    m_Value: 34.743473
+    m_Value: 47.220364
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -705,21 +705,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Students/Shane/Enemies
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Students/Shane/Enemies
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\shane\OneDrive\Documents\lvl
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: f4630000
-    m_LastClickedID: 25588
+    scrollPos: {x: 0, y: 240}
+    m_SelectedIDs: 2e640000
+    m_LastClickedID: 25646
     m_ExpandedIDs: 00000000f2630000f4630000f6630000f8630000fa63000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -773,9 +773,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b0610000
-    m_LastClickedInstanceID: 25008
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -892,8 +892,8 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 25008
-  m_LastVerticalScrollValue: 594
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
