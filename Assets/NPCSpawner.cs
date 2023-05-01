@@ -10,7 +10,7 @@ public class NPCSpawner : MonoBehaviour
     float Countdown = 0;
     public List<NPCController> Prefabs;
     public bool SpawnEndless = false;
-    public bool Waves = false;
+    bool Waves = false;
 
     void Start()
     {
