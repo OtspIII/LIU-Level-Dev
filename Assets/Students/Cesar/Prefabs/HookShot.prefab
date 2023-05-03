@@ -29,7 +29,6 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.54, z: 0.8}
   m_LocalScale: {x: 0.17, y: 0.2, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7982298398747419037}
   m_RootOrder: 0
@@ -53,7 +52,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -125,7 +123,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6464258723667759846}
   m_Father: {fileID: 0}
@@ -147,10 +144,13 @@ MonoBehaviour:
   hook: {fileID: 6191596892002818313}
   flySpeed: 10
   hookRange: 50
+  glideMax: 20
+  glideMin: -20
   hookNoise:
   - {fileID: 8300000, guid: 5e23e0172c3c5a4459b911a15da37e68, type: 3}
   - {fileID: 8300000, guid: 9c77a87a320fd1a4a9c5fe0b6b751389, type: 3}
   - {fileID: 8300000, guid: 0a296470a848ec34dbfde323fb57dd5c, type: 3}
+  hookSlider: {fileID: 0}
 --- !u!82 &8371089505219474254
 AudioSource:
   m_ObjectHideFlags: 0

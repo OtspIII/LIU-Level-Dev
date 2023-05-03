@@ -194,6 +194,7 @@ public class FirstPersonController : ActorController
         //base.Die(source);
         if(source != null)
             Debug.Log("KILLED BY " + source);
+        SendMessage("DidDie",SendMessageOptions.DontRequireReceiver);
         Reset();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         // SetGhostMode(true);
