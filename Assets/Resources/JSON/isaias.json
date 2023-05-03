@@ -17,7 +17,7 @@
     },
     {
       "Name": "EyeBomber",
-      "HP": 20,
+      "HP": 30,
       "MoveSpeed": 10,
       "SprintSpeed": 0.1,
       "Weapon": "Grenade"
