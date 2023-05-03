@@ -569,7 +569,9 @@ MonoBehaviour:
   - {fileID: 2042324108943306696, guid: 8340563b35ddd774baafa52521e7d116, type: 3}
   - {fileID: 9095533383446067436, guid: 35362529f4102ce41b0c427206ee6a8e, type: 3}
   - {fileID: 2034622820725300304, guid: 944924134be31284f9fbc00547ec650a, type: 3}
+  spawned: []
   timer: 3
+  player: {fileID: 0}
 --- !u!114 &3134948121702579273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,7 +641,7 @@ MonoBehaviour:
   HP: 30
   Ammo: 0
   InControl: 1
-  CanWalk: 0
+  CanWalk: 1
   Type: SpawnerPod
   Behavior: 1
   Aggro: 0
@@ -662,7 +664,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!23 &5911660187467369044
 MeshRenderer:
