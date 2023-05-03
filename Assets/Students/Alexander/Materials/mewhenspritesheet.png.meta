@@ -150,7 +150,7 @@ TextureImporter:
       213: -5315865464920383919
     second: mewhenspritesheet_48
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -171,6 +171,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -209,6 +210,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -224,6 +226,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1150,6 +1164,50 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      mewhenspritesheet_32: 1303239979044018179
+      mewhenspritesheet_18: -5005349754369754861
+      mewhenspritesheet_42: 8334412033924546783
+      mewhenspritesheet_37: 1117740145797594002
+      mewhenspritesheet_19: -1458995721270287369
+      mewhenspritesheet_38: 7550412050443599653
+      mewhenspritesheet_2: -1567975943550399568
+      mewhenspritesheet_11: -2386167584770428536
+      mewhenspritesheet_13: -8257186527137272581
+      mewhenspritesheet_36: 8657475005980671259
+      mewhenspritesheet_33: -8910355806579281501
+      mewhenspritesheet_22: 3955332067638127673
+      mewhenspritesheet_16: 6587207883009798329
+      mewhenspritesheet_28: -6086109008751825316
+      mewhenspritesheet_41: 3080829203314407157
+      mewhenspritesheet_23: 5860599229349745733
+      mewhenspritesheet_40: -5905608874640032061
+      mewhenspritesheet_4: 1375988362047009499
+      mewhenspritesheet_27: -3652035681645624043
+      mewhenspritesheet_5: -598350457364403766
+      mewhenspritesheet_1: 1822612908862568398
+      mewhenspritesheet_26: 6893643739367678536
+      mewhenspritesheet_8: -8078673634059326124
+      mewhenspritesheet_21: 8538878902785481902
+      mewhenspritesheet_39: 9020284788557970754
+      mewhenspritesheet_12: 4394374717618110952
+      mewhenspritesheet_31: 9083881622343452082
+      mewhenspritesheet_0: -2428599146379729914
+      mewhenspritesheet_34: 173173324284328103
+      mewhenspritesheet_29: -8413243118628113332
+      mewhenspritesheet_25: -7056520976455220565
+      mewhenspritesheet_10: -2350607955550554214
+      mewhenspritesheet_3: 2237312993305091578
+      mewhenspritesheet_20: 3353303699732635886
+      mewhenspritesheet_35: -7880357964728536194
+      mewhenspritesheet_9: 1286639403856995250
+      mewhenspritesheet_24: 3970208139900186320
+      mewhenspritesheet_6: 4873019510764596629
+      mewhenspritesheet_7: 4143081661798541142
+      mewhenspritesheet_17: -7408560927752605926
+      mewhenspritesheet_14: 2159224164921954167
+      mewhenspritesheet_30: -2002304522266776312
+      mewhenspritesheet_15: -3742696185675208730
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

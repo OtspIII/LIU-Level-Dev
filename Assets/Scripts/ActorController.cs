@@ -32,6 +32,7 @@ public class ActorController : MonoBehaviour
 
     public bool InControl = true;
     public bool CanWalk = true;
+    public bool Invincible = false;
 
     void Awake()
     {
@@ -199,6 +200,7 @@ public class ActorController : MonoBehaviour
     
     public virtual void TakeDamage(int amt, ActorController source = null)
     {
+        if (Invincible) return;
         HP -= amt;
         if (HP <= 0)
         {
