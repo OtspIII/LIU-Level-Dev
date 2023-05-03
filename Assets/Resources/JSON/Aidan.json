@@ -19,7 +19,7 @@
     {
       "Name": "Sussus",
       "HP": 20,
-      "MoveSpeed": 10,
+      "MoveSpeed": 6,
       "SprintSpeed": 0.1,
       "Weapon": "Pistol"
     }
@@ -29,7 +29,7 @@
       "Color":"Yellow",
       "Text": "Pistol",
       "Damage": 2,
-      "RateOfFire":3,
+      "RateOfFire":1,
       "Accuracy":1,
       "Knockback":10
     },

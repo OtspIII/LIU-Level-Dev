@@ -3,7 +3,7 @@
   "Actors": [
     {
       "Name": "Player",
-      "HP": 10,
+      "HP": 50,
       "MoveSpeed": 10,
       "SprintSpeed": 2,
       "Weapon": "Pistol"
@@ -14,6 +14,27 @@
       "MoveSpeed": 10,
       "SprintSpeed": 0.1,
       "Weapon": "Pistol"
+    },
+    {
+      "Name": "EyeBomber",
+      "HP": 20,
+      "MoveSpeed": 10,
+      "SprintSpeed": 0.1,
+      "Weapon": "Grenade"
+    },
+    {
+      "Name": "Biter",
+      "HP": 50,
+      "MoveSpeed": 10,
+      "SprintSpeed": 0.1,
+      "Weapon": "Grenade"
+    },
+    {
+      "Name": "Mega Biter",
+      "HP": 80,
+      "MoveSpeed": 10,
+      "SprintSpeed": 0.1,
+      "Weapon": "Mega Grenade"
     }
   ],
   "Weapons": [
@@ -22,7 +43,7 @@
       "Text": "Pistol",
       "Damage": 10,
       "RateOfFire":0.5,
-      "Accuracy":45
+      "Accuracy":3
     },
     {
       "Color":"Blue",
@@ -68,7 +89,7 @@
       "Damage": 5,
       "Ammo": 10,
       "RateOfFire":0.4,
-      "Accuracy":15,
+      "Accuracy":5,
       "Shots":5
     },
     {
@@ -77,7 +98,7 @@
       "Damage": 5,
       "Ammo": 90,
       "RateOfFire":0.1,
-      "Accuracy":10
+      "Accuracy":5
     },
     {
       "Color":"Orange",
@@ -86,6 +107,32 @@
       "Ammo": 90,
       "RateOfFire":0.5,
       "Type": "Melee"
+    },
+    {
+      "Color":"Black",
+      "Text": "Shadow Realm",
+      "Damage": 100,
+      "Ammo": 5,
+      "RateOfFire":0.5,
+      "Accuracy":2,
+      "ExplodeRadius":3,
+      "ExplodeDamage":100
+    },
+    {
+      "Color":"Purple",
+      "Text": "Mega Grenade",
+      "Damage": 30,
+      "Ammo": 10,
+      "RateOfFire":0.8,
+      "Accuracy":5,
+      "Speed":20,
+      "Gravity":2,
+      "ExplodeRadius":2,
+      "ExplodeDamage":20,
+      "Knockback":1,
+      "Bounce":2.5,
+      "Lifetime":3,
+      "Type":"Grenade"
     }
   ],
   "PointsToWin":2,

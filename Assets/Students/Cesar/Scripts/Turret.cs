@@ -25,7 +25,7 @@ public class Turret : EnemyNormal
     {
 
 
-        if (SeekPlayer(eyePos.transform, ~(1 << 10), sightDistance))
+        if (SeekPlayer(eyePos.transform, ~(1 << 10 | 1 << 2), sightDistance))
         {
             Attack();
             FacePlayer(headPos);
