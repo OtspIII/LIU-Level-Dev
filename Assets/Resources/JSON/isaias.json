@@ -1,0 +1,140 @@
+{
+  "Gravity": 1,
+  "Actors": [
+    {
+      "Name": "Player",
+      "HP": 50,
+      "MoveSpeed": 10,
+      "SprintSpeed": 2,
+      "Weapon": "Pistol"
+    },
+    {
+      "Name": "Amogus",
+      "HP": 20,
+      "MoveSpeed": 10,
+      "SprintSpeed": 0.1,
+      "Weapon": "Pistol"
+    },
+    {
+      "Name": "EyeBomber",
+      "HP": 30,
+      "MoveSpeed": 10,
+      "SprintSpeed": 0.1,
+      "Weapon": "Grenade"
+    },
+    {
+      "Name": "Biter",
+      "HP": 50,
+      "MoveSpeed": 10,
+      "SprintSpeed": 0.1,
+      "Weapon": "Grenade"
+    },
+    {
+      "Name": "Mega Biter",
+      "HP": 80,
+      "MoveSpeed": 10,
+      "SprintSpeed": 0.1,
+      "Weapon": "Mega Grenade"
+    }
+  ],
+  "Weapons": [
+    {
+      "Color":"Yellow",
+      "Text": "Pistol",
+      "Damage": 10,
+      "RateOfFire":0.5,
+      "Accuracy":3
+    },
+    {
+      "Color":"Blue",
+      "Text": "Rifle",
+      "Type": "Hitscan",
+      "Damage": 10,
+      "Ammo": 30,
+      "RateOfFire":0.2
+    },
+    {
+      "Color":"Red",
+      "Text": "Rocket",
+      "Damage": 10,
+      "Ammo": 3,
+      "RateOfFire":1,
+      "Accuracy":2,
+      "Speed":30,
+      "ExplodeRadius":3,
+      "ExplodeDamage":50,
+      "SelfDamage":true,
+      "Knockback":10
+    },
+    {
+      "Color":"Pink",
+      "Text": "Grenade",
+      "Damage": 20,
+      "Ammo": 10,
+      "RateOfFire":0.5,
+      "Accuracy":5,
+      "Speed":20,
+      "Gravity":2,
+      "ExplodeRadius":2,
+      "ExplodeDamage":20,
+      "SelfDamage":true,
+      "Knockback":1,
+      "Bounce":2.5,
+      "Lifetime":3,
+      "Type":"Grenade"
+    },
+    {
+      "Color":"Green",
+      "Text": "Shotgun",
+      "Damage": 5,
+      "Ammo": 10,
+      "RateOfFire":0.4,
+      "Accuracy":5,
+      "Shots":5
+    },
+    {
+      "Color":"White",
+      "Text": "Uzi",
+      "Damage": 5,
+      "Ammo": 90,
+      "RateOfFire":0.1,
+      "Accuracy":5
+    },
+    {
+      "Color":"Orange",
+      "Text": "Sword",
+      "Damage": 25,
+      "Ammo": 90,
+      "RateOfFire":0.5,
+      "Type": "Melee"
+    },
+    {
+      "Color":"Black",
+      "Text": "Shadow Realm",
+      "Damage": 100,
+      "Ammo": 5,
+      "RateOfFire":0.5,
+      "Accuracy":2,
+      "ExplodeRadius":3,
+      "ExplodeDamage":100
+    },
+    {
+      "Color":"Purple",
+      "Text": "Mega Grenade",
+      "Damage": 30,
+      "Ammo": 10,
+      "RateOfFire":0.8,
+      "Accuracy":5,
+      "Speed":20,
+      "Gravity":2,
+      "ExplodeRadius":2,
+      "ExplodeDamage":20,
+      "Knockback":1,
+      "Bounce":2.5,
+      "Lifetime":3,
+      "Type":"Grenade"
+    }
+  ],
+  "PointsToWin":2,
+  "Items":[]
+}
