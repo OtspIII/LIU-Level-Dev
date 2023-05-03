@@ -3,7 +3,7 @@
   "Actors": [
     {
       "Name": "Player",
-      "HP": 100,
+      "HP": 10,
       "MoveSpeed": 10,
       "SprintSpeed": 2,
       "Weapon": "Pistol"
@@ -13,63 +13,16 @@
       "HP": 20,
       "MoveSpeed": 10,
       "SprintSpeed": 0.1,
-      "Weapon": "Rifle"
-    },
-    {
-      "Name": "Watcher",
-      "HP": 20,
-      "MoveSpeed": 2,
-      "SprintSpeed": 0.2,
-      "Weapon": "Laser"
-    },
-    {
-      "Name": "HeadsWorm",
-      "HP": 5,
-      "MoveSpeed": 1,
-      "SprintSpeed": 4,
-      "Weapon": "Sword"
-    },
-    {
-      "Name": "EyeTurret",
-      "HP": 7,
-      "MoveSpeed": 0,
-      "SprintSpeed": 0,
-      "Weapon": "Laser2"
-    },
-    {
-      "Name": "SpawnerPod",
-      "HP": 20,
-      "MoveSpeed": 0,
-      "SprintSpeed": 0
-    },
-    {
-      "Name": "BreakableWall",
-      "HP": 1,
-      "MoveSpeed": 0,
-      "SprintSpeed": 0
+      "Weapon": "Pistol"
     }
   ],
   "Weapons": [
     {
-      "Color": "Red",
-      "Text": "Laser",
-      "Damage": 10,
-      "RateOfFire": 0.7,
-      "Accuracy": 1
-    },
-    {
-      "Color": "Red",
-      "Text": "Laser2",
-      "Damage": 5,
-      "RateOfFire": 0.3,
-      "Accuracy": 1
-    },
-    {
       "Color":"Yellow",
       "Text": "Pistol",
-      "Damage": 5,
+      "Damage": 10,
       "RateOfFire":0.5,
-      "Accuracy":1
+      "Accuracy":45
     },
     {
       "Color":"Blue",
@@ -113,7 +66,7 @@
       "Color":"Green",
       "Text": "Shotgun",
       "Damage": 5,
-      "Ammo": 20,
+      "Ammo": 10,
       "RateOfFire":0.4,
       "Accuracy":15,
       "Shots":5
@@ -136,12 +89,5 @@
     }
   ],
   "PointsToWin":2,
-  "Items":[
-    {
-      "Text": "Health",
-      "Type": "Healing",
-      "Amount": 25,
-      "Color": "Green"
-    }
-  ]
+  "Items":[]
 }
