@@ -8,11 +8,13 @@ public class HookShotScript : MonoBehaviour
 {
     private FirstPersonController fps;
     [SerializeField] private GameObject debugCube;
-    [SerializeField] private GameObject hook;
+    [SerializeField] private GameObject hook, forceField, slamField;
+    [SerializeField] private ParticleSystem rushParticle, shieldParticle;
     [SerializeField] private float flySpeed, hookRange, glideMax, glideMin ;
     [SerializeField] private AudioClip[] hookNoise;
     [SerializeField] private Slider hookSlider;
-    
+    [SerializeField] private Image crosshair;
+
     private AudioSource _hookSource;
     private Rigidbody rb;
     private GameObject _gameObject;
@@ -21,21 +23,24 @@ public class HookShotScript : MonoBehaviour
     private PlayerState _playerState;
     private float _hookDetect = 2f, _hookSize, _coolRate = .2f;
     private bool _hookCoolDown;
+    private BoxCollider _slamBox;
     void Awake()
     {
+        _slamBox = slamField.GetComponent<BoxCollider>();
         rb = GetComponentInParent<Rigidbody>();
         fps = GetComponentInParent<FirstPersonController>();
         _hookSource = GetComponent<AudioSource>();
         hook.SetActive(false);
+        rushParticle.gameObject.transform.SetParent(fps.Eyes.transform);
     }
 
 
     void Update()
     {
-        if (fps.HP < 1)
-        {
-            ResetHook();
-        }
+       
+        slamField.gameObject.transform.position = fps.transform.position;
+        forceField.gameObject.transform.position = fps.transform.position;  
+       
        SwitchState();
     }
     void FixedUpdate()
@@ -49,12 +54,15 @@ public class HookShotScript : MonoBehaviour
         switch (_hookState)
         {
             case HookState.NotHooked:
-                {
-                   
-                    hook.SetActive(false);
-                    
-                    if (fps.OnGround()) fps.InControl = true;
+            {
+                hook.SetActive(false);
 
+                if (fps.OnGround())
+                {
+                    StartCoroutine(Iframes());
+                    fps.CanWalk = true;
+                }
+                    CheckHook();
                     if (!_hookCoolDown) StartHookShot();
                     
                     break;
@@ -68,7 +76,7 @@ public class HookShotScript : MonoBehaviour
 
             case HookState.Flying:
                 {
-                    fps.InControl = false;
+                    fps.CanWalk = false;
                    FlyToHook();
                     break;
                 }
@@ -92,7 +100,7 @@ public class HookShotScript : MonoBehaviour
             }
             case PlayerState.None:
             {
-                
+                StartCoroutine(slamField.GetComponent<SlamBox>().ResetSlam());
                 break;
             }
 
@@ -101,14 +109,31 @@ public class HookShotScript : MonoBehaviour
                 LetGo();
                 break;
             }
+
+            case PlayerState.Rushing:
+            {
+                Rush();
+                break;
+            }
         }
     }
 
+
+    void CheckHook()
+    {
+        if (Physics.Raycast(fps.Eyes.transform.position, fps.Eyes.transform.forward, out RaycastHit hit, hookRange, ~(1 << 8 | 1 << 2)))
+        {
+            crosshair.color = Color.red;
+            return;
+        }
+        crosshair.color = Color.black;
+    }
     private void Glide()
     {
+        rb.velocity += _hookMomentum;
         if (_hookMomentum.magnitude >= .1)
         {
-            rb.velocity += _hookMomentum;
+            
             float drag = 80;
             Vector3 dragMomentum = _hookMomentum * (drag * Time.deltaTime);
             
@@ -118,14 +143,17 @@ public class HookShotScript : MonoBehaviour
                        
             if (_hookMomentum.magnitude < .1)
             {
+                _playerState = PlayerState.None;
                 _hookMomentum = Vector3.zero;
             }
         }
     }
 
-    private void ResetHook()
+    private void DidDie()
     {
+        Debug.Log("I died");
         _hookState = HookState.NotHooked;
+        _playerState = PlayerState.None;
         rb.velocity = Vector3.zero;
         hook.SetActive(false);
         _hitPoint = Vector3.zero;
@@ -136,7 +164,7 @@ public class HookShotScript : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
            
-            if (Physics.Raycast(fps.Eyes.transform.position, fps.Eyes.transform.forward, out RaycastHit hit, hookRange, ~(1 << 10 | 1 << 2)))
+            if (Physics.Raycast(fps.Eyes.transform.position, fps.Eyes.transform.forward, out RaycastHit hit, hookRange, ~(1 << 8 | 1 << 2)))
             {
                 
                 _hitPoint = hit.point;
@@ -169,26 +197,39 @@ public class HookShotScript : MonoBehaviour
 
     private void FlyToHook()
     {
-        _playerState = PlayerState.Hooking;
+        if(_playerState != PlayerState.Rushing)_playerState = PlayerState.Hooking;
         Vector3 dir = _hitPoint - fps.transform.position;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if ( Input.GetKeyDown(KeyCode.Space))
         {
             _playerState = PlayerState.Swing;
+             rushParticle.Stop();
             float speed = 5.15f;
             _coolRate = speed;
             Unhook();
             return;
         }
 
-        float dist = Vector3.Distance(fps.transform.position, _hitPoint);
-
-        if (dist <= .4f)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
+            _playerState = PlayerState.Rushing;
+            return;
+        }
+
+            float dist = Vector3.Distance(transform.position, _hitPoint);
+          
+        if (dist <= .61f)
+        {
+            rushParticle.Stop();
+            if (_playerState == PlayerState.Rushing)
+            {
+               SetForceField();
+            }
             fps.RB.velocity = Vector3.zero;
             float speed = .85f;
             _coolRate = speed;
             Unhook();
+            _playerState = PlayerState.None;
             return;
         }
 
@@ -196,10 +237,16 @@ public class HookShotScript : MonoBehaviour
         {
             if (hit.collider != null)
             {
+                rushParticle.Stop();
+                if (_playerState == PlayerState.Rushing)
+                {
+                   SetForceField();
+                }
                 fps.RB.velocity = Vector3.zero;
                 float speed = .85f;
                 _coolRate = speed;
                 Unhook();
+                _playerState = PlayerState.None;
             }
         }
 
@@ -217,46 +264,85 @@ public class HookShotScript : MonoBehaviour
         }
     }
 
+    void SetForceField()
+    {
+       
+        _hookSource.PlayOneShot(hookNoise[3]);
+        shieldParticle.Play();
+        forceField.SetActive(false);
+        _slamBox.enabled = true;
+    }
     private void Unhook()
     {
+        
         fps.RB.useGravity = true;
         _hookSource.PlayOneShot(hookNoise[0]);
         hookSlider.value = 0;
         _hookCoolDown = true;
-        _playerState = PlayerState.None;
         _hookState = HookState.NotHooked;
     }
 
+    private void Rush()
+    {
+        forceField.SetActive(true);
+        Vector3 dir = _hitPoint - fps.transform.position;
+        rushParticle.Play();
+        RushToHook(dir);
+       
+    }
     private void MoveToHook()
     {
         hook.transform.LookAt(_hitPoint);
         Vector3 dir = _hitPoint - fps.transform.position;
         float maxSpeed = 40;
         float minSpeed = 10;
-        float speedMulti = 80;
+        float speedMulti = 50;
         fps.RB.useGravity = false;
         flySpeed = Mathf.Clamp(Vector3.Distance(fps.transform.position, _hitPoint), minSpeed, maxSpeed);
         fps.RB.velocity = (dir.normalized * flySpeed) * (speedMulti * Time.deltaTime);
     }
 
+    private void RushToHook(Vector3 dir)
+    {
+        fps.Invincible = true;
+        hook.transform.LookAt(_hitPoint);
+        float maxSpeed = 40;
+        float minSpeed = 10;
+        float speedMulti = 95;
+        fps.RB.useGravity = false;
+        flySpeed = Mathf.Clamp(Vector3.Distance(fps.transform.position, _hitPoint), minSpeed, maxSpeed);
+        fps.RB.velocity = (dir.normalized * flySpeed) * (speedMulti * Time.deltaTime);
+    }
+
+     IEnumerator Iframes()
+     {
+         yield return new WaitForSeconds(1f);
+         fps.Invincible = false;
+     }
+
     private void LetGo()
     {
         Vector3 dir = _hitPoint - fps.transform.position;
-        float extraSpeed = 7;
+        
         _hookMomentum = dir.normalized * (flySpeed * Time.deltaTime);
-        float jumpSpeed = 12;
+        float jumpSpeed = 9.5f;
         Vector3 jumpForce = Vector3.up * jumpSpeed;
+       
  
         _hookMomentum += jumpForce;
        
         
-        _playerState = PlayerState.None;
+        _playerState = PlayerState.Gliding;
     }
+
+   
+
     private enum HookState
     {
         NotHooked,
         Hooked,
         Flying,
+        HookRush,
     }
     
     private enum PlayerState
@@ -265,5 +351,8 @@ public class HookShotScript : MonoBehaviour
         Hooking,
         None,
         Swing,
+        Rushing,
     }
+
+   
 }
