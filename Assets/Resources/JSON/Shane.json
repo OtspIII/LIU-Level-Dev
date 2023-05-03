@@ -6,7 +6,7 @@
       "HP": 100,
       "MoveSpeed": 10,
       "SprintSpeed": 2,
-      "Weapon": "Sword"
+      "Weapon": "Pistol"
     },
     {
       "Name": "Amogus",
@@ -31,7 +31,7 @@
     },
     {
       "Name": "EyeTurret",
-      "HP": 12,
+      "HP": 7,
       "MoveSpeed": 0,
       "SprintSpeed": 0,
       "Weapon": "Laser2"
@@ -39,6 +39,12 @@
     {
       "Name": "SpawnerPod",
       "HP": 20,
+      "MoveSpeed": 0,
+      "SprintSpeed": 0
+    },
+    {
+      "Name": "BreakableWall",
+      "HP": 1,
       "MoveSpeed": 0,
       "SprintSpeed": 0
     }
@@ -61,7 +67,7 @@
     {
       "Color":"Yellow",
       "Text": "Pistol",
-      "Damage": 10,
+      "Damage": 5,
       "RateOfFire":0.5,
       "Accuracy":1
     },
@@ -107,7 +113,7 @@
       "Color":"Green",
       "Text": "Shotgun",
       "Damage": 5,
-      "Ammo": 10,
+      "Ammo": 20,
       "RateOfFire":0.4,
       "Accuracy":15,
       "Shots":5
@@ -130,5 +136,12 @@
     }
   ],
   "PointsToWin":2,
-  "Items":[]
+  "Items":[
+    {
+      "Text": "Health",
+      "Type": "Healing",
+      "Amount": 25,
+      "Color": "Green"
+    }
+  ]
 }
