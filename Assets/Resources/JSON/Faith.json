@@ -4,7 +4,7 @@
     "Actors": [
         {
             "Name": "Player",
-            "HP": 90,
+            "HP": 100,
             "MoveSpeed": 10,
             "SprintSpeed": 2,
             "Weapon": "Rifle"
@@ -21,10 +21,10 @@
         {
             "Color": "Yellow",
             "Text": "Pistol",
-            "Damage": 10,
-            "RateOfFire": 0.65,
-            "Accuracy": 1,
-            "Knockback": 10
+            "Damage": 5,
+            "RateOfFire": 0.7,
+            "Accuracy": 3,
+            "Knockback": 2
         },
         {
             "Color": "Blue",
@@ -32,7 +32,9 @@
             "Type": "Hitscan",
             "Damage": 10,
             "Ammo": 30,
-            "RateOfFire": 0.2
+            "RateOfFire": 0.2,
+            "Accuracy": 2,
+            "Knockback": 4
         },
         {
             "Color": "Red",
@@ -67,10 +69,10 @@
         {
             "Color": "Green",
             "Text": "Sniper",
-            "Damage": 10,
+            "Damage": 20,
             "Ammo": 5,
             "RateOfFire": 0.75,
-            "Accuracy": 0
+            "Accuracy": 1
         },
         {
             "Color": "White",
