@@ -1,13 +1,15 @@
 {
   "Gravity": 1,
-  "Waves": 3,
+  "Waves": 0,
+  "PointsToWin":1,
+  "TextSpeed": 0.05,
   "Actors": [
     {
       "Name": "Player",
-      "HP": 90,
+      "HP": 0,
       "MoveSpeed": 10,
       "SprintSpeed": 2,
-      "Weapon": "Pistol"
+      "Weapon": ""
     },
     {
       "Name": "Amogus",
@@ -90,7 +92,6 @@
       "Type": "Melee"
     }
   ],
-  "PointsToWin":2,
   "Items":[
     {
       "Text": "1 Point",

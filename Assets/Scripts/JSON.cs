@@ -89,6 +89,7 @@ public class JSONCreator
 {
     public string Author;
     public int PointsToWin;
+    public float TextSpeed;
     public int PlayerHP;
     public float MoveSpeed;
     public float SprintSpeed;
@@ -118,6 +119,7 @@ public class JSONCreator
             Weapons.Add(new JSONWeapon(i));
         Gravity = source.Gravity > 0 ? source.Gravity : 1;
         Waves = source.Waves;
+        TextSpeed = source.TextSpeed;
 
 //        if (source.Symbol == null)
 //        {
@@ -176,6 +178,7 @@ public class JSONTempCreator
     public float Gravity;
     public string Mode;
     public int Waves;
+    public float TextSpeed;
     public JSONTempActor[] Actors;
     public JSONTempItem[] Items;
     public JSONTempWeapon[] Weapons;

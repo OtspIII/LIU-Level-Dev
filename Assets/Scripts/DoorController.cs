@@ -4,23 +4,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
-public class DoorController : MonoBehaviour
+public class DoorController : TriggerableController
 {
     [Header("Customizable")]
     public Vector3 Movement = new Vector3(0, 10, 0);
     public float Speed = 2;
     public bool AutoClose = true;
+    public bool StartUp = false;
     
     [Header("Ignore Below")]
     public GameObject Body;
     private Vector3 DesiredPos;
     private bool Open = false;
     private Vector3 StartPos;
+    public TriggerZoneScript Detector;
 
     void Start()
     {
         StartPos = Body.transform.position;
         DesiredPos = StartPos;
+        if (StartUp)
+        {
+            DesiredPos = StartPos + Movement;
+            Body.transform.position = DesiredPos;
+        }
+
+        if (AutoClose && Detector != null)
+        {
+            Detector.ExitMessage = "Close";
+        }
     }
 
     private void Update()
@@ -32,21 +44,36 @@ public class DoorController : MonoBehaviour
         }
     }
 
-    public void Trigger()
+    public override void Trigger(string type = "", GameObject target = null)
     {
-        if (!AutoClose && Open)
+        //if (Body.transform.position != DesiredPos) return;
+        switch (type)
         {
-            DesiredPos = StartPos;
-            Open = false;
-            return;
+            case "Open":case "Up":
+            {
+                DesiredPos = StartPos + Movement;
+                Open = true;
+                break;
+            }
+            case "Close":case "Down":
+            {
+                DesiredPos = StartPos;
+                Open = true;
+                break;
+            }
+            case "Toggle":
+            {
+                Open = !Open;
+                if (Open)
+                {
+                    DesiredPos = StartPos + Movement;
+                }
+                else
+                {
+                    DesiredPos = StartPos;
+                }
+                break;
+            }
         }
-        DesiredPos = StartPos + Movement;
-        Open = true;
-    }
-
-    public void Untrigger()
-    {
-        if(AutoClose)
-            DesiredPos = StartPos;
     }
 }

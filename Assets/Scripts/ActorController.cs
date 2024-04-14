@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
-public class ActorController : MonoBehaviour
+public class ActorController : TriggerableController
 {
     [Header("Ignore Below")]
     public Rigidbody RB;
@@ -203,7 +203,7 @@ public class ActorController : MonoBehaviour
     
     public virtual void TakeDamage(int amt, ActorController source = null)
     {
-        if (Invincible) return;
+        if (Invincible || amt <= 0) return;
         HP -= amt;
         if (HP <= 0)
         {
@@ -233,7 +233,7 @@ public class ActorController : MonoBehaviour
     
     public virtual int GetMaxHP()
     {
-        return JSON != null && JSON.HP > 0 ? JSON.HP : 100;
+        return JSON != null ? JSON.HP : 100;
     }
     
     public float GetMoveSpeed()
@@ -271,5 +271,18 @@ public class ActorController : MonoBehaviour
     private void OnDestroy()
     {
         God.Actors.Remove(this);
+    }
+
+    public override void Trigger(string type = "", GameObject target = null)
+    {
+        base.Trigger(type, target);
+        switch (type)
+        {
+            case "Die":case "Destroy":
+            {
+                Die(target != null ? target.GetComponent<ActorController>() : null);
+                break;
+            }
+        }
     }
 }

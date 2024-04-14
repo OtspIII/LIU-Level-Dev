@@ -19,7 +19,7 @@ using Random = UnityEngine.Random;
 public class FirstPersonController : ActorController
 {
     public GameObject Eyes;
-    public TextMeshPro NameText;
+    //public TextMeshPro NameText;
     public float MouseSensitivity = 3;
     public bool GhostMode;
     public Vector3 StartSpot;
@@ -39,15 +39,17 @@ public class FirstPersonController : ActorController
         StartSpot = transform.position;
         //Debug.Log("X");
         if(God.LM.UseJSON) ImprintJSON(God.LM.GetActor("Player"));
+        if(GetMaxHP() <= 0 && God.HPText != null) God.HPText.gameObject.SetActive(false);
         Reset();
     }
 
     public override void OnUpdate()
     {
         base.OnUpdate();
-        if (God.HPText != null)
+        int maxhp = GetMaxHP();
+        if (God.HPText != null && maxhp > 0)
         {
-            God.HPText.text = HP + "/" + GetMaxHP();
+            God.HPText.text = HP + "/" + maxhp;
             if(GetWeapon() != null)
                 God.StatusText.text = GetWeapon().Text + (Ammo > 0 ? " - " + Ammo : "");
         }

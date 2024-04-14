@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using TMPro;
 using Unity.Netcode;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class LevelManager : MonoBehaviour
@@ -29,10 +31,16 @@ public class LevelManager : MonoBehaviour
     public bool RoundComplete;
     public Dictionary<IColors,List<FirstPersonController>> Teams = new Dictionary<IColors, List<FirstPersonController>>();
     public int CurrentWave = 0;
+    public int Points = 0;
+    public Image Overlay;
+    public TextMeshProUGUI CenterText;
+    bool Won = false;
+    public static bool MidCutscene = false;
 
     void Awake()
     {
         God.LM = this;
+        MidCutscene = false;
     }
 
     void Start()
@@ -70,6 +78,7 @@ public class LevelManager : MonoBehaviour
         }
         God.UpdateText.text = txt;
 
+        if (Won) return;
         if (Ruleset.Waves > 0 && CurrentWave != -1)
         {
             bool any = false;
@@ -86,7 +95,8 @@ public class LevelManager : MonoBehaviour
                 CurrentWave++;
                 if (CurrentWave >= Ruleset.Waves)
                 {
-                    MakeAnnounce("YOU WIN");
+                    StartCoroutine(YouWin());
+                    // MakeAnnounce("YOU WIN");
                     CurrentWave = -1;
                 }
                 else
@@ -96,6 +106,119 @@ public class LevelManager : MonoBehaviour
                         sp.Spawn();
                     }
                 }
+            }
+        }
+    }
+
+    public IEnumerator YouWin(bool skipStart=false)
+    {
+        if (Won) yield break;
+        Won = true;
+        Overlay.gameObject.SetActive(true);
+        Overlay.color = new Color(0,0,0,0);
+        CenterText.text = "";
+        float c = 0;
+        if (skipStart) c = 1;
+        while (c < 1)
+        {
+            c = Mathf.Lerp(c, 1.01f, Time.deltaTime);
+            c = Mathf.MoveTowards(c, 1.01f, Time.deltaTime / 2);
+            Overlay.color = new Color(0,0,0,c);
+            yield return null;
+        }
+        Overlay.color = new Color(0,0,0,1);
+        yield return StartCoroutine(TextReveal("YOU WIN",0.15f));
+        // CenterText.text = "YOU WIN";
+        while (!Input.GetKeyDown(KeyCode.Space) && !Input.GetMouseButtonDown(0))
+        {
+            yield return null;
+        }
+        MidCutscene = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //MakeAnnounce("YOU WIN");
+    }
+
+    public IEnumerator Cutscene(string text, int points)
+    {
+        yield return StartCoroutine(Cutscene(new List<string>() { text }, points));
+    }
+    
+    public IEnumerator Cutscene(List<string> text, int points)
+    {
+        if (MidCutscene) yield break;
+        MidCutscene = true;
+        Overlay.gameObject.SetActive(true);
+        Overlay.color = new Color(0,0,0,0);
+        CenterText.text = "";
+        float c = 0;
+        while (c < 1)
+        {
+            c = Mathf.Lerp(c, 1.01f, Time.deltaTime);
+            c = Mathf.MoveTowards(c, 1.01f, Time.deltaTime);
+            Overlay.color = new Color(0,0,0,c);
+            yield return null;
+        }
+        Overlay.color = new Color(0,0,0,1);
+        // if (bg != null)
+        // {
+        //     Overlay.color = new Color(1,1,1);
+        //     Overlay.sprite = bg;
+        // }
+        foreach(string txt in text)
+        {
+            yield return StartCoroutine(TextReveal(txt,Ruleset.TextSpeed));
+            // CenterText.text = txt;
+            while (!Input.GetKeyDown(KeyCode.Space) && !Input.GetMouseButtonDown(0))
+            {
+                yield return null;
+            }
+
+            yield return null;
+        }
+        CenterText.text = "";
+        if(points != 0)
+            GetPoint(points,false);
+        if (Points >= Ruleset.PointsToWin)
+        {
+            
+            yield return StartCoroutine(YouWin(true));
+            yield break;
+        }
+        Overlay.color = new Color(0,0,0,1);
+        c = 1;
+        while (c > 0)
+        {
+            c = Mathf.Lerp(c, -0.01f, Time.deltaTime);
+            c = Mathf.MoveTowards(c, -0.01f, Time.deltaTime);
+            Overlay.color = new Color(0,0,0,c);
+            yield return null;
+        }
+
+        MidCutscene = false;
+    }
+
+    public IEnumerator TextReveal(string txt,float speed=0.05f)
+    {
+        float time = 0;
+        for (int n = 0; n <= txt.Length; n++)
+        {
+            if (n < txt.Length && txt.Substring(n, 1) == "<")
+            {
+                while (txt.Substring(n, 1) != ">" && n <= txt.Length)
+                    n++;
+                n++;
+            }
+            CenterText.text = txt.Substring(0, n);
+            time = speed;
+            while (time > 0)
+            {
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+                {
+                    speed = 0;
+                    time = 0;
+                }
+                time -= Time.deltaTime;
+                yield return null;
             }
         }
     }
@@ -203,11 +326,12 @@ public class LevelManager : MonoBehaviour
     public JSONWeapon GetWeapon(string n)
     {
         if (Weapons.ContainsKey(n)) return Weapons[n];
-        if (Ruleset.Weapons.Count > 0) return Ruleset.Weapons[0];
-        JSONTempWeapon wpn = new JSONTempWeapon();
-        wpn.Damage = 10;
-        wpn.Text = "GENERIC WEAPON";
-        return new JSONWeapon(wpn);
+        return null;
+        // if (Ruleset.Weapons.Count > 0) return Ruleset.Weapons[0];
+        // JSONTempWeapon wpn = new JSONTempWeapon();
+        // wpn.Damage = 10;
+        // wpn.Text = "GENERIC WEAPON";
+        // return new JSONWeapon(wpn);
     }
 
     public bool Respawn(FirstPersonController pc)
@@ -267,5 +391,15 @@ public class LevelManager : MonoBehaviour
         AlivePlayers.Remove(pc);
         foreach (IColors c in Teams.Keys)
             Teams[c].Remove(pc);
+    }
+
+    public void GetPoint(int amt,bool checkWin=true)
+    {
+        Points += amt;
+        if (Points >= Ruleset.PointsToWin && !Won && checkWin)
+        {
+            StartCoroutine(YouWin());
+            // MakeAnnounce("YOU WIN");
+        }
     }
 }

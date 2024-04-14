@@ -4,28 +4,33 @@ using Unity.Mathematics;
 using UnityEngine;
 using Unity.Netcode;
 
-public class ItemSpawnController : MonoBehaviour
+public class ItemSpawnController : TriggerableController
 {
     [Header("Customizable")]
     public string ItemToSpawn;
     public float RespawnTime = 15;
     public Vector3 Destination;
     public Transform DestObj;
+    public bool StartOn = true;
     
     [Header("Ignore Below")]
     public GameObject Holder;
     public SpawnableController Held;
     float Countdown = 0;
+    bool Active;
     
     void Start()
     {
+        Active = StartOn;
         if (DestObj != null) Destination = DestObj.position - God.LM.transform.position;
         God.LM.ISpawns.Add(this);
-        Spawn();
+        if(Active)
+            Spawn();
     }
 
     void Update()
     {
+        if (!Active) return;
         if(Holder != null)
             Holder?.transform.Rotate(0,5,0);
         if (Held != null) return;
@@ -53,5 +58,28 @@ public class ItemSpawnController : MonoBehaviour
     {
         Held = null;
         Countdown = RespawnTime;
+    }
+
+    public override void Trigger(string type = "", GameObject target = null)
+    {
+        base.Trigger(type, target);
+        switch (type)
+        {
+            case "Spawn":
+            {
+                Spawn();
+                break;
+            }
+            case "Start":
+            {
+                Active = true;
+                break;
+            }
+            case "Stop":
+            {
+                Active = false;
+                break;
+            }
+        }
     }
 }
