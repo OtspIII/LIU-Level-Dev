@@ -7,19 +7,16 @@ using Random = UnityEngine.Random;
 
 public class ActorController : MonoBehaviour
 {
-    public GameObject AimObj;
+    [Header("Ignore Below")]
     public Rigidbody RB;
     public MeshRenderer MR;
     public Collider Coll;
-    public float JumpPower = 7;
-    public float MoveSpeed = 10;
-    public float SprintSpeed = 1.5f;
+
     public List<GameObject> Floors;
     public float ShotCooldown;
     public bool JustKnocked = false;
     public MeleeBox MB;
     
-
     public JSONActor JSON;
     public JSONWeapon CurrentWeapon;
     public JSONWeapon DefaultWeapon;
@@ -33,6 +30,12 @@ public class ActorController : MonoBehaviour
     public bool InControl = true;
     public bool CanWalk = true;
     public bool Invincible = false;
+    public GameObject AimObj;
+        
+    [Header("Customizable")]
+    public float JumpPower = 7;
+    public float MoveSpeed = 10;
+    public float SprintSpeed = 1.5f;
 
     void Awake()
     {

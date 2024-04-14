@@ -6,14 +6,17 @@ using Unity.Netcode;
 
 public class ItemSpawnController : MonoBehaviour
 {
-    public GameObject Holder;
-    public SpawnableController Held;
-    public float RespawnTime = 15;
-    float Countdown = 0;
+    [Header("Customizable")]
     public string ItemToSpawn;
+    public float RespawnTime = 15;
     public Vector3 Destination;
     public Transform DestObj;
-
+    
+    [Header("Ignore Below")]
+    public GameObject Holder;
+    public SpawnableController Held;
+    float Countdown = 0;
+    
     void Start()
     {
         if (DestObj != null) Destination = DestObj.position - God.LM.transform.position;

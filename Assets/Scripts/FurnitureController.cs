@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class FurnitureController : ActorController
 {
+    
     public int MaxHP = 1;
     public float ExplosionSize = 0;
     public float ExplosionDamage = 0;
     public float ExplosionKnockback = 0;
-    public GameObject Drop;
+    public GameObject Drop; 
 
     public override void OnStart()
     {

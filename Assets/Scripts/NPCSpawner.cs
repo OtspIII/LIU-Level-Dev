@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class NPCSpawner : MonoBehaviour
 {
+    [Header("Customizable")]
+    public List<NPCController> Prefabs;
+    public float RespawnTime = 15;
+    public bool SpawnEndless = false;
+    
+    [Header("Ignore Below")]
     public GameObject Holder;
     public List<NPCController> Children;
-    public float RespawnTime = 15;
     float Countdown = 0;
-    public List<NPCController> Prefabs;
-    public bool SpawnEndless = false;
     bool Waves = false;
 
     void Start()

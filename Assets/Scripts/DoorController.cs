@@ -6,13 +6,16 @@ using UnityEngine.Purchasing;
 
 public class DoorController : MonoBehaviour
 {
-    public GameObject Body;
-    private Vector3 StartPos;
+    [Header("Customizable")]
     public Vector3 Movement = new Vector3(0, 10, 0);
-    private Vector3 DesiredPos;
-    public bool AutoClose = true;
-    private bool Open = false;
     public float Speed = 2;
+    public bool AutoClose = true;
+    
+    [Header("Ignore Below")]
+    public GameObject Body;
+    private Vector3 DesiredPos;
+    private bool Open = false;
+    private Vector3 StartPos;
 
     void Start()
     {

@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class StormController : MonoBehaviour
 {
-	public SphereCollider Coll;
-	public float MinSize = 10;
+	[Header("Customizable")]
 	public float ShrinkSpeed = 1;
+	public float MinSize = 10;
+	[Header("Ignore Below")]
+	public SphereCollider Coll;
 	private float StartSize;
 	private float StartScale;
 	private float Size;

@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class WeaponSpawnController : MonoBehaviour
 {
+    [Header("Customizable")]
+    public string WeaponToSpawn;
+    [Header("Ignore Below")]
     public GameObject Holder;
     public WeaponController Held;
     public float RespawnTime = 15;
     float Countdown = 0;
-    public string WeaponToSpawn;
 
     void Start()
     {

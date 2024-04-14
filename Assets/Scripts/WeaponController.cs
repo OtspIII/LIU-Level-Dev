@@ -7,12 +7,15 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
+    [Header("Customizable")]
+    public string Name;// = new NetworkVariable<FixedString64Bytes>();
+    [Header("Ignore Below")]
     public WeaponSpawnController Spawner;
     public TextMeshPro Desc;
     public JSONWeapon Data;
     public MeshRenderer MR;
     public bool IsSetup = false;
-    public string Name;// = new NetworkVariable<FixedString64Bytes>();
+    
 
     public void Setup(WeaponSpawnController s,JSONWeapon data)
     {

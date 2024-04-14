@@ -9,14 +9,16 @@ using Unity.Netcode.Components;
 
 public class SpawnableController : MonoBehaviour
 {
+    [Header("Customizable")]
+    public string Name;
+    public Vector3 Destination;
+    [Header("Ignore Below")]
     public ItemSpawnController Spawner;
     public TextMeshPro Desc;
     public JSONItem Data;
     public MeshRenderer MR;
     
     public bool IsSetup = false;
-    public string Name;// = new NetworkVariable<FixedString64Bytes>();
-    public Vector3 Destination;// = new NetworkVariable<Vector3>();
 
     public void Setup(ItemSpawnController s,JSONItem data)
     {

@@ -7,7 +7,7 @@ public class MovingPlatformController : MonoBehaviour
 {
     public List<Vector3> Destinations;
     private int CurrentDest;
-    public float Speed = 0.1f;
+    public float Speed = 1f;
     private List<Transform> Riders = new List<Transform>();
     
     void FixedUpdate()
@@ -15,7 +15,7 @@ public class MovingPlatformController : MonoBehaviour
         if (Destinations.Count == 0) return; // || !PlayerController.HasMoved
         Vector3 dest = Destinations[CurrentDest];
         Vector3 old = transform.position;
-        transform.position = Vector3.MoveTowards(transform.position, dest, Speed);
+        transform.position = Vector3.MoveTowards(transform.position, dest, Speed * Time.fixedDeltaTime);
         Vector3 movement = transform.position - old;
         foreach (Transform tra in Riders)
         {
