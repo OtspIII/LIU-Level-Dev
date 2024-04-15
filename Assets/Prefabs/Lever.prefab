@@ -260,14 +260,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MR: {fileID: 0}
-  Vanish: 1
+  Vanish: 0
   CollideWith:
     serializedVersion: 2
     m_Bits: 0
   OneTime: 0
-  Targets: []
-  EnterMessage: 
-  ExitMessage: 
+  Targets:
+  - {fileID: 0}
+  EnterMessage: Down
+  ExitMessage: Up
   Points: 0
   TextMessage: []
   Anim: {fileID: 6882795733093722059}
