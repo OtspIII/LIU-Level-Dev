@@ -121,8 +121,8 @@ public class LevelManager : MonoBehaviour
         if (skipStart) c = 1;
         while (c < 1)
         {
-            c = Mathf.Lerp(c, 1.01f, Time.deltaTime);
-            c = Mathf.MoveTowards(c, 1.01f, Time.deltaTime / 2);
+            c = Mathf.Lerp(c, 1.01f, Time.unscaledDeltaTime);
+            c = Mathf.MoveTowards(c, 1.01f, Time.unscaledDeltaTime / 2);
             Overlay.color = new Color(0,0,0,c);
             yield return null;
         }
@@ -133,7 +133,7 @@ public class LevelManager : MonoBehaviour
         {
             yield return null;
         }
-        MidCutscene = false;
+        EndCutscene();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //MakeAnnounce("YOU WIN");
     }
@@ -146,15 +146,15 @@ public class LevelManager : MonoBehaviour
     public IEnumerator Cutscene(List<string> text, int points)
     {
         if (MidCutscene) yield break;
-        MidCutscene = true;
+        StartCutscene();
         Overlay.gameObject.SetActive(true);
         Overlay.color = new Color(0,0,0,0);
         CenterText.text = "";
         float c = 0;
         while (c < 1)
         {
-            c = Mathf.Lerp(c, 1.01f, Time.deltaTime);
-            c = Mathf.MoveTowards(c, 1.01f, Time.deltaTime);
+            c = Mathf.Lerp(c, 1.01f, Time.unscaledDeltaTime);
+            c = Mathf.MoveTowards(c, 1.01f, Time.unscaledDeltaTime);
             Overlay.color = new Color(0,0,0,c);
             yield return null;
         }
@@ -188,13 +188,13 @@ public class LevelManager : MonoBehaviour
         c = 1;
         while (c > 0)
         {
-            c = Mathf.Lerp(c, -0.01f, Time.deltaTime);
-            c = Mathf.MoveTowards(c, -0.01f, Time.deltaTime);
+            c = Mathf.Lerp(c, -0.01f, Time.unscaledDeltaTime);
+            c = Mathf.MoveTowards(c, -0.01f, Time.unscaledDeltaTime);
             Overlay.color = new Color(0,0,0,c);
             yield return null;
         }
 
-        MidCutscene = false;
+        EndCutscene();
     }
 
     public IEnumerator TextReveal(string txt,float speed=0.05f)
@@ -217,7 +217,7 @@ public class LevelManager : MonoBehaviour
                     speed = 0;
                     time = 0;
                 }
-                time -= Time.deltaTime;
+                time -= Time.unscaledDeltaTime;
                 yield return null;
             }
         }
@@ -385,6 +385,17 @@ public class LevelManager : MonoBehaviour
     //         Teams[best].Add(pc);
     //     return best;
     // }
+    public void StartCutscene()
+    {
+        MidCutscene = true;
+        Time.timeScale = 0;
+    }
+
+    public void EndCutscene()
+    {
+        MidCutscene = false;
+        Time.timeScale = 1;
+    }
 
     public void RemovePlayer(FirstPersonController pc)
     {

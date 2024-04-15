@@ -8,6 +8,7 @@ public class TriggerZoneScript : TriggerScript
     public string EnterMessage;
     public string ExitMessage;
     public int Points = 0;
+    [TextArea]
     public List<string> TextMessage;
 
     public override void Trigger(GameObject go)

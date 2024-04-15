@@ -29,6 +29,7 @@ public class NPCController : ActorController
 
     public override void OnUpdate()
     {
+        if (LevelManager.MidCutscene) return;
         base.OnUpdate();
         //Debug.Log("VIS: " + JSON.Vision);
         if (Aggro && !Attacking && God.Player != null 

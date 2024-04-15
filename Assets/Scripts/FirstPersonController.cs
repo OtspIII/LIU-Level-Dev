@@ -45,6 +45,7 @@ public class FirstPersonController : ActorController
 
     public override void OnUpdate()
     {
+        if (LevelManager.MidCutscene) return;
         base.OnUpdate();
         int maxhp = GetMaxHP();
         if (God.HPText != null && maxhp > 0)
