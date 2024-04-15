@@ -27,6 +27,7 @@ public class FirstPersonController : ActorController
     public float Dizzy = 0;
     public Vector2 DizzyDir;
     bool Crouching;
+    public LayerMask InteractLayer;
 
     public override void OnStart()
     {
@@ -113,6 +114,22 @@ public class FirstPersonController : ActorController
             Shoot(Eyes.transform.position + Eyes.transform.forward, Eyes.transform.rotation);
         }
 
+        Ray ray = new Ray(Eyes.transform.position,Eyes.transform.forward);
+        bool interactive = false;
+        if (Physics.Raycast(ray, out RaycastHit hit, 5, InteractLayer))
+        {
+            TriggerZoneScript tz = hit.transform.gameObject.GetComponentInParent<TriggerZoneScript>();
+            if (tz != null)
+            {
+                interactive = true;
+                if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.E))
+                {
+                    tz.Trigger(gameObject);
+                }
+            }
+        }
+        God.LM.SetCrosshair(interactive);
+        
         if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

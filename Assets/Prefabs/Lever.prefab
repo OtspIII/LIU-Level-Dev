@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4572573871070078316}
   - component: {fileID: 7127752362616845791}
   - component: {fileID: 8288297177304178519}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 6737144557290335542}
   - component: {fileID: 5662911740647052400}
   - component: {fileID: 2547151586860139295}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7018596904236222607}
   - component: {fileID: 1260444781424641847}
-  m_Layer: 0
+  - component: {fileID: 6882795733093722059}
+  m_Layer: 12
   m_Name: Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,6 +259,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e318bd5bad746f46887f08f476ea93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MR: {fileID: 0}
+  Vanish: 1
+  CollideWith:
+    serializedVersion: 2
+    m_Bits: 0
+  OneTime: 0
+  Targets: []
+  EnterMessage: 
+  ExitMessage: 
+  Points: 0
+  TextMessage: []
+  Anim: {fileID: 6882795733093722059}
+  UseAnim: Pull
+  ResetAnim: Push
+--- !u!95 &6882795733093722059
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218508709970665127}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 84087fd958d1ea34489d30a43d4c0f2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2459038351219740492
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +306,7 @@ GameObject:
   - component: {fileID: 5446038602790627536}
   - component: {fileID: 5467428376705679219}
   - component: {fileID: 9127297262957460333}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,8 +408,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1902712157629452516}
-  m_Layer: 0
-  m_Name: GameObject
+  m_Layer: 12
+  m_Name: Rotator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

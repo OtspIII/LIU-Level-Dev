@@ -5315,12 +5315,14 @@ MonoBehaviour:
   MoveSpeed: 10
   SprintSpeed: 1.5
   Eyes: {fileID: 772149536382218223}
-  NameText: {fileID: 6467906636470138432}
   MouseSensitivity: 7
   GhostMode: 0
   StartSpot: {x: 0, y: 0, z: 0}
   Dizzy: 0
   DizzyDir: {x: 0, y: 0}
+  InteractLayer:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!33 &5762141610368144450
 MeshFilter:
   m_ObjectHideFlags: 0

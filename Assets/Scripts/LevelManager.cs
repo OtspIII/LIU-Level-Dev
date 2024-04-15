@@ -36,11 +36,15 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI CenterText;
     bool Won = false;
     public static bool MidCutscene = false;
+    public Image Crosshair;
+    public Sprite CrosshairPlus;
+    Sprite CrosshairBasic;
 
     void Awake()
     {
         God.LM = this;
         MidCutscene = false;
+        CrosshairBasic = Crosshair.sprite;
     }
 
     void Start()
@@ -412,5 +416,10 @@ public class LevelManager : MonoBehaviour
             StartCoroutine(YouWin());
             // MakeAnnounce("YOU WIN");
         }
+    }
+
+    public void SetCrosshair(bool fancy)
+    {
+        Crosshair.sprite = fancy ? CrosshairPlus : CrosshairBasic;
     }
 }
